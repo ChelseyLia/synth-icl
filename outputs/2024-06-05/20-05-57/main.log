@@ -1,0 +1,1 @@
+[2024-06-05 20:06:31,319][arch.safari.models.sequence.ssm.ss_kernel_diag][WARNING] - Falling back on slow Vandermonde kernel. Install pykeops for improved memory efficiency.

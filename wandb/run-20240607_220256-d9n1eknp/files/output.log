@@ -1,0 +1,251 @@
+[34m[1mwandb[39m[22m: [33mWARNING[39m Config item 'seed' was locked by 'sweep' (ignored update).
+[34m[1mwandb[39m[22m: [33mWARNING[39m Config item 'optimizer' was locked by 'sweep' (ignored update).
+[34m[1mwandb[39m[22m: [33mWARNING[39m Config item 'save_checkpoints' was locked by 'sweep' (ignored update).
+[34m[1mwandb[39m[22m: [33mWARNING[39m Config item 'model' was locked by 'sweep' (ignored update).
+[34m[1mwandb[39m[22m: [33mWARNING[39m Config item 'data' was locked by 'sweep' (ignored update).
+CONFIG
+├── seed
+│   └── 2059
+├── seed_eval
+│   └── 2000
+├── seed_test
+│   └── 3000
+├── device
+│   └── cuda
+├── train
+│   └── do: true
+│       do_save: false
+│       reset_every: null
+│       dtype: float32
+│       compile: false
+│       do_amp: false
+│       batch_size: 50
+│       grad_clip: 1.0
+│       iters: 200001
+│       samples: null
+│       log_every: 1000
+│       save_every: 50000
+│       save_path: ./out
+│       num_workers: 0
+│       do_early_stop: false
+│       early_stop_patience: 5
+│       early_stop_metric: loss
+│       early_stop_tol: 0.001
+│       early_stop_start_iter: 40000.200000000004
+│       early_stop_acc: null
+│       parallel_loss: true
+│       merge_embeds: false
+│       merge_type: sum
+│
+├── eval
+│   └── do: true
+│       split: both
+│       batch_size: 1
+│       every: 5000
+│       every_samples: null
+│       iters: 1000
+│
+├── scheduler
+│   └── decay_lr: true
+│       warmup_iters: 40000.200000000004
+│       lr_decay_iters: 200001
+│       min_lr: 3.16228e-05
+│
+├── optimizer
+│   └── lr: 0.000316228
+│       _name_: adamw
+│       weight_decay: 0
+│       betas:
+│       - 0.9
+│       - 0.95
+│
+├── log_level
+│   └── info
+├── examples_to_log
+│   └── 3
+├── log_batch_idx
+│   └── [0, 1]
+├── wandb
+│   └── project: icl-arch
+│
+├── save_checkpoints
+│   └── True
+├── nl_icl
+│   └── do: false
+│       checkpoint_path: null
+│       hf_path: null
+│       task: sentiment
+│       n_seeds: 10
+│       min_examples_per_class: 0
+│       max_examples_per_class: 9
+│       do_full_vocab: true
+│
+├── do_count_param_only
+│   └── False
+├── model
+│   └── _name_: mamba
+│       d_model: 800
+│       n_layer: 8
+│       norm_epsilon: 1.0e-05
+│       rms_norm: false
+│       fused_add_norm: false
+│       residual_in_fp32: false
+│       max_seq_len: 512
+│
+└── data
+    └── _name_: language-modeling-HF
+        vocab_size: 10000
+        preprocessing_num_workers: 20
+        overwrite_cache: false
+        tokenizer_dir: EleutherAI/gpt-neo-125M
+        max_seq_len: 512
+        do_shuffle: true
+        version: original
+        sent:
+          filepath: stats/sent.csv
+          examples_per_class: 3
+          same_name: Lilly
+          do_flip_class: false
+/root/anaconda3/envs/icl/lib/python3.10/site-packages/datasets/table.py:1421: FutureWarning: promote has been superseded by promote_options='default'.
+  table = cls._concat_blocks(blocks, axis=0)
+/root/anaconda3/envs/icl/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/root/anaconda3/envs/icl/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+mamba.backbone.layers.0.mixer.A_log: 25600
+mamba.backbone.layers.0.mixer.D: 1600
+mamba.backbone.layers.0.mixer.in_proj.weight: 2560000
+mamba.backbone.layers.0.mixer.conv1d.weight: 6400
+mamba.backbone.layers.0.mixer.conv1d.bias: 1600
+mamba.backbone.layers.0.mixer.x_proj.weight: 131200
+mamba.backbone.layers.0.mixer.dt_proj.weight: 80000
+mamba.backbone.layers.0.mixer.dt_proj.bias: 1600
+mamba.backbone.layers.0.mixer.out_proj.weight: 1280000
+mamba.backbone.layers.0.norm.weight: 800
+mamba.backbone.layers.1.mixer.A_log: 25600
+mamba.backbone.layers.1.mixer.D: 1600
+mamba.backbone.layers.1.mixer.in_proj.weight: 2560000
+mamba.backbone.layers.1.mixer.conv1d.weight: 6400
+mamba.backbone.layers.1.mixer.conv1d.bias: 1600
+mamba.backbone.layers.1.mixer.x_proj.weight: 131200
+mamba.backbone.layers.1.mixer.dt_proj.weight: 80000
+mamba.backbone.layers.1.mixer.dt_proj.bias: 1600
+mamba.backbone.layers.1.mixer.out_proj.weight: 1280000
+mamba.backbone.layers.1.norm.weight: 800
+mamba.backbone.layers.2.mixer.A_log: 25600
+mamba.backbone.layers.2.mixer.D: 1600
+mamba.backbone.layers.2.mixer.in_proj.weight: 2560000
+mamba.backbone.layers.2.mixer.conv1d.weight: 6400
+mamba.backbone.layers.2.mixer.conv1d.bias: 1600
+mamba.backbone.layers.2.mixer.x_proj.weight: 131200
+mamba.backbone.layers.2.mixer.dt_proj.weight: 80000
+mamba.backbone.layers.2.mixer.dt_proj.bias: 1600
+mamba.backbone.layers.2.mixer.out_proj.weight: 1280000
+mamba.backbone.layers.2.norm.weight: 800
+mamba.backbone.layers.3.mixer.A_log: 25600
+mamba.backbone.layers.3.mixer.D: 1600
+mamba.backbone.layers.3.mixer.in_proj.weight: 2560000
+mamba.backbone.layers.3.mixer.conv1d.weight: 6400
+mamba.backbone.layers.3.mixer.conv1d.bias: 1600
+mamba.backbone.layers.3.mixer.x_proj.weight: 131200
+mamba.backbone.layers.3.mixer.dt_proj.weight: 80000
+mamba.backbone.layers.3.mixer.dt_proj.bias: 1600
+mamba.backbone.layers.3.mixer.out_proj.weight: 1280000
+mamba.backbone.layers.3.norm.weight: 800
+mamba.backbone.layers.4.mixer.A_log: 25600
+mamba.backbone.layers.4.mixer.D: 1600
+mamba.backbone.layers.4.mixer.in_proj.weight: 2560000
+mamba.backbone.layers.4.mixer.conv1d.weight: 6400
+mamba.backbone.layers.4.mixer.conv1d.bias: 1600
+mamba.backbone.layers.4.mixer.x_proj.weight: 131200
+mamba.backbone.layers.4.mixer.dt_proj.weight: 80000
+mamba.backbone.layers.4.mixer.dt_proj.bias: 1600
+mamba.backbone.layers.4.mixer.out_proj.weight: 1280000
+mamba.backbone.layers.4.norm.weight: 800
+mamba.backbone.layers.5.mixer.A_log: 25600
+mamba.backbone.layers.5.mixer.D: 1600
+mamba.backbone.layers.5.mixer.in_proj.weight: 2560000
+mamba.backbone.layers.5.mixer.conv1d.weight: 6400
+mamba.backbone.layers.5.mixer.conv1d.bias: 1600
+mamba.backbone.layers.5.mixer.x_proj.weight: 131200
+mamba.backbone.layers.5.mixer.dt_proj.weight: 80000
+mamba.backbone.layers.5.mixer.dt_proj.bias: 1600
+mamba.backbone.layers.5.mixer.out_proj.weight: 1280000
+mamba.backbone.layers.5.norm.weight: 800
+mamba.backbone.layers.6.mixer.A_log: 25600
+mamba.backbone.layers.6.mixer.D: 1600
+mamba.backbone.layers.6.mixer.in_proj.weight: 2560000
+mamba.backbone.layers.6.mixer.conv1d.weight: 6400
+mamba.backbone.layers.6.mixer.conv1d.bias: 1600
+mamba.backbone.layers.6.mixer.x_proj.weight: 131200
+mamba.backbone.layers.6.mixer.dt_proj.weight: 80000
+mamba.backbone.layers.6.mixer.dt_proj.bias: 1600
+mamba.backbone.layers.6.mixer.out_proj.weight: 1280000
+mamba.backbone.layers.6.norm.weight: 800
+mamba.backbone.layers.7.mixer.A_log: 25600
+mamba.backbone.layers.7.mixer.D: 1600
+mamba.backbone.layers.7.mixer.in_proj.weight: 2560000
+mamba.backbone.layers.7.mixer.conv1d.weight: 6400
+mamba.backbone.layers.7.mixer.conv1d.bias: 1600
+mamba.backbone.layers.7.mixer.x_proj.weight: 131200
+mamba.backbone.layers.7.mixer.dt_proj.weight: 80000
+mamba.backbone.layers.7.mixer.dt_proj.bias: 1600
+mamba.backbone.layers.7.mixer.out_proj.weight: 1280000
+mamba.backbone.layers.7.norm.weight: 800
+mamba.backbone.norm_f.weight: 800
+n_params=32711200
+ignored=[('embedder.embedder.weight', 40205600), ('head.head.weight', 40205600)]
+  0%|                                                                                                                    | 0/200001 [00:00<?, ?it/s]
+Shuffled dataset.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Grouping texts in chunks of 513 (num_proc=20): 100%|███████████████████████████████████████████▉| 2113776/2119719 [00:33<00:00, 69146.95 examples/s]
+[[split=train]] train_iter: 0, batch_idx: 0, input: [33, 11369, 290, 22162, 547, 2712, 287, 262, 3952, 13], target: [11369, 290, 22162, 547, 2712, 287, 262, 3952, 13, 22162]
+/root/anaconda3/envs/icl/lib/python3.10/site-packages/datasets/table.py:1421: FutureWarning: promote has been superseded by promote_options='default'.
+  table = cls._concat_blocks(blocks, axis=0)
+  0%|                                                                                                                      | 0/1000 [00:00<?, ?it/s]
+
+Grouping texts in chunks of 513 (num_proc=20): 100%|█████████████████████████████████████████████████| 21990/21990 [00:06<00:00, 5741.71 examples/s]
+[[split=eval]] train_iter: 0, eval_iter: 0, batch_idx: 0, input: [32565, 13, 15899, 2497, 262, 22441, 1097, 290, 531, 11], target: [13, 15899, 2497, 262, 22441, 1097, 290, 531, 11, 366]
+[[split=eval]] train_iter: 0, eval_iter: 1, batch_idx: 0, input: [287, 5436, 13, 7454, 2402, 257, 640, 11, 612, 373], target: [5436, 13, 7454, 2402, 257, 640, 11, 612, 373, 257]
+
+
+
+
+ 87%|█████████████████████████████████████████████████████████████████████████████████████████████▏             | 871/1000 [00:25<00:01, 125.49it/s]
+[[split=test]] train_iter: 0, eval_iter: 0, batch_idx: 0, input: [43, 6548, 447, 247, 82, 4771, 8566, 24178, 13, 35134], target: [43, 6548, 447, 247, 82, 4771, 8566, 24178, 13, 35134]
+[[split=test]] train_iter: 0, eval_iter: 1, batch_idx: 0, input: [43, 6548, 925, 257, 6450, 18676, 13, 35134, 318, 3772], target: [43, 6548, 925, 257, 6450, 18676, 13, 35134, 318, 3772]
+
+
+ 11%|███████████▉                                                                                               | 111/1000 [00:00<00:07, 120.28it/s]
+[[split=train]] train_iter: 1, batch_idx: 0, input: [10719, 284, 1064, 530, 326, 373, 517, 1611, 290, 8030], target: [284, 1064, 530, 326, 373, 517, 1611, 290, 8030, 13]
+
+  0%|                                                                                                       | 1/200001 [01:08<3794:17:05, 68.30s/it]
+[[split=train]] train_iter: 2, batch_idx: 0, input: [3114, 379, 1123, 584, 290, 531, 11, 366, 14385, 526], target: [379, 1123, 584, 290, 531, 11, 366, 14385, 526, 198]
+
+
+
+
+
+
+
+
+
+
+
+
+
+  0%|                                                                                                        | 90/200001 [01:33<15:46:43,  3.52it/s]

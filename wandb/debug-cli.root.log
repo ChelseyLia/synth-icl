@@ -1,0 +1,2876 @@
+2024-06-05 13:35:21 ERROR Traceback (most recent call last):
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 968, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+ValueError: Sweep edin/icl/1shxswrd not found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/cli/cli.py", line 102, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/cli/cli.py", line 1483, in agent
+    wandb_agent.agent(sweep_id, entity=entity, project=project, count=count)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/wandb_agent.py", line 583, in agent
+    return run_agent(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/wandb_agent.py", line 528, in run_agent
+    agent.run()
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/wandb_agent.py", line 190, in run
+    sweep_obj = self._api.sweep(self._sweep_id, "{}")
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/internal.py", line 126, in sweep
+    return self.api.sweep(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 87, in wrapper
+    raise CommError(message, err).with_traceback(sys.exc_info()[2])
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 968, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+wandb.errors.CommError: Sweep edin/icl/1shxswrd not found
+
+2024-06-05 13:36:04 INFO Running runs: []
+2024-06-05 13:36:04 INFO Agent received command: run
+2024-06-05 13:36:04 INFO Agent starting run with config:
+	data: gauss-mix-model
+	data.dim: 16
+	data.num_classes: 2
+	data.num_xy_pairs_train: 32
+	data.num_xy_pairs_val: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: rnn
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-05 13:36:04 INFO About to run command: /usr/bin/env python main.py data=gauss-mix-model data.dim=16 data.num_classes=2 data.num_xy_pairs_train=32 data.num_xy_pairs_val=1024 eval.every=5000 eval.iters=1000 model=rnn model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-05 13:36:09 INFO Running runs: ['l030w92k']
+2024-06-05 13:36:14 INFO Cleaning up finished run: l030w92k
+2024-06-05 13:36:51 INFO Running runs: []
+2024-06-05 13:36:51 INFO Agent received command: run
+2024-06-05 13:36:51 INFO Agent starting run with config:
+	data: gauss-mix-model
+	data.dim: 16
+	data.num_classes: 2
+	data.num_xy_pairs_train: 32
+	data.num_xy_pairs_val: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: rnn
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 5947
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-05 13:36:51 INFO About to run command: /usr/bin/env python main.py data=gauss-mix-model data.dim=16 data.num_classes=2 data.num_xy_pairs_train=32 data.num_xy_pairs_val=1024 eval.every=5000 eval.iters=1000 model=rnn model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=5947 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-05 13:36:56 INFO Running runs: ['ufjllzro']
+2024-06-05 13:51:37 INFO Running runs: []
+2024-06-05 13:51:37 INFO Agent received command: run
+2024-06-05 13:51:37 INFO Agent starting run with config:
+	data: gauss-mix-model
+	data.dim: 16
+	data.num_classes: 2
+	data.num_xy_pairs_train: 32
+	data.num_xy_pairs_val: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: rnn
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 9656
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-05 13:51:37 INFO About to run command: /usr/bin/env python main.py data=gauss-mix-model data.dim=16 data.num_classes=2 data.num_xy_pairs_train=32 data.num_xy_pairs_val=1024 eval.every=5000 eval.iters=1000 model=rnn model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=9656 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-05 13:51:42 INFO Running runs: ['i7cu0sdm']
+2024-06-05 13:53:04 INFO Cleaning up finished run: i7cu0sdm
+2024-06-05 13:58:50 INFO Running runs: []
+2024-06-05 13:58:50 INFO Agent received command: run
+2024-06-05 13:58:50 INFO Agent starting run with config:
+	data: gauss-mix-model
+	data.dim: 16
+	data.num_classes: 2
+	data.num_xy_pairs_train: 32
+	data.num_xy_pairs_val: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: rnn
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.lr: 0.000316228
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-05 13:58:50 INFO About to run command: /usr/bin/env python main.py data=gauss-mix-model data.dim=16 data.num_classes=2 data.num_xy_pairs_train=32 data.num_xy_pairs_val=1024 eval.every=5000 eval.iters=1000 model=rnn model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.lr=0.000316228 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-05 13:58:55 INFO Running runs: ['99980pas']
+2024-06-05 14:04:03 INFO Cleaning up finished run: 99980pas
+2024-06-05 14:04:41 INFO Running runs: []
+2024-06-05 14:04:41 INFO Agent received command: run
+2024-06-05 14:04:41 INFO Agent starting run with config:
+	data: gauss-mix-model
+	data.dim: 16
+	data.num_classes: 2
+	data.num_xy_pairs_train: 32
+	data.num_xy_pairs_val: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: rnn
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.lr: 0.000316228
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 5947
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-05 14:04:41 INFO About to run command: /usr/bin/env python main.py data=gauss-mix-model data.dim=16 data.num_classes=2 data.num_xy_pairs_train=32 data.num_xy_pairs_val=1024 eval.every=5000 eval.iters=1000 model=rnn model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.lr=0.000316228 optimizer.weight_decay=0 scheduler.decay_lr=True seed=5947 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-05 14:04:46 INFO Running runs: ['5yg6ex7v']
+2024-06-05 14:40:05 INFO Running runs: []
+2024-06-05 14:40:06 INFO Agent received command: run
+2024-06-05 14:40:06 INFO Agent starting run with config:
+	data: gauss-mix-model
+	data.dim: 16
+	data.num_classes: 2
+	data.num_xy_pairs_train: 32
+	data.num_xy_pairs_val: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: lightconv
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-05 14:40:06 INFO About to run command: /usr/bin/env python main.py data=gauss-mix-model data.dim=16 data.num_classes=2 data.num_xy_pairs_train=32 data.num_xy_pairs_val=1024 eval.every=5000 eval.iters=1000 model=lightconv model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-05 14:40:11 INFO Running runs: ['p6eqk7nx']
+2024-06-05 16:57:10 INFO Running runs: []
+2024-06-05 16:57:10 INFO Agent received command: run
+2024-06-05 16:57:10 INFO Agent starting run with config:
+	data: gauss-mix-model
+	data.dim: 16
+	data.num_classes: 2
+	data.num_xy_pairs_train: 32
+	data.num_xy_pairs_val: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: rnn
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-05 16:57:10 INFO About to run command: /usr/bin/env python main.py data=gauss-mix-model data.dim=16 data.num_classes=2 data.num_xy_pairs_train=32 data.num_xy_pairs_val=1024 eval.every=5000 eval.iters=1000 model=rnn model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-05 16:57:15 INFO Running runs: ['l030w92k']
+2024-06-05 17:11:59 INFO Running runs: []
+2024-06-05 17:12:00 INFO Agent received command: run
+2024-06-05 17:12:00 INFO Agent starting run with config:
+	data: gauss-mix-model
+	data.dim: 16
+	data.num_classes: 2
+	data.num_xy_pairs_train: 32
+	data.num_xy_pairs_val: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: rnn
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 5947
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-05 17:12:00 INFO About to run command: /usr/bin/env python main.py data=gauss-mix-model data.dim=16 data.num_classes=2 data.num_xy_pairs_train=32 data.num_xy_pairs_val=1024 eval.every=5000 eval.iters=1000 model=rnn model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=5947 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-05 17:12:05 INFO Running runs: ['7c6qskhl']
+2024-06-05 19:37:36 INFO Running runs: []
+2024-06-05 19:37:36 INFO Agent received command: run
+2024-06-05 19:37:36 INFO Agent starting run with config:
+	data: linear-regression
+	data.curriculum.dims.end: 5
+	data.curriculum.points_train.end: 32
+	data.curriculum.points_train.start: 32
+	data.curriculum.points_val.end: 1024
+	data.curriculum.points_val.start: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: lightconv
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-05 19:37:36 INFO About to run command: /usr/bin/env python main.py data=linear-regression data.curriculum.dims.end=5 data.curriculum.points_train.end=32 data.curriculum.points_train.start=32 data.curriculum.points_val.end=1024 data.curriculum.points_val.start=1024 eval.every=5000 eval.iters=1000 model=lightconv model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-05 19:37:41 INFO Running runs: ['sm9bwvd4']
+2024-06-05 19:39:51 INFO Cleaning up finished run: sm9bwvd4
+2024-06-05 19:48:25 INFO Running runs: []
+2024-06-05 19:48:25 INFO Agent received command: run
+2024-06-05 19:48:26 INFO Agent starting run with config:
+	data: linear-regression
+	data.curriculum.dims.end: 5
+	data.curriculum.points_train.end: 32
+	data.curriculum.points_train.start: 32
+	data.curriculum.points_val.end: 1024
+	data.curriculum.points_val.start: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: lightconv
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 5947
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-05 19:48:26 INFO About to run command: /usr/bin/env python main.py data=linear-regression data.curriculum.dims.end=5 data.curriculum.points_train.end=32 data.curriculum.points_train.start=32 data.curriculum.points_val.end=1024 data.curriculum.points_val.start=1024 eval.every=5000 eval.iters=1000 model=lightconv model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=5947 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-05 19:48:31 INFO Running runs: ['tznq16h6']
+2024-06-05 19:50:30 INFO Cleaning up finished run: tznq16h6
+2024-06-05 19:52:40 INFO Running runs: []
+2024-06-05 19:52:41 INFO Agent received command: run
+2024-06-05 19:52:41 INFO Agent starting run with config:
+	data: linear-regression
+	data.curriculum.dims.end: 5
+	data.curriculum.points_train.end: 32
+	data.curriculum.points_train.start: 32
+	data.curriculum.points_val.end: 1024
+	data.curriculum.points_val.start: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: lightconv
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 9656
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-05 19:52:41 INFO About to run command: /usr/bin/env python main.py data=linear-regression data.curriculum.dims.end=5 data.curriculum.points_train.end=32 data.curriculum.points_train.start=32 data.curriculum.points_val.end=1024 data.curriculum.points_val.start=1024 eval.every=5000 eval.iters=1000 model=lightconv model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=9656 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-05 19:52:46 INFO Running runs: ['0jgoz769']
+2024-06-05 19:57:02 INFO Running runs: []
+2024-06-05 19:57:02 INFO Agent received command: run
+2024-06-05 19:57:02 INFO Agent starting run with config:
+	data: linear-regression
+	data.curriculum.dims.end: 5
+	data.curriculum.points_train.end: 32
+	data.curriculum.points_train.start: 32
+	data.curriculum.points_val.end: 1024
+	data.curriculum.points_val.start: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: dynamicconv
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-05 19:57:02 INFO About to run command: /usr/bin/env python main.py data=linear-regression data.curriculum.dims.end=5 data.curriculum.points_train.end=32 data.curriculum.points_train.start=32 data.curriculum.points_val.end=1024 data.curriculum.points_val.start=1024 eval.every=5000 eval.iters=1000 model=dynamicconv model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-05 19:57:08 INFO Running runs: ['cx448eh7']
+2024-06-05 20:00:13 INFO Running runs: []
+2024-06-05 20:00:14 INFO Agent received command: run
+2024-06-05 20:00:14 INFO Agent starting run with config:
+	data: linear-regression
+	data.curriculum.dims.end: 5
+	data.curriculum.points_train.end: 32
+	data.curriculum.points_train.start: 32
+	data.curriculum.points_val.end: 1024
+	data.curriculum.points_val.start: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: s4
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-05 20:00:14 INFO About to run command: /usr/bin/env python main.py data=linear-regression data.curriculum.dims.end=5 data.curriculum.points_train.end=32 data.curriculum.points_train.start=32 data.curriculum.points_val.end=1024 data.curriculum.points_val.start=1024 eval.every=5000 eval.iters=1000 model=s4 model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-05 20:00:19 INFO Running runs: ['er94lbxw']
+2024-06-05 20:04:43 INFO Running runs: []
+2024-06-05 20:04:43 INFO Agent received command: run
+2024-06-05 20:04:43 INFO Agent starting run with config:
+	data: linear-regression
+	data.curriculum.dims.end: 5
+	data.curriculum.points_train.end: 32
+	data.curriculum.points_train.start: 32
+	data.curriculum.points_val.end: 1024
+	data.curriculum.points_val.start: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: h3
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-05 20:04:43 INFO About to run command: /usr/bin/env python main.py data=linear-regression data.curriculum.dims.end=5 data.curriculum.points_train.end=32 data.curriculum.points_train.start=32 data.curriculum.points_val.end=1024 data.curriculum.points_val.start=1024 eval.every=5000 eval.iters=1000 model=h3 model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-05 20:04:48 INFO Running runs: ['e44ktqhj']
+2024-06-05 20:07:58 INFO Running runs: []
+2024-06-05 20:07:58 INFO Agent received command: run
+2024-06-05 20:07:58 INFO Agent starting run with config:
+	data: linear-regression
+	data.curriculum.dims.end: 5
+	data.curriculum.points_train.end: 32
+	data.curriculum.points_train.start: 32
+	data.curriculum.points_val.end: 1024
+	data.curriculum.points_val.start: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: hyena
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-05 20:07:58 INFO About to run command: /usr/bin/env python main.py data=linear-regression data.curriculum.dims.end=5 data.curriculum.points_train.end=32 data.curriculum.points_train.start=32 data.curriculum.points_val.end=1024 data.curriculum.points_val.start=1024 eval.every=5000 eval.iters=1000 model=hyena model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-05 20:08:03 INFO Running runs: ['t8fxlcax']
+2024-06-05 20:10:44 INFO Cleaning up finished run: t8fxlcax
+2024-06-05 20:12:41 INFO Running runs: []
+2024-06-05 20:12:41 INFO Agent received command: run
+2024-06-05 20:12:41 INFO Agent starting run with config:
+	data: linear-regression
+	data.curriculum.dims.end: 5
+	data.curriculum.points_train.end: 32
+	data.curriculum.points_train.start: 32
+	data.curriculum.points_val.end: 1024
+	data.curriculum.points_val.start: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: hyena
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 5947
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-05 20:12:41 INFO About to run command: /usr/bin/env python main.py data=linear-regression data.curriculum.dims.end=5 data.curriculum.points_train.end=32 data.curriculum.points_train.start=32 data.curriculum.points_val.end=1024 data.curriculum.points_val.start=1024 eval.every=5000 eval.iters=1000 model=hyena model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=5947 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-05 20:12:46 INFO Running runs: ['x7pvhbae']
+2024-06-05 20:16:22 INFO Running runs: []
+2024-06-05 20:16:23 INFO Agent received command: run
+2024-06-05 20:16:23 INFO Agent starting run with config:
+	data: linear-regression
+	data.curriculum.dims.end: 5
+	data.curriculum.points_train.end: 32
+	data.curriculum.points_train.start: 32
+	data.curriculum.points_val.end: 1024
+	data.curriculum.points_val.start: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-05 20:16:23 INFO About to run command: /usr/bin/env python main.py data=linear-regression data.curriculum.dims.end=5 data.curriculum.points_train.end=32 data.curriculum.points_train.start=32 data.curriculum.points_val.end=1024 data.curriculum.points_val.start=1024 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-05 20:16:28 INFO Running runs: ['lyaimhqq']
+2024-06-05 20:19:46 INFO Cleaning up finished run: lyaimhqq
+2024-06-05 20:21:36 INFO Running runs: []
+2024-06-05 20:21:36 INFO Agent received command: run
+2024-06-05 20:21:36 INFO Agent starting run with config:
+	data: linear-regression
+	data.curriculum.dims.end: 5
+	data.curriculum.points_train.end: 32
+	data.curriculum.points_train.start: 32
+	data.curriculum.points_val.end: 1024
+	data.curriculum.points_val.start: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 5947
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-05 20:21:36 INFO About to run command: /usr/bin/env python main.py data=linear-regression data.curriculum.dims.end=5 data.curriculum.points_train.end=32 data.curriculum.points_train.start=32 data.curriculum.points_val.end=1024 data.curriculum.points_val.start=1024 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=5947 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-05 20:21:42 INFO Running runs: ['p6s7zl6z']
+2024-06-05 20:23:52 INFO Cleaning up finished run: p6s7zl6z
+2024-06-05 20:25:07 INFO Running runs: []
+2024-06-05 20:25:07 INFO Agent received command: run
+2024-06-05 20:25:07 INFO Agent starting run with config:
+	data: linear-regression
+	data.curriculum.dims.end: 5
+	data.curriculum.points_train.end: 32
+	data.curriculum.points_train.start: 32
+	data.curriculum.points_val.end: 1024
+	data.curriculum.points_val.start: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 9656
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-05 20:25:07 INFO About to run command: /usr/bin/env python main.py data=linear-regression data.curriculum.dims.end=5 data.curriculum.points_train.end=32 data.curriculum.points_train.start=32 data.curriculum.points_val.end=1024 data.curriculum.points_val.start=1024 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=9656 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-05 20:25:12 INFO Running runs: ['9g25lz3r']
+2024-06-05 20:27:22 INFO Cleaning up finished run: 9g25lz3r
+2024-06-05 20:28:23 INFO Running runs: []
+2024-06-05 20:28:24 INFO Agent received command: run
+2024-06-05 20:28:24 INFO Agent starting run with config:
+	data: linear-regression
+	data.curriculum.dims.end: 5
+	data.curriculum.points_train.end: 32
+	data.curriculum.points_train.start: 32
+	data.curriculum.points_val.end: 1024
+	data.curriculum.points_val.start: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.lr: 0.000316228
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-05 20:28:24 INFO About to run command: /usr/bin/env python main.py data=linear-regression data.curriculum.dims.end=5 data.curriculum.points_train.end=32 data.curriculum.points_train.start=32 data.curriculum.points_val.end=1024 data.curriculum.points_val.start=1024 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.lr=0.000316228 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-05 20:28:29 INFO Running runs: ['e9if8lq4']
+2024-06-05 20:30:39 INFO Cleaning up finished run: e9if8lq4
+2024-06-05 20:36:17 INFO Running runs: []
+2024-06-05 20:36:18 INFO Agent received command: run
+2024-06-05 20:36:18 INFO Agent starting run with config:
+	data: linear-regression
+	data.curriculum.dims.end: 5
+	data.curriculum.points_train.end: 32
+	data.curriculum.points_train.start: 32
+	data.curriculum.points_val.end: 1024
+	data.curriculum.points_val.start: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.lr: 0.000316228
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 5947
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-05 20:36:18 INFO About to run command: /usr/bin/env python main.py data=linear-regression data.curriculum.dims.end=5 data.curriculum.points_train.end=32 data.curriculum.points_train.start=32 data.curriculum.points_val.end=1024 data.curriculum.points_val.start=1024 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.lr=0.000316228 optimizer.weight_decay=0 scheduler.decay_lr=True seed=5947 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-05 20:36:23 INFO Running runs: ['zmuszcnp']
+2024-06-05 20:39:44 INFO Running runs: []
+2024-06-05 20:39:44 INFO Agent received command: run
+2024-06-05 20:39:44 INFO Agent starting run with config:
+	data: linear-regression
+	data.curriculum.dims.end: 5
+	data.curriculum.points_train.end: 32
+	data.curriculum.points_train.start: 32
+	data.curriculum.points_val.end: 1024
+	data.curriculum.points_val.start: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: retnet
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-05 20:39:44 INFO About to run command: /usr/bin/env python main.py data=linear-regression data.curriculum.dims.end=5 data.curriculum.points_train.end=32 data.curriculum.points_train.start=32 data.curriculum.points_val.end=1024 data.curriculum.points_val.start=1024 eval.every=5000 eval.iters=1000 model=retnet model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-05 20:39:49 INFO Running runs: ['fdr3myb1']
+2024-06-05 20:42:36 INFO Cleaning up finished run: fdr3myb1
+2024-06-05 20:44:56 INFO Running runs: []
+2024-06-05 20:44:56 INFO Agent received command: run
+2024-06-05 20:44:56 INFO Agent starting run with config:
+	data: linear-regression
+	data.curriculum.dims.end: 5
+	data.curriculum.points_train.end: 32
+	data.curriculum.points_train.start: 32
+	data.curriculum.points_val.end: 1024
+	data.curriculum.points_val.start: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: retnet
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 5947
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-05 20:44:56 INFO About to run command: /usr/bin/env python main.py data=linear-regression data.curriculum.dims.end=5 data.curriculum.points_train.end=32 data.curriculum.points_train.start=32 data.curriculum.points_val.end=1024 data.curriculum.points_val.start=1024 eval.every=5000 eval.iters=1000 model=retnet model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=5947 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-05 20:45:01 INFO Running runs: ['gnb3gyut']
+2024-06-05 20:48:51 INFO Running runs: []
+2024-06-05 20:48:51 INFO Agent received command: run
+2024-06-05 20:48:51 INFO Agent starting run with config:
+	data: linear-regression
+	data.curriculum.dims.end: 5
+	data.curriculum.points_train.end: 32
+	data.curriculum.points_train.start: 32
+	data.curriculum.points_val.end: 1024
+	data.curriculum.points_val.start: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: rwkv
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-05 20:48:51 INFO About to run command: /usr/bin/env python main.py data=linear-regression data.curriculum.dims.end=5 data.curriculum.points_train.end=32 data.curriculum.points_train.start=32 data.curriculum.points_val.end=1024 data.curriculum.points_val.start=1024 eval.every=5000 eval.iters=1000 model=rwkv model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-05 20:48:57 INFO Running runs: ['njmaaztz']
+2024-06-05 20:55:26 INFO Running runs: []
+2024-06-05 20:55:27 INFO Agent received command: run
+2024-06-05 20:55:27 INFO Agent starting run with config:
+	data: linear-regression
+	data.curriculum.dims.end: 5
+	data.curriculum.points_train.end: 32
+	data.curriculum.points_train.start: 32
+	data.curriculum.points_val.end: 1024
+	data.curriculum.points_val.start: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: rwkv
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 5947
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-05 20:55:27 INFO About to run command: /usr/bin/env python main.py data=linear-regression data.curriculum.dims.end=5 data.curriculum.points_train.end=32 data.curriculum.points_train.start=32 data.curriculum.points_val.end=1024 data.curriculum.points_val.start=1024 eval.every=5000 eval.iters=1000 model=rwkv model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=5947 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-05 20:55:32 INFO Running runs: ['eujkdecn']
+2024-06-05 21:03:31 INFO Running runs: []
+2024-06-05 21:03:31 INFO Agent received command: run
+2024-06-05 21:03:31 INFO Agent starting run with config:
+	data: linear-regression
+	data.curriculum.dims.end: 5
+	data.curriculum.points_train.end: 32
+	data.curriculum.points_train.start: 32
+	data.curriculum.points_val.end: 1024
+	data.curriculum.points_val.start: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: gpt2
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-05 21:03:31 INFO About to run command: /usr/bin/env python main.py data=linear-regression data.curriculum.dims.end=5 data.curriculum.points_train.end=32 data.curriculum.points_train.start=32 data.curriculum.points_val.end=1024 data.curriculum.points_val.start=1024 eval.every=5000 eval.iters=1000 model=gpt2 model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-05 21:03:37 INFO Running runs: ['yh8zkhry']
+2024-06-05 21:08:10 INFO Running runs: []
+2024-06-05 21:08:11 INFO Agent received command: run
+2024-06-05 21:08:11 INFO Agent starting run with config:
+	data: linear-regression
+	data.curriculum.dims.end: 5
+	data.curriculum.points_train.end: 32
+	data.curriculum.points_train.start: 32
+	data.curriculum.points_val.end: 1024
+	data.curriculum.points_val.start: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: llama2
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-05 21:08:11 INFO About to run command: /usr/bin/env python main.py data=linear-regression data.curriculum.dims.end=5 data.curriculum.points_train.end=32 data.curriculum.points_train.start=32 data.curriculum.points_val.end=1024 data.curriculum.points_val.start=1024 eval.every=5000 eval.iters=1000 model=llama2 model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-05 21:08:16 INFO Running runs: ['y2f8usi1']
+2024-06-05 21:13:13 INFO Agent received command: stop
+2024-06-05 21:13:13 INFO Stop: 7c6qskhl
+2024-06-05 21:13:18 INFO Cleaning up finished run: 7c6qskhl
+2024-06-05 21:14:20 INFO Running runs: []
+2024-06-05 21:14:20 INFO Agent received command: run
+2024-06-05 21:14:20 INFO Agent starting run with config:
+	data: linear-regression
+	data.curriculum.dims.end: 5
+	data.curriculum.points_train.end: 32
+	data.curriculum.points_train.start: 32
+	data.curriculum.points_val.end: 1024
+	data.curriculum.points_val.start: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-05 21:14:20 INFO About to run command: /usr/bin/env python main.py data=linear-regression data.curriculum.dims.end=5 data.curriculum.points_train.end=32 data.curriculum.points_train.start=32 data.curriculum.points_val.end=1024 data.curriculum.points_val.start=1024 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-05 21:14:25 INFO Running runs: ['w8cdjp5t']
+2024-06-05 21:21:51 INFO Running runs: []
+2024-06-05 21:21:51 INFO Agent received command: run
+2024-06-05 21:21:51 INFO Agent starting run with config:
+	data: gauss-mix-model
+	data.dim: 16
+	data.num_classes: 2
+	data.num_xy_pairs_train: 32
+	data.num_xy_pairs_val: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-05 21:21:51 INFO About to run command: /usr/bin/env python main.py data=gauss-mix-model data.dim=16 data.num_classes=2 data.num_xy_pairs_train=32 data.num_xy_pairs_val=1024 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-05 21:21:56 INFO Running runs: ['pwwxw229']
+2024-06-05 21:43:47 INFO Running runs: []
+2024-06-05 21:43:48 INFO Agent received command: run
+2024-06-05 21:43:48 INFO Agent starting run with config:
+	data: gauss-mix-model
+	data.dim: 16
+	data.num_classes: 2
+	data.num_xy_pairs_train: 2
+	data.num_xy_pairs_val: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-05 21:43:48 INFO About to run command: /usr/bin/env python main.py data=gauss-mix-model data.dim=16 data.num_classes=2 data.num_xy_pairs_train=2 data.num_xy_pairs_val=1024 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-05 21:43:53 INFO Running runs: ['sdud4bc3']
+2024-06-05 22:17:38 INFO Running runs: []
+2024-06-05 22:17:38 INFO Agent received command: run
+2024-06-05 22:17:38 INFO Agent starting run with config:
+	data: gauss-mix-model
+	data.dim: 16
+	data.num_classes: 2
+	data.num_xy_pairs_train: 32
+	data.num_xy_pairs_val: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-05 22:17:38 INFO About to run command: /usr/bin/env python main.py data=gauss-mix-model data.dim=16 data.num_classes=2 data.num_xy_pairs_train=32 data.num_xy_pairs_val=1024 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-05 22:17:43 INFO Running runs: ['feoiwtgz']
+2024-06-05 22:21:20 INFO Running runs: []
+2024-06-05 22:21:21 INFO Agent received command: run
+2024-06-05 22:21:21 INFO Agent starting run with config:
+	data: gauss-mix-model
+	data.dim: 16
+	data.num_classes: 2
+	data.num_xy_pairs_train: 1
+	data.num_xy_pairs_val: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-05 22:21:21 INFO About to run command: /usr/bin/env python main.py data=gauss-mix-model data.dim=16 data.num_classes=2 data.num_xy_pairs_train=1 data.num_xy_pairs_val=1024 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-05 22:21:26 INFO Running runs: ['kgmkfbdd']
+2024-06-05 23:26:02 INFO Running runs: []
+2024-06-05 23:26:03 INFO Agent received command: run
+2024-06-05 23:26:03 INFO Agent starting run with config:
+	data: gauss-mix-model
+	data.dim: 16
+	data.num_classes: 2
+	data.num_xy_pairs_train: 1
+	data.num_xy_pairs_val: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-05 23:26:03 INFO About to run command: /usr/bin/env python main.py data=gauss-mix-model data.dim=16 data.num_classes=2 data.num_xy_pairs_train=1 data.num_xy_pairs_val=1024 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-05 23:26:08 INFO Running runs: ['dg3dr9q3']
+2024-06-05 23:26:51 INFO Running runs: []
+2024-06-05 23:26:51 INFO Agent received command: run
+2024-06-05 23:26:51 INFO Agent starting run with config:
+	data: gauss-mix-model
+	data.dim: 16
+	data.num_classes: 2
+	data.num_xy_pairs_train: 1
+	data.num_xy_pairs_val: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 5947
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-05 23:26:51 INFO About to run command: /usr/bin/env python main.py data=gauss-mix-model data.dim=16 data.num_classes=2 data.num_xy_pairs_train=1 data.num_xy_pairs_val=1024 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=5947 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-05 23:26:56 INFO Running runs: ['oobxnha7']
+2024-06-06 00:21:06 ERROR 400 response executing GraphQL.
+2024-06-06 00:21:06 ERROR {"errors":[{"message":"Invalid sweep config: invalid hyperparameter configuration: data.num_xy_pairs_train","path":["upsertSweep"]}],"data":{"upsertSweep":null}}
+2024-06-06 00:21:06 ERROR Traceback (most recent call last):
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 323, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/lib/gql_request.py", line 56, in execute
+    request.raise_for_status()
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://api.wandb.ai/graphql
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/cli/cli.py", line 102, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/cli/cli.py", line 849, in sweep
+    sweep_id, warnings = api.upsert_sweep(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/internal.py", line 129, in upsert_sweep
+    return self.api.upsert_sweep(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 73, in wrapper
+    raise err
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 2899, in upsert_sweep
+    raise e
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 2893, in upsert_sweep
+    response = self.gql(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 295, in gql
+    ret = self._retry_gql(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/lib/retry.py", line 147, in __call__
+    retry_timedelta_triggered = check_retry_fn(e)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/util.py", line 869, in no_retry_4xx
+    raise UsageError(body["errors"][0]["message"])
+wandb.errors.UsageError: Invalid sweep config: invalid hyperparameter configuration: data.num_xy_pairs_train
+
+2024-06-06 00:27:34 INFO Running runs: []
+2024-06-06 00:27:34 INFO Agent received command: run
+2024-06-06 00:27:34 INFO Agent starting run with config:
+	data: gauss-mix-model
+	data.dim: 16
+	data.num_classes: 2
+	data.num_xy_pairs_train: 32
+	data.num_xy_pairs_val: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: 0.9
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-06 00:27:34 INFO About to run command: /usr/bin/env python main.py data=gauss-mix-model data.dim=16 data.num_classes=2 data.num_xy_pairs_train=32 data.num_xy_pairs_val=1024 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.betas=0.9 optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-06 00:27:39 INFO Running runs: ['41ca8kt5']
+2024-06-06 00:30:40 ERROR Traceback (most recent call last):
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 968, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+ValueError: Sweep edin/gmm-extrapolate/edin/gmm-extrapolate/ not found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/cli/cli.py", line 102, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/cli/cli.py", line 1483, in agent
+    wandb_agent.agent(sweep_id, entity=entity, project=project, count=count)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/wandb_agent.py", line 583, in agent
+    return run_agent(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/wandb_agent.py", line 528, in run_agent
+    agent.run()
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/wandb_agent.py", line 190, in run
+    sweep_obj = self._api.sweep(self._sweep_id, "{}")
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/internal.py", line 126, in sweep
+    return self.api.sweep(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 87, in wrapper
+    raise CommError(message, err).with_traceback(sys.exc_info()[2])
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 968, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+wandb.errors.CommError: Sweep edin/gmm-extrapolate/edin/gmm-extrapolate/ not found
+
+2024-06-06 00:30:43 ERROR Traceback (most recent call last):
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 968, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+ValueError: Sweep edin/lr-extrapolate/edin/lr-extrapolate/ not found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/cli/cli.py", line 102, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/cli/cli.py", line 1483, in agent
+    wandb_agent.agent(sweep_id, entity=entity, project=project, count=count)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/wandb_agent.py", line 583, in agent
+    return run_agent(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/wandb_agent.py", line 528, in run_agent
+    agent.run()
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/wandb_agent.py", line 190, in run
+    sweep_obj = self._api.sweep(self._sweep_id, "{}")
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/internal.py", line 126, in sweep
+    return self.api.sweep(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 87, in wrapper
+    raise CommError(message, err).with_traceback(sys.exc_info()[2])
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 968, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+wandb.errors.CommError: Sweep edin/lr-extrapolate/edin/lr-extrapolate/ not found
+
+2024-06-06 00:30:47 ERROR Traceback (most recent call last):
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 968, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+ValueError: Sweep edin/ar-extrapolate/edin/ar-extrapolate/ not found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/cli/cli.py", line 102, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/cli/cli.py", line 1483, in agent
+    wandb_agent.agent(sweep_id, entity=entity, project=project, count=count)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/wandb_agent.py", line 583, in agent
+    return run_agent(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/wandb_agent.py", line 528, in run_agent
+    agent.run()
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/wandb_agent.py", line 190, in run
+    sweep_obj = self._api.sweep(self._sweep_id, "{}")
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/internal.py", line 126, in sweep
+    return self.api.sweep(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 87, in wrapper
+    raise CommError(message, err).with_traceback(sys.exc_info()[2])
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 968, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+wandb.errors.CommError: Sweep edin/ar-extrapolate/edin/ar-extrapolate/ not found
+
+2024-06-06 00:30:51 ERROR Traceback (most recent call last):
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 968, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+ValueError: Sweep edin/og-p_bursty/edin/og-p_bursty/ not found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/cli/cli.py", line 102, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/cli/cli.py", line 1483, in agent
+    wandb_agent.agent(sweep_id, entity=entity, project=project, count=count)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/wandb_agent.py", line 583, in agent
+    return run_agent(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/wandb_agent.py", line 528, in run_agent
+    agent.run()
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/wandb_agent.py", line 190, in run
+    sweep_obj = self._api.sweep(self._sweep_id, "{}")
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/internal.py", line 126, in sweep
+    return self.api.sweep(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 87, in wrapper
+    raise CommError(message, err).with_traceback(sys.exc_info()[2])
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 968, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+wandb.errors.CommError: Sweep edin/og-p_bursty/edin/og-p_bursty/ not found
+
+2024-06-06 00:32:58 ERROR Traceback (most recent call last):
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 968, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+ValueError: Sweep edin/gmm-extrapolate/edin/gmm-extrapolate/ not found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/cli/cli.py", line 102, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/cli/cli.py", line 1483, in agent
+    wandb_agent.agent(sweep_id, entity=entity, project=project, count=count)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/wandb_agent.py", line 583, in agent
+    return run_agent(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/wandb_agent.py", line 528, in run_agent
+    agent.run()
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/wandb_agent.py", line 190, in run
+    sweep_obj = self._api.sweep(self._sweep_id, "{}")
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/internal.py", line 126, in sweep
+    return self.api.sweep(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 87, in wrapper
+    raise CommError(message, err).with_traceback(sys.exc_info()[2])
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 968, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+wandb.errors.CommError: Sweep edin/gmm-extrapolate/edin/gmm-extrapolate/ not found
+
+2024-06-06 00:33:01 ERROR Traceback (most recent call last):
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 968, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+ValueError: Sweep edin/lr-extrapolate/edin/lr-extrapolate/ not found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/cli/cli.py", line 102, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/cli/cli.py", line 1483, in agent
+    wandb_agent.agent(sweep_id, entity=entity, project=project, count=count)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/wandb_agent.py", line 583, in agent
+    return run_agent(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/wandb_agent.py", line 528, in run_agent
+    agent.run()
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/wandb_agent.py", line 190, in run
+    sweep_obj = self._api.sweep(self._sweep_id, "{}")
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/internal.py", line 126, in sweep
+    return self.api.sweep(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 87, in wrapper
+    raise CommError(message, err).with_traceback(sys.exc_info()[2])
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 968, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+wandb.errors.CommError: Sweep edin/lr-extrapolate/edin/lr-extrapolate/ not found
+
+2024-06-06 00:33:05 ERROR Traceback (most recent call last):
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 968, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+ValueError: Sweep edin/ar-extrapolate/edin/ar-extrapolate/ not found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/cli/cli.py", line 102, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/cli/cli.py", line 1483, in agent
+    wandb_agent.agent(sweep_id, entity=entity, project=project, count=count)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/wandb_agent.py", line 583, in agent
+    return run_agent(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/wandb_agent.py", line 528, in run_agent
+    agent.run()
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/wandb_agent.py", line 190, in run
+    sweep_obj = self._api.sweep(self._sweep_id, "{}")
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/internal.py", line 126, in sweep
+    return self.api.sweep(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 87, in wrapper
+    raise CommError(message, err).with_traceback(sys.exc_info()[2])
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 968, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+wandb.errors.CommError: Sweep edin/ar-extrapolate/edin/ar-extrapolate/ not found
+
+2024-06-06 00:33:07 ERROR Traceback (most recent call last):
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 968, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+ValueError: Sweep edin/gmm-extrapolate/edin/gmm-extrapolate/ not found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/cli/cli.py", line 102, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/cli/cli.py", line 1483, in agent
+    wandb_agent.agent(sweep_id, entity=entity, project=project, count=count)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/wandb_agent.py", line 583, in agent
+    return run_agent(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/wandb_agent.py", line 528, in run_agent
+    agent.run()
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/wandb_agent.py", line 190, in run
+    sweep_obj = self._api.sweep(self._sweep_id, "{}")
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/internal.py", line 126, in sweep
+    return self.api.sweep(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 87, in wrapper
+    raise CommError(message, err).with_traceback(sys.exc_info()[2])
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 968, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+wandb.errors.CommError: Sweep edin/gmm-extrapolate/edin/gmm-extrapolate/ not found
+
+2024-06-06 00:33:09 ERROR Traceback (most recent call last):
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 968, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+ValueError: Sweep edin/og-p_bursty/edin/og-p_bursty/ not found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/cli/cli.py", line 102, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/cli/cli.py", line 1483, in agent
+    wandb_agent.agent(sweep_id, entity=entity, project=project, count=count)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/wandb_agent.py", line 583, in agent
+    return run_agent(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/wandb_agent.py", line 528, in run_agent
+    agent.run()
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/wandb_agent.py", line 190, in run
+    sweep_obj = self._api.sweep(self._sweep_id, "{}")
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/internal.py", line 126, in sweep
+    return self.api.sweep(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 87, in wrapper
+    raise CommError(message, err).with_traceback(sys.exc_info()[2])
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 968, in sweep
+    raise ValueError(f"Sweep {entity}/{project}/{sweep} not found")
+wandb.errors.CommError: Sweep edin/og-p_bursty/edin/og-p_bursty/ not found
+
+2024-06-06 00:41:41 INFO Running runs: []
+2024-06-06 00:41:41 INFO Agent received command: run
+2024-06-06 00:41:41 INFO Agent starting run with config:
+	data: gauss-mix-model
+	data.dim: 16
+	data.num_classes: 2
+	data.num_xy_pairs_train: 32
+	data.num_xy_pairs_val: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: 0.9
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 5947
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-06 00:41:41 INFO About to run command: /usr/bin/env python main.py data=gauss-mix-model data.dim=16 data.num_classes=2 data.num_xy_pairs_train=32 data.num_xy_pairs_val=1024 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.betas=0.9 optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=5947 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-06 00:41:46 INFO Running runs: ['i6iob8cg']
+2024-06-06 00:42:02 INFO Cleaning up finished run: i6iob8cg
+2024-06-06 00:42:16 INFO Running runs: []
+2024-06-06 00:42:16 INFO Agent received command: run
+2024-06-06 00:42:16 INFO Agent starting run with config:
+	data: linear-regression
+	data.curriculum.dims.end: 5
+	data.curriculum.points_train.end: 32
+	data.curriculum.points_train.start: 32
+	data.curriculum.points_val.end: 1024
+	data.curriculum.points_val.start: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: 0.9
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-06 00:42:16 INFO About to run command: /usr/bin/env python main.py data=linear-regression data.curriculum.dims.end=5 data.curriculum.points_train.end=32 data.curriculum.points_train.start=32 data.curriculum.points_val.end=1024 data.curriculum.points_val.start=1024 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.betas=0.9 optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-06 00:42:21 INFO Running runs: ['w1tbt3cg']
+2024-06-06 00:42:31 INFO Cleaning up finished run: w1tbt3cg
+2024-06-06 00:42:45 INFO Running runs: []
+2024-06-06 00:42:45 INFO Agent received command: run
+2024-06-06 00:42:45 INFO Agent starting run with config:
+	data: assoc-recall
+	data.force_target_in_prompt: False
+	data.num_xy_pairs_train: 32
+	data.num_xy_pairs_val: 1024
+	data.vocab_size: 20
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: 0.9
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-06 00:42:45 INFO About to run command: /usr/bin/env python main.py data=assoc-recall data.force_target_in_prompt=False data.num_xy_pairs_train=32 data.num_xy_pairs_val=1024 data.vocab_size=20 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.betas=0.9 optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-06 00:42:50 INFO Running runs: ['xyneqq5o']
+2024-06-06 00:43:00 INFO Cleaning up finished run: xyneqq5o
+2024-06-06 00:43:14 INFO Running runs: []
+2024-06-06 00:43:14 INFO Agent received command: run
+2024-06-06 00:43:14 INFO Agent starting run with config:
+	data: omniglot
+	data.seq_config.p_bursty: 1
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 64
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: 0.9
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.num_workers: 4
+	train.parallel_loss: False
+2024-06-06 00:43:14 INFO About to run command: /usr/bin/env python main.py data=omniglot data.seq_config.p_bursty=1 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=64 model.n_layer=12 optimizer=adamw optimizer.betas=0.9 optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.num_workers=4 train.parallel_loss=False
+2024-06-06 00:43:19 INFO Running runs: ['ud6dq46b']
+2024-06-06 00:43:45 INFO Cleaning up finished run: ud6dq46b
+2024-06-06 00:45:01 INFO Running runs: []
+2024-06-06 00:45:01 INFO Agent received command: run
+2024-06-06 00:45:01 INFO Agent starting run with config:
+	data: gauss-mix-model
+	data.dim: 16
+	data.num_classes: 2
+	data.num_xy_pairs_train: 32
+	data.num_xy_pairs_val: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: 0.9
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 9656
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-06 00:45:01 INFO About to run command: /usr/bin/env python main.py data=gauss-mix-model data.dim=16 data.num_classes=2 data.num_xy_pairs_train=32 data.num_xy_pairs_val=1024 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.betas=0.9 optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=9656 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-06 00:45:06 INFO Running runs: ['vq5ejke2']
+2024-06-06 00:49:53 INFO Running runs: []
+2024-06-06 00:49:54 INFO Agent received command: run
+2024-06-06 00:49:54 INFO Agent starting run with config:
+	data: gauss-mix-model
+	data.dim: 16
+	data.num_classes: 2
+	data.num_xy_pairs_train: 32
+	data.num_xy_pairs_val: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: 0.9
+	optimizer.lr: 0.000316228
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-06 00:49:54 INFO About to run command: /usr/bin/env python main.py data=gauss-mix-model data.dim=16 data.num_classes=2 data.num_xy_pairs_train=32 data.num_xy_pairs_val=1024 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.betas=0.9 optimizer.lr=0.000316228 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-06 00:49:59 INFO Running runs: ['wyqow32h']
+2024-06-06 00:51:54 INFO Running runs: []
+2024-06-06 00:51:54 INFO Agent received command: run
+2024-06-06 00:51:54 INFO Agent starting run with config:
+	data: gauss-mix-model
+	data.dim: 16
+	data.num_classes: 2
+	data.num_xy_pairs_train: 32
+	data.num_xy_pairs_val: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: 0.9
+	optimizer.lr: 0.000316228
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 5947
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-06 00:51:54 INFO About to run command: /usr/bin/env python main.py data=gauss-mix-model data.dim=16 data.num_classes=2 data.num_xy_pairs_train=32 data.num_xy_pairs_val=1024 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.betas=0.9 optimizer.lr=0.000316228 optimizer.weight_decay=0 scheduler.decay_lr=True seed=5947 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-06 00:51:59 INFO Running runs: ['iwuquvi4']
+2024-06-06 00:53:03 ERROR 400 response executing GraphQL.
+2024-06-06 00:53:03 ERROR {"errors":[{"message":"Invalid configuration for hyperparameter 'optimizer.betas'","path":["upsertSweep"]}],"data":{"upsertSweep":null}}
+2024-06-06 00:53:03 ERROR Traceback (most recent call last):
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 323, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/lib/gql_request.py", line 56, in execute
+    request.raise_for_status()
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://api.wandb.ai/graphql
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/cli/cli.py", line 102, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/cli/cli.py", line 849, in sweep
+    sweep_id, warnings = api.upsert_sweep(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/internal.py", line 129, in upsert_sweep
+    return self.api.upsert_sweep(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 73, in wrapper
+    raise err
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 2899, in upsert_sweep
+    raise e
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 2893, in upsert_sweep
+    response = self.gql(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 295, in gql
+    ret = self._retry_gql(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/lib/retry.py", line 147, in __call__
+    retry_timedelta_triggered = check_retry_fn(e)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/util.py", line 869, in no_retry_4xx
+    raise UsageError(body["errors"][0]["message"])
+wandb.errors.UsageError: Invalid configuration for hyperparameter 'optimizer.betas'
+
+2024-06-06 00:53:27 ERROR 400 response executing GraphQL.
+2024-06-06 00:53:27 ERROR {"errors":[{"message":"Invalid sweep config: invalid hyperparameter configuration: optimizer","path":["upsertSweep"]}],"data":{"upsertSweep":null}}
+2024-06-06 00:53:27 ERROR Traceback (most recent call last):
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 323, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/lib/gql_request.py", line 56, in execute
+    request.raise_for_status()
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://api.wandb.ai/graphql
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/cli/cli.py", line 102, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/cli/cli.py", line 849, in sweep
+    sweep_id, warnings = api.upsert_sweep(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/internal.py", line 129, in upsert_sweep
+    return self.api.upsert_sweep(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 73, in wrapper
+    raise err
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 2899, in upsert_sweep
+    raise e
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 2893, in upsert_sweep
+    response = self.gql(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 295, in gql
+    ret = self._retry_gql(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/lib/retry.py", line 147, in __call__
+    retry_timedelta_triggered = check_retry_fn(e)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/util.py", line 869, in no_retry_4xx
+    raise UsageError(body["errors"][0]["message"])
+wandb.errors.UsageError: Invalid sweep config: invalid hyperparameter configuration: optimizer
+
+2024-06-06 00:54:41 ERROR 400 response executing GraphQL.
+2024-06-06 00:54:41 ERROR {"errors":[{"message":"Invalid configuration for hyperparameter 'optimizer.betas'","path":["upsertSweep"]}],"data":{"upsertSweep":null}}
+2024-06-06 00:54:41 ERROR Traceback (most recent call last):
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 323, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/lib/gql_request.py", line 56, in execute
+    request.raise_for_status()
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://api.wandb.ai/graphql
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/cli/cli.py", line 102, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/cli/cli.py", line 849, in sweep
+    sweep_id, warnings = api.upsert_sweep(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/internal.py", line 129, in upsert_sweep
+    return self.api.upsert_sweep(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 73, in wrapper
+    raise err
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 2899, in upsert_sweep
+    raise e
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 2893, in upsert_sweep
+    response = self.gql(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 295, in gql
+    ret = self._retry_gql(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/lib/retry.py", line 147, in __call__
+    retry_timedelta_triggered = check_retry_fn(e)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/util.py", line 869, in no_retry_4xx
+    raise UsageError(body["errors"][0]["message"])
+wandb.errors.UsageError: Invalid configuration for hyperparameter 'optimizer.betas'
+
+2024-06-06 00:54:53 ERROR 400 response executing GraphQL.
+2024-06-06 00:54:53 ERROR {"errors":[{"message":"Invalid configuration for hyperparameter 'optimizer.betas'","path":["upsertSweep"]}],"data":{"upsertSweep":null}}
+2024-06-06 00:54:53 ERROR Traceback (most recent call last):
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 323, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/lib/gql_request.py", line 56, in execute
+    request.raise_for_status()
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://api.wandb.ai/graphql
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/cli/cli.py", line 102, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/cli/cli.py", line 849, in sweep
+    sweep_id, warnings = api.upsert_sweep(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/internal.py", line 129, in upsert_sweep
+    return self.api.upsert_sweep(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 73, in wrapper
+    raise err
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 2899, in upsert_sweep
+    raise e
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 2893, in upsert_sweep
+    response = self.gql(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 295, in gql
+    ret = self._retry_gql(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/lib/retry.py", line 147, in __call__
+    retry_timedelta_triggered = check_retry_fn(e)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/util.py", line 869, in no_retry_4xx
+    raise UsageError(body["errors"][0]["message"])
+wandb.errors.UsageError: Invalid configuration for hyperparameter 'optimizer.betas'
+
+2024-06-06 00:56:06 ERROR 400 response executing GraphQL.
+2024-06-06 00:56:06 ERROR {"errors":[{"message":"Invalid configuration for hyperparameter 'optimizer.betas'","path":["upsertSweep"]}],"data":{"upsertSweep":null}}
+2024-06-06 00:56:06 ERROR Traceback (most recent call last):
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 323, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/lib/gql_request.py", line 56, in execute
+    request.raise_for_status()
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://api.wandb.ai/graphql
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/cli/cli.py", line 102, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/cli/cli.py", line 849, in sweep
+    sweep_id, warnings = api.upsert_sweep(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/internal.py", line 129, in upsert_sweep
+    return self.api.upsert_sweep(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 73, in wrapper
+    raise err
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 2899, in upsert_sweep
+    raise e
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 2893, in upsert_sweep
+    response = self.gql(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 295, in gql
+    ret = self._retry_gql(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/lib/retry.py", line 147, in __call__
+    retry_timedelta_triggered = check_retry_fn(e)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/util.py", line 869, in no_retry_4xx
+    raise UsageError(body["errors"][0]["message"])
+wandb.errors.UsageError: Invalid configuration for hyperparameter 'optimizer.betas'
+
+2024-06-06 00:59:13 INFO Running runs: []
+2024-06-06 00:59:13 INFO Agent received command: run
+2024-06-06 00:59:13 INFO Agent starting run with config:
+	data: gauss-mix-model
+	data.dim: 16
+	data.num_classes: 2
+	data.num_xy_pairs_train: 32
+	data.num_xy_pairs_val: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-06 00:59:13 INFO About to run command: /usr/bin/env python main.py data=gauss-mix-model data.dim=16 data.num_classes=2 data.num_xy_pairs_train=32 data.num_xy_pairs_val=1024 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-06 00:59:18 INFO Running runs: ['574jjnde']
+2024-06-06 01:02:07 INFO Running runs: []
+2024-06-06 01:02:07 INFO Agent received command: run
+2024-06-06 01:02:07 INFO Agent starting run with config:
+	data: gauss-mix-model
+	data.dim: 16
+	data.num_classes: 2
+	data.num_xy_pairs_train: 32
+	data.num_xy_pairs_val: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 5947
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-06 01:02:07 INFO About to run command: /usr/bin/env python main.py data=gauss-mix-model data.dim=16 data.num_classes=2 data.num_xy_pairs_train=32 data.num_xy_pairs_val=1024 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=5947 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-06 01:02:12 INFO Running runs: ['7mi5a3b4']
+2024-06-06 01:04:03 INFO Running runs: []
+2024-06-06 01:04:04 INFO Agent received command: run
+2024-06-06 01:04:04 INFO Agent starting run with config:
+	data: gauss-mix-model
+	data.dim: 16
+	data.num_classes: 2
+	data.num_xy_pairs_train: 32
+	data.num_xy_pairs_val: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 9656
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-06 01:04:04 INFO About to run command: /usr/bin/env python main.py data=gauss-mix-model data.dim=16 data.num_classes=2 data.num_xy_pairs_train=32 data.num_xy_pairs_val=1024 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=9656 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-06 01:04:09 INFO Running runs: ['h1pmnv5h']
+2024-06-06 09:01:50 INFO Cleaning up finished run: h1pmnv5h
+2024-06-06 09:02:06 INFO Running runs: []
+2024-06-06 09:02:06 INFO Agent received command: run
+2024-06-06 09:02:06 INFO Agent starting run with config:
+	data: linear-regression
+	data.curriculum.dims.end: 5
+	data.curriculum.points_train.end: 32
+	data.curriculum.points_train.start: 32
+	data.curriculum.points_val.end: 1024
+	data.curriculum.points_val.start: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-06 09:02:06 INFO About to run command: /usr/bin/env python main.py data=linear-regression data.curriculum.dims.end=5 data.curriculum.points_train.end=32 data.curriculum.points_train.start=32 data.curriculum.points_val.end=1024 data.curriculum.points_val.start=1024 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-06 09:02:11 INFO Running runs: ['sh53nink']
+2024-06-06 09:02:52 INFO Cleaning up finished run: sh53nink
+2024-06-06 09:03:07 INFO Running runs: []
+2024-06-06 09:03:07 INFO Agent received command: run
+2024-06-06 09:03:07 INFO Agent starting run with config:
+	data: assoc-recall
+	data.force_target_in_prompt: False
+	data.num_xy_pairs_train: 32
+	data.num_xy_pairs_val: 1024
+	data.vocab_size: 20
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-06 09:03:07 INFO About to run command: /usr/bin/env python main.py data=assoc-recall data.force_target_in_prompt=False data.num_xy_pairs_train=32 data.num_xy_pairs_val=1024 data.vocab_size=20 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-06 09:03:12 INFO Running runs: ['ufpd93zm']
+2024-06-06 10:42:16 INFO Cleaning up finished run: ufpd93zm
+2024-06-06 10:42:34 INFO Running runs: []
+2024-06-06 10:42:34 INFO Agent received command: run
+2024-06-06 10:42:34 INFO Agent starting run with config:
+	data: omniglot
+	data.seq_config.p_bursty: 1
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 64
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.num_workers: 4
+	train.parallel_loss: False
+2024-06-06 10:42:34 INFO About to run command: /usr/bin/env python main.py data=omniglot data.seq_config.p_bursty=1 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=64 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.num_workers=4 train.parallel_loss=False
+2024-06-06 10:42:39 INFO Running runs: ['6pnx98tw']
+2024-06-06 10:43:05 INFO Cleaning up finished run: 6pnx98tw
+2024-06-06 14:06:48 INFO Running runs: []
+2024-06-06 14:06:48 INFO Agent received command: run
+2024-06-06 14:06:48 INFO Agent starting run with config:
+	data: assoc-recall
+	data.force_target_in_prompt: False
+	data.num_xy_pairs_train: 32
+	data.num_xy_pairs_val: 1024
+	data.vocab_size: 20
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 5947
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-06 14:06:48 INFO About to run command: /usr/bin/env python main.py data=assoc-recall data.force_target_in_prompt=False data.num_xy_pairs_train=32 data.num_xy_pairs_val=1024 data.vocab_size=20 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=5947 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-06 14:06:53 INFO Running runs: ['mbrj82fy']
+2024-06-06 14:07:54 INFO Running runs: []
+2024-06-06 14:07:54 INFO Agent received command: run
+2024-06-06 14:07:54 INFO Agent starting run with config:
+	data: omniglot
+	data.seq_config.p_bursty: 1
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 64
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 5947
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.num_workers: 4
+	train.parallel_loss: False
+2024-06-06 14:07:54 INFO About to run command: /usr/bin/env python main.py data=omniglot data.seq_config.p_bursty=1 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=64 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=5947 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.num_workers=4 train.parallel_loss=False
+2024-06-06 14:07:59 INFO Running runs: ['kuwjgl66']
+2024-06-06 14:08:25 INFO Cleaning up finished run: kuwjgl66
+2024-06-06 14:11:27 INFO Running runs: []
+2024-06-06 14:11:28 INFO Agent received command: run
+2024-06-06 14:11:28 INFO Agent starting run with config:
+	data: omniglot
+	data.seq_config.p_bursty: 1
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 64
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 9656
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.num_workers: 4
+	train.parallel_loss: False
+2024-06-06 14:11:28 INFO About to run command: /usr/bin/env python main.py data=omniglot data.seq_config.p_bursty=1 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=64 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=9656 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.num_workers=4 train.parallel_loss=False
+2024-06-06 14:11:33 INFO Running runs: ['du3qws67']
+2024-06-06 14:11:58 INFO Cleaning up finished run: du3qws67
+2024-06-06 14:12:52 INFO Running runs: []
+2024-06-06 14:12:52 INFO Agent received command: run
+2024-06-06 14:12:52 INFO Agent starting run with config:
+	data: omniglot
+	data.seq_config.p_bursty: 1
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 64
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.000316228
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.num_workers: 4
+	train.parallel_loss: False
+2024-06-06 14:12:52 INFO About to run command: /usr/bin/env python main.py data=omniglot data.seq_config.p_bursty=1 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=64 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.000316228 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.num_workers=4 train.parallel_loss=False
+2024-06-06 14:12:57 INFO Running runs: ['x8rv1yy6']
+2024-06-06 14:13:03 INFO Cleaning up finished run: x8rv1yy6
+2024-06-06 14:13:52 INFO Running runs: []
+2024-06-06 14:13:52 INFO Agent received command: run
+2024-06-06 14:13:52 INFO Agent starting run with config:
+	data: omniglot
+	data.seq_config.p_bursty: 1
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 64
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.000316228
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 5947
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.num_workers: 4
+	train.parallel_loss: False
+2024-06-06 14:13:52 INFO About to run command: /usr/bin/env python main.py data=omniglot data.seq_config.p_bursty=1 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=64 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.000316228 optimizer.weight_decay=0 scheduler.decay_lr=True seed=5947 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.num_workers=4 train.parallel_loss=False
+2024-06-06 14:13:57 INFO Running runs: ['5p1kfsyv']
+2024-06-06 14:14:07 INFO Cleaning up finished run: 5p1kfsyv
+2024-06-06 14:14:18 INFO Running runs: []
+2024-06-06 14:14:19 INFO Agent received command: run
+2024-06-06 14:14:19 INFO Agent starting run with config:
+	data: omniglot
+	data.seq_config.p_bursty: 1
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 64
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.000316228
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 9656
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.num_workers: 4
+	train.parallel_loss: False
+2024-06-06 14:14:19 INFO About to run command: /usr/bin/env python main.py data=omniglot data.seq_config.p_bursty=1 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=64 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.000316228 optimizer.weight_decay=0 scheduler.decay_lr=True seed=9656 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.num_workers=4 train.parallel_loss=False
+2024-06-06 14:14:24 INFO Running runs: ['627u02lk']
+2024-06-06 14:14:49 INFO Cleaning up finished run: 627u02lk
+2024-06-06 14:16:00 INFO Cleaning up finished run: 7mi5a3b4
+2024-06-06 14:16:32 INFO Running runs: []
+2024-06-06 14:16:32 INFO Agent received command: run
+2024-06-06 14:16:32 INFO Agent starting run with config:
+	data: omniglot
+	data.seq_config.p_bursty: 1
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 64
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.num_workers: 4
+	train.parallel_loss: False
+2024-06-06 14:16:32 INFO About to run command: /usr/bin/env python main.py data=omniglot data.seq_config.p_bursty=1 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=64 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.num_workers=4 train.parallel_loss=False
+2024-06-06 14:16:37 INFO Running runs: ['hcn6tgbb']
+2024-06-06 14:17:03 INFO Cleaning up finished run: hcn6tgbb
+2024-06-06 14:21:10 INFO Running runs: []
+2024-06-06 14:21:10 INFO Agent received command: run
+2024-06-06 14:21:10 INFO Agent starting run with config:
+	data: omniglot
+	data.seq_config.p_bursty: 1
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 64
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 5947
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.num_workers: 4
+	train.parallel_loss: False
+2024-06-06 14:21:10 INFO About to run command: /usr/bin/env python main.py data=omniglot data.seq_config.p_bursty=1 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=64 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=5947 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.num_workers=4 train.parallel_loss=False
+2024-06-06 14:21:15 INFO Running runs: ['svgnnwvv']
+2024-06-06 14:21:21 INFO Cleaning up finished run: svgnnwvv
+2024-06-06 14:22:59 INFO Running runs: []
+2024-06-06 14:22:59 INFO Agent received command: run
+2024-06-06 14:22:59 INFO Agent starting run with config:
+	data: omniglot
+	data.seq_config.p_bursty: 1
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 64
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 9656
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.num_workers: 4
+	train.parallel_loss: False
+2024-06-06 14:22:59 INFO About to run command: /usr/bin/env python main.py data=omniglot data.seq_config.p_bursty=1 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=64 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=9656 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.num_workers=4 train.parallel_loss=False
+2024-06-06 14:23:04 INFO Running runs: ['xs9xdqj9']
+2024-06-06 14:23:35 INFO Cleaning up finished run: xs9xdqj9
+2024-06-06 14:25:40 INFO Running runs: []
+2024-06-06 14:25:41 INFO Agent received command: run
+2024-06-06 14:25:41 INFO Agent starting run with config:
+	data: omniglot
+	data.seq_config.p_bursty: 1
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 64
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.000316228
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.num_workers: 4
+	train.parallel_loss: False
+2024-06-06 14:25:41 INFO About to run command: /usr/bin/env python main.py data=omniglot data.seq_config.p_bursty=1 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=64 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.000316228 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.num_workers=4 train.parallel_loss=False
+2024-06-06 14:25:46 INFO Running runs: ['l0cnq7qx']
+2024-06-06 14:57:24 INFO Running runs: []
+2024-06-06 14:57:25 INFO Agent received command: run
+2024-06-06 14:57:25 INFO Agent starting run with config:
+	data: omniglot
+	data.seq_config.p_bursty: 1
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 64
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.000316228
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 5947
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.num_workers: 4
+	train.parallel_loss: False
+2024-06-06 14:57:25 INFO About to run command: /usr/bin/env python main.py data=omniglot data.seq_config.p_bursty=1 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=64 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.000316228 optimizer.weight_decay=0 scheduler.decay_lr=True seed=5947 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.num_workers=4 train.parallel_loss=False
+2024-06-06 14:57:30 INFO Running runs: ['7o6kgtja']
+2024-06-06 14:59:48 INFO Cleaning up finished run: 7o6kgtja
+2024-06-06 15:00:59 INFO Running runs: []
+2024-06-06 15:01:00 INFO Agent received command: run
+2024-06-06 15:01:00 INFO Agent starting run with config:
+	data: omniglot
+	data.seq_config.p_bursty: 1
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 64
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.000316228
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 9656
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.num_workers: 4
+	train.parallel_loss: False
+2024-06-06 15:01:00 INFO About to run command: /usr/bin/env python main.py data=omniglot data.seq_config.p_bursty=1 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=64 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.000316228 optimizer.weight_decay=0 scheduler.decay_lr=True seed=9656 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.num_workers=4 train.parallel_loss=False
+2024-06-06 15:01:05 INFO Running runs: ['lq6waund']
+2024-06-06 15:06:13 INFO Cleaning up finished run: lq6waund
+2024-06-06 15:06:34 INFO Running runs: []
+2024-06-06 15:06:34 INFO Agent received command: run
+2024-06-06 15:06:34 INFO Agent starting run with config:
+	data: omniglot
+	data.seq_config.p_bursty: 1
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 64
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.0001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.num_workers: 4
+	train.parallel_loss: False
+2024-06-06 15:06:34 INFO About to run command: /usr/bin/env python main.py data=omniglot data.seq_config.p_bursty=1 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=64 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.0001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.num_workers=4 train.parallel_loss=False
+2024-06-06 15:06:39 INFO Running runs: ['duox4zib']
+2024-06-06 15:09:54 INFO Running runs: []
+2024-06-06 15:09:55 INFO Agent received command: run
+2024-06-06 15:09:55 INFO Agent starting run with config:
+	data: omniglot
+	data.seq_config.p_bursty: 1
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 64
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.0001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 5947
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.num_workers: 4
+	train.parallel_loss: False
+2024-06-06 15:09:55 INFO About to run command: /usr/bin/env python main.py data=omniglot data.seq_config.p_bursty=1 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=64 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.0001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=5947 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.num_workers=4 train.parallel_loss=False
+2024-06-06 15:10:00 INFO Running runs: ['u4t33dwf']
+2024-06-06 15:36:04 INFO Running runs: []
+2024-06-06 15:36:04 INFO Agent received command: run
+2024-06-06 15:36:04 INFO Agent starting run with config:
+	data: linear-regression
+	data.curriculum.dims.end: 5
+	data.curriculum.points_train.end: 32
+	data.curriculum.points_train.start: 32
+	data.curriculum.points_val.end: 1024
+	data.curriculum.points_val.start: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-06 15:36:04 INFO About to run command: /usr/bin/env python main.py data=linear-regression data.curriculum.dims.end=5 data.curriculum.points_train.end=32 data.curriculum.points_train.start=32 data.curriculum.points_val.end=1024 data.curriculum.points_val.start=1024 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-06 15:36:09 INFO Running runs: ['xa5tsbz7']
+2024-06-06 15:37:52 INFO Running runs: []
+2024-06-06 15:37:53 INFO Agent received command: run
+2024-06-06 15:37:53 INFO Agent starting run with config:
+	data: linear-regression
+	data.curriculum.dims.end: 5
+	data.curriculum.points_train.end: 32
+	data.curriculum.points_train.start: 32
+	data.curriculum.points_val.end: 1024
+	data.curriculum.points_val.start: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 5947
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-06 15:37:53 INFO About to run command: /usr/bin/env python main.py data=linear-regression data.curriculum.dims.end=5 data.curriculum.points_train.end=32 data.curriculum.points_train.start=32 data.curriculum.points_val.end=1024 data.curriculum.points_val.start=1024 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=5947 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-06 15:37:58 INFO Running runs: ['65e9o49m']
+2024-06-06 15:38:54 INFO Cleaning up finished run: 65e9o49m
+2024-06-06 15:43:35 INFO Running runs: []
+2024-06-06 15:43:35 INFO Agent received command: run
+2024-06-06 15:43:35 INFO Agent starting run with config:
+	data: linear-regression
+	data.curriculum.dims.end: 5
+	data.curriculum.points_train.end: 32
+	data.curriculum.points_train.start: 32
+	data.curriculum.points_val.end: 1024
+	data.curriculum.points_val.start: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 9656
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-06 15:43:35 INFO About to run command: /usr/bin/env python main.py data=linear-regression data.curriculum.dims.end=5 data.curriculum.points_train.end=32 data.curriculum.points_train.start=32 data.curriculum.points_val.end=1024 data.curriculum.points_val.start=1024 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=9656 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-06 15:43:40 INFO Running runs: ['6hd46fwk']
+2024-06-06 15:44:31 INFO Cleaning up finished run: 6hd46fwk
+2024-06-06 15:49:22 INFO Running runs: []
+2024-06-06 15:49:22 INFO Agent received command: run
+2024-06-06 15:49:22 INFO Agent starting run with config:
+	data: linear-regression
+	data.curriculum.dims.end: 5
+	data.curriculum.points_train.end: 32
+	data.curriculum.points_train.start: 32
+	data.curriculum.points_val.end: 1024
+	data.curriculum.points_val.start: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.000316228
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-06 15:49:22 INFO About to run command: /usr/bin/env python main.py data=linear-regression data.curriculum.dims.end=5 data.curriculum.points_train.end=32 data.curriculum.points_train.start=32 data.curriculum.points_val.end=1024 data.curriculum.points_val.start=1024 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.000316228 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-06 15:49:27 INFO Running runs: ['apzb7ip5']
+2024-06-06 15:50:18 INFO Cleaning up finished run: apzb7ip5
+2024-06-06 15:50:51 INFO Running runs: []
+2024-06-06 15:50:51 INFO Agent received command: run
+2024-06-06 15:50:51 INFO Agent starting run with config:
+	data: linear-regression
+	data.curriculum.dims.end: 5
+	data.curriculum.points_train.end: 32
+	data.curriculum.points_train.start: 32
+	data.curriculum.points_val.end: 1024
+	data.curriculum.points_val.start: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.000316228
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 5947
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-06 15:50:51 INFO About to run command: /usr/bin/env python main.py data=linear-regression data.curriculum.dims.end=5 data.curriculum.points_train.end=32 data.curriculum.points_train.start=32 data.curriculum.points_val.end=1024 data.curriculum.points_val.start=1024 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.000316228 optimizer.weight_decay=0 scheduler.decay_lr=True seed=5947 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-06 15:50:56 INFO Running runs: ['h411li54']
+2024-06-06 15:56:04 INFO Running runs: []
+2024-06-06 15:56:04 INFO Agent received command: run
+2024-06-06 15:56:04 INFO Agent starting run with config:
+	data: gauss-mix-model
+	data.dim: 16
+	data.num_classes: 2
+	data.num_xy_pairs_train: 32
+	data.num_xy_pairs_val: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-06 15:56:04 INFO About to run command: /usr/bin/env python main.py data=gauss-mix-model data.dim=16 data.num_classes=2 data.num_xy_pairs_train=32 data.num_xy_pairs_val=1024 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-06 15:56:09 INFO Running runs: ['kzhzaquf']
+2024-06-06 19:08:16 INFO Running runs: []
+2024-06-06 19:08:16 INFO Agent received command: run
+2024-06-06 19:08:16 INFO Agent starting run with config:
+	data: linear-regression
+	data.curriculum.dims.end: 5
+	data.curriculum.points_train.end: 32
+	data.curriculum.points_train.start: 32
+	data.curriculum.points_val.end: 1024
+	data.curriculum.points_val.start: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-06 19:08:16 INFO About to run command: /usr/bin/env python main.py data=linear-regression data.curriculum.dims.end=5 data.curriculum.points_train.end=32 data.curriculum.points_train.start=32 data.curriculum.points_val.end=1024 data.curriculum.points_val.start=1024 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-06 19:08:21 INFO Running runs: ['5f1nub0h']
+2024-06-06 19:13:42 INFO Running runs: []
+2024-06-06 19:13:42 INFO Agent received command: run
+2024-06-06 19:13:42 INFO Agent starting run with config:
+	data: assoc-recall
+	data.force_target_in_prompt: False
+	data.num_xy_pairs_train: 32
+	data.num_xy_pairs_val: 1024
+	data.vocab_size: 20
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-06 19:13:42 INFO About to run command: /usr/bin/env python main.py data=assoc-recall data.force_target_in_prompt=False data.num_xy_pairs_train=32 data.num_xy_pairs_val=1024 data.vocab_size=20 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-06 19:13:47 INFO Running runs: ['dg36tz40']
+2024-06-06 19:18:02 INFO Running runs: []
+2024-06-06 19:18:03 INFO Agent received command: run
+2024-06-06 19:18:03 INFO Agent starting run with config:
+	data: omniglot
+	data.seq_config.p_bursty: 1
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 64
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.num_workers: 4
+	train.parallel_loss: False
+2024-06-06 19:18:03 INFO About to run command: /usr/bin/env python main.py data=omniglot data.seq_config.p_bursty=1 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=64 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.num_workers=4 train.parallel_loss=False
+2024-06-06 19:18:08 INFO Running runs: ['yip6cl1a']
+2024-06-06 19:21:19 ERROR 502 response executing GraphQL.
+2024-06-06 19:21:19 ERROR 
+<html><head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>502 Server Error</title>
+</head>
+<body text=#000000 bgcolor=#ffffff>
+<h1>Error: Server Error</h1>
+<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>
+<h2></h2>
+</body></html>
+
+2024-06-06 19:40:47 INFO Agent received command: stop
+2024-06-06 19:40:47 INFO Stop: kzhzaquf
+2024-06-06 19:40:52 INFO Cleaning up finished run: kzhzaquf
+2024-06-06 19:41:02 INFO Agent received command: stop
+2024-06-06 19:41:02 INFO Stop: h411li54
+2024-06-06 19:41:07 INFO Cleaning up finished run: h411li54
+2024-06-06 19:52:00 INFO Running runs: []
+2024-06-06 19:52:00 INFO Agent received command: run
+2024-06-06 19:52:00 INFO Agent starting run with config:
+	data: gauss-mix-model
+	data.dim: 16
+	data.num_classes: 2
+	data.num_xy_pairs_train: 32
+	data.num_xy_pairs_val: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-06 19:52:00 INFO About to run command: /usr/bin/env python main.py data=gauss-mix-model data.dim=16 data.num_classes=2 data.num_xy_pairs_train=32 data.num_xy_pairs_val=1024 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-06 19:52:05 INFO Running runs: ['fo8c39q8']
+2024-06-06 19:52:49 INFO Running runs: []
+2024-06-06 19:52:50 INFO Agent received command: run
+2024-06-06 19:52:50 INFO Agent starting run with config:
+	data: linear-regression
+	data.curriculum.dims.end: 20
+	data.curriculum.points_train.end: 32
+	data.curriculum.points_train.start: 32
+	data.curriculum.points_val.end: 1024
+	data.curriculum.points_val.start: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-06 19:52:50 INFO About to run command: /usr/bin/env python main.py data=linear-regression data.curriculum.dims.end=20 data.curriculum.points_train.end=32 data.curriculum.points_train.start=32 data.curriculum.points_val.end=1024 data.curriculum.points_val.start=1024 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-06 19:52:55 INFO Running runs: ['a9ujh0x8']
+2024-06-06 19:55:35 INFO Running runs: []
+2024-06-06 19:55:36 INFO Agent received command: run
+2024-06-06 19:55:36 INFO Agent starting run with config:
+	data: assoc-recall
+	data.force_target_in_prompt: False
+	data.num_xy_pairs_train: 32
+	data.num_xy_pairs_val: 1024
+	data.vocab_size: 20
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-06 19:55:36 INFO About to run command: /usr/bin/env python main.py data=assoc-recall data.force_target_in_prompt=False data.num_xy_pairs_train=32 data.num_xy_pairs_val=1024 data.vocab_size=20 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-06 19:55:41 INFO Running runs: ['aujtfagw']
+2024-06-06 21:13:41 ERROR 502 response executing GraphQL.
+2024-06-06 21:13:41 ERROR 
+<html><head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>502 Server Error</title>
+</head>
+<body text=#000000 bgcolor=#ffffff>
+<h1>Error: Server Error</h1>
+<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>
+<h2></h2>
+</body></html>
+
+2024-06-06 21:37:56 ERROR 502 response executing GraphQL.
+2024-06-06 21:37:56 ERROR 
+<html><head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>502 Server Error</title>
+</head>
+<body text=#000000 bgcolor=#ffffff>
+<h1>Error: Server Error</h1>
+<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>
+<h2></h2>
+</body></html>
+
+2024-06-06 22:03:30 INFO Agent received command: stop
+2024-06-06 22:03:30 INFO Stop: fo8c39q8
+2024-06-06 22:03:35 INFO Cleaning up finished run: fo8c39q8
+2024-06-06 22:07:47 INFO Running runs: []
+2024-06-06 22:07:48 INFO Agent received command: run
+2024-06-06 22:07:48 INFO Agent starting run with config:
+	data: gauss-mix-model
+	data.dim: 16
+	data.num_classes: 2
+	data.num_xy_pairs_train: 32
+	data.num_xy_pairs_val: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.lr: 0.000316228
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-06 22:07:48 INFO About to run command: /usr/bin/env python main.py data=gauss-mix-model data.dim=16 data.num_classes=2 data.num_xy_pairs_train=32 data.num_xy_pairs_val=1024 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.lr=0.000316228 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-06 22:07:53 INFO Running runs: ['xl80ejtv']
+2024-06-07 00:03:07 INFO Agent received command: stop
+2024-06-07 00:03:07 INFO Stop: xl80ejtv
+2024-06-07 00:03:12 INFO Cleaning up finished run: xl80ejtv
+2024-06-07 00:06:44 INFO Running runs: []
+2024-06-07 00:06:44 INFO Agent received command: run
+2024-06-07 00:06:44 INFO Agent starting run with config:
+	data: gauss-mix-model
+	data.dim: 16
+	data.num_classes: 8
+	data.num_xy_pairs_train: 32
+	data.num_xy_pairs_val: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: hyena
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-07 00:06:44 INFO About to run command: /usr/bin/env python main.py data=gauss-mix-model data.dim=16 data.num_classes=8 data.num_xy_pairs_train=32 data.num_xy_pairs_val=1024 eval.every=5000 eval.iters=1000 model=hyena model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-07 00:06:49 INFO Running runs: ['zr2hlv6y']
+2024-06-07 03:33:26 INFO Cleaning up finished run: u4t33dwf
+2024-06-07 09:23:08 INFO Cleaning up finished run: aujtfagw
+2024-06-07 12:17:03 INFO Running runs: []
+2024-06-07 12:17:03 INFO Agent received command: run
+2024-06-07 12:17:03 INFO Agent starting run with config:
+	data: lang-model
+	data.preprocessing_num_workers: 20
+	data.version: original
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 800
+	model.max_seq_len: 512
+	model.n_layer: 8
+	optimizer: adamw
+	optimizer.lr: 0.000316228
+	optimizer.weight_decay: 0
+	save_checkpoints: True
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 50
+	train.do_early_stop: False
+	train.iters: 200001
+	train.log_every: 1000
+	train.num_workers: 0
+	train.parallel_loss: True
+	train.save_every: 50000
+2024-06-07 12:17:03 INFO About to run command: /usr/bin/env python main.py data=lang-model data.preprocessing_num_workers=20 data.version=original eval.every=5000 eval.iters=1000 model=mamba model.d_model=800 model.max_seq_len=512 model.n_layer=8 optimizer=adamw optimizer.lr=0.000316228 optimizer.weight_decay=0 save_checkpoints=True scheduler.decay_lr=True seed=2059 train.batch_size=50 train.do_early_stop=False train.iters=200001 train.log_every=1000 train.num_workers=0 train.parallel_loss=True train.save_every=50000
+2024-06-07 12:17:08 INFO Running runs: ['0c2ua5wm']
+2024-06-07 12:17:20 INFO Agent received command: stop
+2024-06-07 12:17:20 INFO Stop: a9ujh0x8
+2024-06-07 12:17:26 INFO Cleaning up finished run: a9ujh0x8
+2024-06-07 14:59:03 INFO Cleaning up finished run: zr2hlv6y
+2024-06-07 21:17:22 INFO Agent received command: stop
+2024-06-07 21:17:22 INFO Stop: 0c2ua5wm
+2024-06-07 21:17:27 INFO Cleaning up finished run: 0c2ua5wm
+2024-06-07 21:30:41 INFO Running runs: []
+2024-06-07 21:30:41 INFO Agent received command: run
+2024-06-07 21:30:41 INFO Agent starting run with config:
+	data: linear-regression
+	data.curriculum.dims.end: 20
+	data.curriculum.points_train.end: 32
+	data.curriculum.points_train.start: 32
+	data.curriculum.points_val.end: 1024
+	data.curriculum.points_val.start: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-07 21:30:41 INFO About to run command: /usr/bin/env python main.py data=linear-regression data.curriculum.dims.end=20 data.curriculum.points_train.end=32 data.curriculum.points_train.start=32 data.curriculum.points_val.end=1024 data.curriculum.points_val.start=1024 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-07 21:31:03 INFO Running runs: []
+2024-06-07 21:31:03 INFO Agent received command: run
+2024-06-07 21:31:03 INFO Agent starting run with config:
+	data: linear-regression
+	data.curriculum.dims.end: 20
+	data.curriculum.points_train.end: 32
+	data.curriculum.points_train.start: 32
+	data.curriculum.points_val.end: 1024
+	data.curriculum.points_val.start: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 5947
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-07 21:31:03 INFO About to run command: /usr/bin/env python main.py data=linear-regression data.curriculum.dims.end=20 data.curriculum.points_train.end=32 data.curriculum.points_train.start=32 data.curriculum.points_val.end=1024 data.curriculum.points_val.start=1024 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=5947 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-07 21:31:08 INFO Running runs: ['kok9c8be']
+2024-06-07 21:31:13 INFO Cleaning up finished run: kok9c8be
+2024-06-07 21:33:03 INFO Running runs: []
+2024-06-07 21:33:03 INFO Agent received command: run
+2024-06-07 21:33:03 INFO Agent starting run with config:
+	data: linear-regression
+	data.curriculum.dims.end: 20
+	data.curriculum.points_train.end: 32
+	data.curriculum.points_train.start: 32
+	data.curriculum.points_val.end: 1024
+	data.curriculum.points_val.start: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 9656
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-07 21:33:03 INFO About to run command: /usr/bin/env python main.py data=linear-regression data.curriculum.dims.end=20 data.curriculum.points_train.end=32 data.curriculum.points_train.start=32 data.curriculum.points_val.end=1024 data.curriculum.points_val.start=1024 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=9656 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-07 21:33:08 INFO Running runs: ['kkfhhcyz']
+2024-06-07 21:48:31 INFO Running runs: []
+2024-06-07 21:48:31 INFO Agent received command: run
+2024-06-07 21:48:31 INFO Agent starting run with config:
+	data: gauss-mix-model
+	data.dim: 16
+	data.num_classes: 8
+	data.num_xy_pairs_train: 32
+	data.num_xy_pairs_val: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: hyena
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-07 21:48:31 INFO About to run command: /usr/bin/env python main.py data=gauss-mix-model data.dim=16 data.num_classes=8 data.num_xy_pairs_train=32 data.num_xy_pairs_val=1024 eval.every=5000 eval.iters=1000 model=hyena model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-07 21:48:36 INFO Running runs: ['4mson9n6']
+2024-06-07 21:57:06 INFO Running runs: []
+2024-06-07 21:57:06 INFO Agent received command: run
+2024-06-07 21:57:06 INFO Agent starting run with config:
+	data: assoc-recall
+	data.force_target_in_prompt: False
+	data.num_xy_pairs_train: 32
+	data.num_xy_pairs_val: 1024
+	data.vocab_size: 20
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-07 21:57:06 INFO About to run command: /usr/bin/env python main.py data=assoc-recall data.force_target_in_prompt=False data.num_xy_pairs_train=32 data.num_xy_pairs_val=1024 data.vocab_size=20 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+2024-06-07 21:57:11 INFO Running runs: ['1n6qmu8d']
+2024-06-07 21:59:49 INFO Running runs: []
+2024-06-07 21:59:50 INFO Agent received command: run
+2024-06-07 21:59:50 INFO Agent starting run with config:
+	data: omniglot
+	data.seq_config.p_bursty: 0.9
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 64
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: [0.9, 0.95]
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.num_workers: 4
+	train.parallel_loss: False
+2024-06-07 21:59:50 INFO About to run command: /usr/bin/env python main.py data=omniglot data.seq_config.p_bursty=0.9 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=64 model.n_layer=12 optimizer=adamw "optimizer.betas=[0.9, 0.95]" optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.num_workers=4 train.parallel_loss=False
+2024-06-07 21:59:55 INFO Running runs: ['12ln0eky']
+2024-06-07 22:02:38 INFO Running runs: []
+2024-06-07 22:02:38 INFO Agent received command: run
+2024-06-07 22:02:38 INFO Agent starting run with config:
+	data: lang-model
+	data.preprocessing_num_workers: 20
+	data.version: original
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 800
+	model.max_seq_len: 512
+	model.n_layer: 8
+	optimizer: adamw
+	optimizer.lr: 0.000316228
+	optimizer.weight_decay: 0
+	save_checkpoints: True
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 50
+	train.do_early_stop: False
+	train.iters: 200001
+	train.log_every: 1000
+	train.num_workers: 0
+	train.parallel_loss: True
+	train.save_every: 50000
+2024-06-07 22:02:38 INFO About to run command: /usr/bin/env python main.py data=lang-model data.preprocessing_num_workers=20 data.version=original eval.every=5000 eval.iters=1000 model=mamba model.d_model=800 model.max_seq_len=512 model.n_layer=8 optimizer=adamw optimizer.lr=0.000316228 optimizer.weight_decay=0 save_checkpoints=True scheduler.decay_lr=True seed=2059 train.batch_size=50 train.do_early_stop=False train.iters=200001 train.log_every=1000 train.num_workers=0 train.parallel_loss=True train.save_every=50000
+2024-06-07 22:02:43 INFO Running runs: ['d9n1eknp']

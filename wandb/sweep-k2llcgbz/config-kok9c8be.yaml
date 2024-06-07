@@ -1,0 +1,50 @@
+wandb_version: 1
+
+data:
+  value: linear-regression
+data.curriculum.dims.end:
+  value: 20
+data.curriculum.points_train.end:
+  value: 32
+data.curriculum.points_train.start:
+  value: 32
+data.curriculum.points_val.end:
+  value: 1024
+data.curriculum.points_val.start:
+  value: 1024
+eval.every:
+  value: 5000
+eval.iters:
+  value: 1000
+model:
+  value: mamba
+model.d_model:
+  value: 64
+model.max_seq_len:
+  value: 4096
+model.n_layer:
+  value: 12
+optimizer:
+  value: adamw
+optimizer.betas:
+  value:
+  - 0.9
+  - 0.95
+optimizer.lr:
+  value: 0.001
+optimizer.weight_decay:
+  value: 0
+scheduler.decay_lr:
+  value: true
+seed:
+  value: 5947
+train.batch_size:
+  value: 128
+train.do_early_stop:
+  value: false
+train.iters:
+  value: 100001
+train.log_every:
+  value: 1000
+train.parallel_loss:
+  value: true

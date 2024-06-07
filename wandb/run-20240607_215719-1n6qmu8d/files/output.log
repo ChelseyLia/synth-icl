@@ -1,0 +1,269 @@
+[34m[1mwandb[39m[22m: [33mWARNING[39m Config item 'seed' was locked by 'sweep' (ignored update).
+[34m[1mwandb[39m[22m: [33mWARNING[39m Config item 'optimizer' was locked by 'sweep' (ignored update).
+[34m[1mwandb[39m[22m: [33mWARNING[39m Config item 'model' was locked by 'sweep' (ignored update).
+[34m[1mwandb[39m[22m: [33mWARNING[39m Config item 'data' was locked by 'sweep' (ignored update).
+CONFIG
+├── seed
+│   └── 2059
+├── seed_eval
+│   └── 2000
+├── seed_test
+│   └── 3000
+├── device
+│   └── cuda
+├── train
+│   └── do: true
+│       do_save: false
+│       reset_every: null
+│       dtype: float32
+│       compile: false
+│       do_amp: false
+│       batch_size: 128
+│       grad_clip: 1.0
+│       iters: 100001
+│       samples: null
+│       log_every: 1000
+│       save_every: 100000
+│       save_path: ./out
+│       num_workers: 0
+│       do_early_stop: false
+│       early_stop_patience: 5
+│       early_stop_metric: loss
+│       early_stop_tol: 0.001
+│       early_stop_start_iter: 20000.2
+│       early_stop_acc: null
+│       parallel_loss: true
+│       merge_embeds: false
+│       merge_type: sum
+│
+├── eval
+│   └── do: true
+│       split: both
+│       batch_size: 1
+│       every: 5000
+│       every_samples: null
+│       iters: 1000
+│
+├── scheduler
+│   └── decay_lr: true
+│       warmup_iters: 20000.2
+│       lr_decay_iters: 100001
+│       min_lr: 0.0001
+│
+├── optimizer
+│   └── lr: 0.001
+│       _name_: adamw
+│       weight_decay: 0
+│       betas:
+│       - 0.9
+│       - 0.95
+│
+├── log_level
+│   └── info
+├── examples_to_log
+│   └── 3
+├── log_batch_idx
+│   └── [0, 1]
+├── wandb
+│   └── project: icl-arch
+│
+├── save_checkpoints
+│   └── False
+├── nl_icl
+│   └── do: false
+│       checkpoint_path: null
+│       hf_path: null
+│       task: sentiment
+│       n_seeds: 10
+│       min_examples_per_class: 0
+│       max_examples_per_class: 9
+│       do_full_vocab: true
+│
+├── do_count_param_only
+│   └── False
+├── model
+│   └── _name_: mamba
+│       d_model: 64
+│       n_layer: 12
+│       norm_epsilon: 1.0e-05
+│       rms_norm: false
+│       fused_add_norm: false
+│       residual_in_fp32: false
+│       max_seq_len: 4096
+│
+└── data
+    └── _name_: assoc-recall
+        vocab_size: 20
+        num_xy_pairs_train: 32
+        num_xy_pairs_val: 1024
+        force_target_in_prompt: false
+head.linear.weight: 1280
+head.linear.bias: 20
+mamba.backbone.layers.0.mixer.A_log: 2048
+mamba.backbone.layers.0.mixer.D: 128
+mamba.backbone.layers.0.mixer.in_proj.weight: 16384
+mamba.backbone.layers.0.mixer.conv1d.weight: 512
+mamba.backbone.layers.0.mixer.conv1d.bias: 128
+mamba.backbone.layers.0.mixer.x_proj.weight: 4608
+mamba.backbone.layers.0.mixer.dt_proj.weight: 512
+mamba.backbone.layers.0.mixer.dt_proj.bias: 128
+mamba.backbone.layers.0.mixer.out_proj.weight: 8192
+mamba.backbone.layers.0.norm.weight: 64
+mamba.backbone.layers.1.mixer.A_log: 2048
+mamba.backbone.layers.1.mixer.D: 128
+mamba.backbone.layers.1.mixer.in_proj.weight: 16384
+mamba.backbone.layers.1.mixer.conv1d.weight: 512
+mamba.backbone.layers.1.mixer.conv1d.bias: 128
+mamba.backbone.layers.1.mixer.x_proj.weight: 4608
+mamba.backbone.layers.1.mixer.dt_proj.weight: 512
+mamba.backbone.layers.1.mixer.dt_proj.bias: 128
+mamba.backbone.layers.1.mixer.out_proj.weight: 8192
+mamba.backbone.layers.1.norm.weight: 64
+mamba.backbone.layers.2.mixer.A_log: 2048
+mamba.backbone.layers.2.mixer.D: 128
+mamba.backbone.layers.2.mixer.in_proj.weight: 16384
+mamba.backbone.layers.2.mixer.conv1d.weight: 512
+mamba.backbone.layers.2.mixer.conv1d.bias: 128
+mamba.backbone.layers.2.mixer.x_proj.weight: 4608
+mamba.backbone.layers.2.mixer.dt_proj.weight: 512
+mamba.backbone.layers.2.mixer.dt_proj.bias: 128
+mamba.backbone.layers.2.mixer.out_proj.weight: 8192
+mamba.backbone.layers.2.norm.weight: 64
+mamba.backbone.layers.3.mixer.A_log: 2048
+mamba.backbone.layers.3.mixer.D: 128
+mamba.backbone.layers.3.mixer.in_proj.weight: 16384
+mamba.backbone.layers.3.mixer.conv1d.weight: 512
+mamba.backbone.layers.3.mixer.conv1d.bias: 128
+mamba.backbone.layers.3.mixer.x_proj.weight: 4608
+mamba.backbone.layers.3.mixer.dt_proj.weight: 512
+mamba.backbone.layers.3.mixer.dt_proj.bias: 128
+mamba.backbone.layers.3.mixer.out_proj.weight: 8192
+mamba.backbone.layers.3.norm.weight: 64
+mamba.backbone.layers.4.mixer.A_log: 2048
+mamba.backbone.layers.4.mixer.D: 128
+mamba.backbone.layers.4.mixer.in_proj.weight: 16384
+mamba.backbone.layers.4.mixer.conv1d.weight: 512
+mamba.backbone.layers.4.mixer.conv1d.bias: 128
+mamba.backbone.layers.4.mixer.x_proj.weight: 4608
+mamba.backbone.layers.4.mixer.dt_proj.weight: 512
+mamba.backbone.layers.4.mixer.dt_proj.bias: 128
+mamba.backbone.layers.4.mixer.out_proj.weight: 8192
+mamba.backbone.layers.4.norm.weight: 64
+mamba.backbone.layers.5.mixer.A_log: 2048
+mamba.backbone.layers.5.mixer.D: 128
+mamba.backbone.layers.5.mixer.in_proj.weight: 16384
+mamba.backbone.layers.5.mixer.conv1d.weight: 512
+mamba.backbone.layers.5.mixer.conv1d.bias: 128
+mamba.backbone.layers.5.mixer.x_proj.weight: 4608
+mamba.backbone.layers.5.mixer.dt_proj.weight: 512
+mamba.backbone.layers.5.mixer.dt_proj.bias: 128
+mamba.backbone.layers.5.mixer.out_proj.weight: 8192
+mamba.backbone.layers.5.norm.weight: 64
+mamba.backbone.layers.6.mixer.A_log: 2048
+mamba.backbone.layers.6.mixer.D: 128
+mamba.backbone.layers.6.mixer.in_proj.weight: 16384
+mamba.backbone.layers.6.mixer.conv1d.weight: 512
+mamba.backbone.layers.6.mixer.conv1d.bias: 128
+mamba.backbone.layers.6.mixer.x_proj.weight: 4608
+mamba.backbone.layers.6.mixer.dt_proj.weight: 512
+mamba.backbone.layers.6.mixer.dt_proj.bias: 128
+mamba.backbone.layers.6.mixer.out_proj.weight: 8192
+mamba.backbone.layers.6.norm.weight: 64
+mamba.backbone.layers.7.mixer.A_log: 2048
+mamba.backbone.layers.7.mixer.D: 128
+mamba.backbone.layers.7.mixer.in_proj.weight: 16384
+mamba.backbone.layers.7.mixer.conv1d.weight: 512
+mamba.backbone.layers.7.mixer.conv1d.bias: 128
+mamba.backbone.layers.7.mixer.x_proj.weight: 4608
+mamba.backbone.layers.7.mixer.dt_proj.weight: 512
+mamba.backbone.layers.7.mixer.dt_proj.bias: 128
+mamba.backbone.layers.7.mixer.out_proj.weight: 8192
+mamba.backbone.layers.7.norm.weight: 64
+mamba.backbone.layers.8.mixer.A_log: 2048
+mamba.backbone.layers.8.mixer.D: 128
+mamba.backbone.layers.8.mixer.in_proj.weight: 16384
+mamba.backbone.layers.8.mixer.conv1d.weight: 512
+mamba.backbone.layers.8.mixer.conv1d.bias: 128
+mamba.backbone.layers.8.mixer.x_proj.weight: 4608
+mamba.backbone.layers.8.mixer.dt_proj.weight: 512
+mamba.backbone.layers.8.mixer.dt_proj.bias: 128
+mamba.backbone.layers.8.mixer.out_proj.weight: 8192
+mamba.backbone.layers.8.norm.weight: 64
+mamba.backbone.layers.9.mixer.A_log: 2048
+mamba.backbone.layers.9.mixer.D: 128
+mamba.backbone.layers.9.mixer.in_proj.weight: 16384
+mamba.backbone.layers.9.mixer.conv1d.weight: 512
+mamba.backbone.layers.9.mixer.conv1d.bias: 128
+mamba.backbone.layers.9.mixer.x_proj.weight: 4608
+mamba.backbone.layers.9.mixer.dt_proj.weight: 512
+mamba.backbone.layers.9.mixer.dt_proj.bias: 128
+mamba.backbone.layers.9.mixer.out_proj.weight: 8192
+mamba.backbone.layers.9.norm.weight: 64
+mamba.backbone.layers.10.mixer.A_log: 2048
+mamba.backbone.layers.10.mixer.D: 128
+mamba.backbone.layers.10.mixer.in_proj.weight: 16384
+mamba.backbone.layers.10.mixer.conv1d.weight: 512
+mamba.backbone.layers.10.mixer.conv1d.bias: 128
+mamba.backbone.layers.10.mixer.x_proj.weight: 4608
+mamba.backbone.layers.10.mixer.dt_proj.weight: 512
+mamba.backbone.layers.10.mixer.dt_proj.bias: 128
+mamba.backbone.layers.10.mixer.out_proj.weight: 8192
+mamba.backbone.layers.10.norm.weight: 64
+mamba.backbone.layers.11.mixer.A_log: 2048
+mamba.backbone.layers.11.mixer.D: 128
+mamba.backbone.layers.11.mixer.in_proj.weight: 16384
+mamba.backbone.layers.11.mixer.conv1d.weight: 512
+mamba.backbone.layers.11.mixer.conv1d.bias: 128
+mamba.backbone.layers.11.mixer.x_proj.weight: 4608
+mamba.backbone.layers.11.mixer.dt_proj.weight: 512
+mamba.backbone.layers.11.mixer.dt_proj.bias: 128
+mamba.backbone.layers.11.mixer.out_proj.weight: 8192
+mamba.backbone.layers.11.norm.weight: 64
+mamba.backbone.norm_f.weight: 64
+n_params=393812
+ignored=[('embedder.embedder.weight', 1280)]
+  0%|                                                                                                                    | 0/100001 [00:00<?, ?it/s]
+  0%|                                                                                                                      | 0/1000 [00:00<?, ?it/s]
+[[split=train]] train_iter: 0, batch_idx: 0, input: [4, 7, 19, 11, 9, 3, 14, 16, 12, 2], target: [7, 11, 3, 16, 2, 7, 13, 3, 16, 11]
+[[split=train]] train_iter: 0, batch_idx: 1, input: [11, 3, 0, 4, 2, 18, 15, 10, 2, 18], target: [3, 4, 18, 10, 18, 10, 1, 3, 8, 6]
+
+  0%|                                                                                                            | 1/1000 [00:10<2:52:56, 10.39s/it]
+[[split=eval]] train_iter: 0, eval_iter: 1, batch_idx: 0, input: [14, 1, 10, 0, 12, 7, 15, 2, 14, 1], target: [1, 0, 7, 2, 1, 13, 18, 0, 16, 2]
+
+
+
+
+
+
+ 10%|██████████▊                                                                                                  | 99/1000 [00:01<00:09, 91.07it/s]
+[[split=test]] train_iter: 0, eval_iter: 0, batch_idx: 0, input: [18, 15, 13, 4, 3, 19, 16, 10, 13, 4], target: [15, 4, 19, 10, 4, 7, 1, 4, 10, 15]
+[[split=test]] train_iter: 0, eval_iter: 1, batch_idx: 0, input: [7, 16, 17, 9, 12, 8, 2, 4, 2, 4], target: [16, 9, 8, 4, 4, 19, 16, 6, 8, 9]
+
+
+
+
+
+
+  0%|                                                                                                        | 17/100001 [00:42<12:12:06,  2.28it/s]
+[[split=train]] train_iter: 1, batch_idx: 0, input: [8, 0, 16, 10, 1, 14, 16, 10, 8, 0], target: [0, 10, 14, 10, 0, 18, 5, 11, 0, 2]
+[[split=train]] train_iter: 1, batch_idx: 1, input: [18, 15, 8, 17, 0, 2, 5, 19, 16, 6], target: [15, 17, 2, 19, 6, 1, 11, 11, 11, 6]
+[[split=train]] train_iter: 2, batch_idx: 0, input: [2, 9, 7, 5, 19, 4, 3, 6, 7, 5], target: [9, 5, 4, 6, 5, 4, 10, 6, 5, 17]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  1%|▌                                                                                                       | 599/100001 [01:17<1:40:50, 16.43it/s]

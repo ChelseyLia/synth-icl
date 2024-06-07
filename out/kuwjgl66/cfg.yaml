@@ -1,0 +1,116 @@
+seed: 5947
+seed_eval: 2000
+seed_test: 3000
+device: cuda
+train:
+  do: true
+  do_save: false
+  reset_every: null
+  dtype: float32
+  compile: false
+  do_amp: false
+  batch_size: 128
+  grad_clip: 1.0
+  iters: 100001
+  samples: null
+  log_every: 1000
+  save_every: 100000
+  save_path: ./out
+  num_workers: 4
+  do_early_stop: false
+  early_stop_patience: 5
+  early_stop_metric: loss
+  early_stop_tol: 0.001
+  early_stop_start_iter: ${scheduler.warmup_iters}
+  early_stop_acc: null
+  parallel_loss: false
+  merge_embeds: false
+  merge_type: sum
+eval:
+  do: true
+  split: both
+  batch_size: 1
+  every: 5000
+  every_samples: null
+  iters: 1000
+scheduler:
+  decay_lr: true
+  warmup_iters: ${eval:'${train.iters} * 0.2'}
+  lr_decay_iters: ${train.iters}
+  min_lr: ${eval:'${optimizer.lr} / 10'}
+optimizer:
+  lr: 0.001
+  _name_: adamw
+  weight_decay: 0
+  betas:
+  - 0.9
+  - 0.95
+log_level: info
+examples_to_log: 3
+log_batch_idx:
+- 0
+- 1
+wandb:
+  project: icl-arch
+save_checkpoints: false
+nl_icl:
+  do: false
+  checkpoint_path: null
+  hf_path: null
+  task: sentiment
+  n_seeds: 10
+  min_examples_per_class: 0
+  max_examples_per_class: 9
+  do_full_vocab: true
+do_count_param_only: false
+model:
+  _name_: mamba
+  d_model: 64
+  n_layer: 12
+  norm_epsilon: 1.0e-05
+  rms_norm: false
+  fused_add_norm: false
+  residual_in_fp32: false
+  max_seq_len: 64
+embedder:
+  example_encoding: resnet
+  flatten_superpixels: false
+  example_dropout_prob: 0.0
+  concatenate_labels: false
+  use_positional_encodings: false
+  positional_dropout_prob: 0.0
+data:
+  _name_: omniglot
+  num_classes: 1623
+  train_seqs: bursty
+  eval_seqs: fewshot_holdout
+  example_type: omniglot
+  generator_config:
+    n_rare_classes: 1603
+    n_common_classes: 10
+    n_holdout_classes: 10
+    zipf_exponent: 0.0
+    use_zipf_for_common_rare: false
+    noise_scale: 0.0
+    preserve_ordering_every_n: null
+  omniglot_config:
+    omniglot_split: all
+    exemplars: all
+    augment_images: false
+  symbolic_config:
+    dataset_size: 1000
+  seq_config:
+    seq_len: 9
+    fs_shots: 4
+    bursty_shots: 3
+    ways: 2
+    p_bursty: 1
+    p_bursty_common: 0.0
+    p_bursty_zipfian: 1.0
+    p_fewshot: 0.1
+    non_bursty_type: zipfian
+    labeling_common: ordered
+    labeling_rare: ordered
+    randomly_generate_rare: false
+    grouped: false
+run_path: out/kuwjgl66

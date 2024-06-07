@@ -1,0 +1,37 @@
+wandb: Starting wandb agent 🕵️
+2024-06-06 00:27:34,661 - wandb.wandb_agent - INFO - Running runs: []
+2024-06-06 00:27:34,902 - wandb.wandb_agent - INFO - Agent received command: run
+2024-06-06 00:27:34,902 - wandb.wandb_agent - INFO - Agent starting run with config:
+	data: gauss-mix-model
+	data.dim: 16
+	data.num_classes: 2
+	data.num_xy_pairs_train: 32
+	data.num_xy_pairs_val: 1024
+	eval.every: 5000
+	eval.iters: 1000
+	model: mamba
+	model.d_model: 64
+	model.max_seq_len: 4096
+	model.n_layer: 12
+	optimizer: adamw
+	optimizer.betas: 0.9
+	optimizer.lr: 0.001
+	optimizer.weight_decay: 0
+	scheduler.decay_lr: True
+	seed: 2059
+	train.batch_size: 128
+	train.do_early_stop: False
+	train.iters: 100001
+	train.log_every: 1000
+	train.parallel_loss: True
+2024-06-06 00:27:34,905 - wandb.wandb_agent - INFO - About to run command: /usr/bin/env python main.py data=gauss-mix-model data.dim=16 data.num_classes=2 data.num_xy_pairs_train=32 data.num_xy_pairs_val=1024 eval.every=5000 eval.iters=1000 model=mamba model.d_model=64 model.max_seq_len=4096 model.n_layer=12 optimizer=adamw optimizer.betas=0.9 optimizer.lr=0.001 optimizer.weight_decay=0 scheduler.decay_lr=True seed=2059 train.batch_size=128 train.do_early_stop=False train.iters=100001 train.log_every=1000 train.parallel_loss=True
+[2024-06-06 00:27:37,620] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+2024-06-06 00:27:39,917 - wandb.wandb_agent - INFO - Running runs: ['41ca8kt5']
+wandb: Ctrl-c pressed. Waiting for runs to end. Press ctrl-c again to terminate them.
+DEBUG:matplotlib:matplotlib data path: /root/anaconda3/envs/icl/lib/python3.10/site-packages/matplotlib/mpl-data
+DEBUG:matplotlib:CONFIGDIR=/root/.config/matplotlib
+DEBUG:matplotlib:interactive is False
+DEBUG:matplotlib:platform is linux
+DEBUG:matplotlib:CACHEDIR=/root/.cache/matplotlib
+DEBUG:matplotlib.font_manager:Using fontManager instance from /root/.cache/matplotlib/fontlist-v330.json
+wandb: Terminating and syncing runs. Press ctrl-c to kill.

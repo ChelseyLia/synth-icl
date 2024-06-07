@@ -1,0 +1,174 @@
+[34m[1mwandb[39m[22m: [33mWARNING[39m Config item 'seed' was locked by 'sweep' (ignored update).
+[34m[1mwandb[39m[22m: [33mWARNING[39m Config item 'optimizer' was locked by 'sweep' (ignored update).
+[34m[1mwandb[39m[22m: [33mWARNING[39m Config item 'model' was locked by 'sweep' (ignored update).
+[34m[1mwandb[39m[22m: [33mWARNING[39m Config item 'data' was locked by 'sweep' (ignored update).
+  0%|                                                                                  | 0/100001 [00:00<?, ?it/s]
+  0%|                                                                                    | 0/1000 [00:00<?, ?it/s]
+CONFIG
+├── seed
+│   └── 2059
+├── seed_eval
+│   └── 2000
+├── seed_test
+│   └── 3000
+├── device
+│   └── cuda
+├── train
+│   └── do: true
+│       do_save: false
+│       reset_every: null
+│       dtype: float32
+│       compile: false
+│       do_amp: false
+│       batch_size: 128
+│       grad_clip: 1.0
+│       iters: 100001
+│       samples: null
+│       log_every: 1000
+│       save_every: 100000
+│       save_path: ./out
+│       num_workers: 0
+│       do_early_stop: false
+│       early_stop_patience: 5
+│       early_stop_metric: loss
+│       early_stop_tol: 0.001
+│       early_stop_start_iter: 20000.2
+│       early_stop_acc: null
+│       parallel_loss: true
+│       merge_embeds: false
+│       merge_type: sum
+│
+├── eval
+│   └── do: true
+│       split: both
+│       batch_size: 1
+│       every: 5000
+│       every_samples: null
+│       iters: 1000
+│
+├── scheduler
+│   └── decay_lr: true
+│       warmup_iters: 20000.2
+│       lr_decay_iters: 100001
+│       min_lr: 3.16228e-05
+│
+├── optimizer
+│   └── lr: 0.000316228
+│       _name_: adamw
+│       weight_decay: 0
+│       betas:
+│       - 0.9
+│       - 0.95
+│
+├── log_level
+│   └── info
+├── examples_to_log
+│   └── 3
+├── log_batch_idx
+│   └── [0, 1]
+├── wandb
+│   └── project: icl-arch
+│
+├── save_checkpoints
+│   └── False
+├── nl_icl
+│   └── do: false
+│       checkpoint_path: null
+│       hf_path: null
+│       task: sentiment
+│       n_seeds: 10
+│       min_examples_per_class: 0
+│       max_examples_per_class: 9
+│       do_full_vocab: true
+│
+├── do_count_param_only
+│   └── False
+├── model
+│   └── _name_: rnn
+│       d_model: 64
+│       n_layer: 12
+│       activ_fn: tanh
+│       bias: false
+│       batch_first: true
+│       dropout: 0.0
+│       bidirectional: false
+│       max_seq_len: 4096
+│
+└── data
+    └── _name_: gauss-mix-model
+        num_classes: 2
+        num_xy_pairs_train: 32
+        num_xy_pairs_val: 1024
+        dim: 16
+head.linear.weight: 128
+head.linear.bias: 2
+rnn.weight_ih_l0: 4096
+rnn.weight_hh_l0: 4096
+rnn.weight_ih_l1: 4096
+rnn.weight_hh_l1: 4096
+rnn.weight_ih_l2: 4096
+rnn.weight_hh_l2: 4096
+rnn.weight_ih_l3: 4096
+rnn.weight_hh_l3: 4096
+rnn.weight_ih_l4: 4096
+rnn.weight_hh_l4: 4096
+rnn.weight_ih_l5: 4096
+rnn.weight_hh_l5: 4096
+rnn.weight_ih_l6: 4096
+rnn.weight_hh_l6: 4096
+rnn.weight_ih_l7: 4096
+rnn.weight_hh_l7: 4096
+rnn.weight_ih_l8: 4096
+rnn.weight_hh_l8: 4096
+rnn.weight_ih_l9: 4096
+rnn.weight_hh_l9: 4096
+rnn.weight_ih_l10: 4096
+rnn.weight_hh_l10: 4096
+rnn.weight_ih_l11: 4096
+rnn.weight_hh_l11: 4096
+n_params=98434
+ignored=[('embedder.embedder.weight', 1024), ('embedder.embedder.bias', 64), ('embedder.y_embedder.weight', 32)]
+[[split=train]] train_iter: 0, batch_idx: 0, input: [[-1.5143520832061768, 1.7547247409820557, 0.09696385264396667, -1.2768162488937378, -0.04301077127456665, 0.36145925521850586, 0.3306042551994324, -1.5219900608062744, 1.3302793502807617, -0.46433794498443604, 0.6675390601158142, 0.21871596574783325, -1.5362563133239746, -0.8872127532958984, 1.5057337284088135, 1.8132071495056152], [-1.6007181406021118, -0.4788353443145752, 0.028184544295072556, -0.3686429262161255, 0.42227551341056824, -1.725391149520874, 0.3964702785015106, -0.2967173457145691, -0.16716866195201874, 1.344051480293274, -0.18993142247200012, 0.35925912857055664, 1.2835932970046997, -0.7802431583404541, 0.13172271847724915, -0.09341850876808167], [-0.35537034273147583, -0.1103639006614685, 0.33140987157821655, -0.02055203914642334, -0.04400321841239929, -1.6546485424041748, 2.5007529258728027, 0.07875090837478638, 0.10718464851379395, -1.8070284128189087, -1.1343684196472168, -0.4570884108543396, 0.8277196884155273, 0.9047274589538574, 3.121223211288452, 0.16567355394363403], [-0.8045891523361206, -0.8511910438537598, 0.6067851781845093, -0.5601234436035156, 1.332539677619934, 0.1546824872493744, 0.43413957953453064, -0.8006095290184021, -1.2939538955688477, -0.4800732433795929, -1.2939326763153076, -0.25739020109176636, -0.4092409312725067, -0.11367404460906982, 2.330000877380371, 0.20296554267406464], [-1.0687131881713867, 0.706230640411377, -1.0980255603790283, -0.13915877044200897, 1.3317065238952637, -1.7027397155761719, 0.510585367679596, -1.5370551347732544, 1.2595176696777344, -0.5114614963531494, -0.5539270043373108, -1.6019115447998047, -1.5422594547271729, -0.26837268471717834, -1.0594700574874878, -1.7739094495773315], [-0.398430734872818, 1.0732274055480957, -1.3770229816436768, -0.6845036745071411, 0.7048077583312988, -2.234358310699463, 1.8881504535675049, -0.33293473720550537, 3.0147624015808105, 0.19990605115890503, -0.4215734004974365, -0.9246740937232971, -1.8692293167114258, -0.7289865016937256, 1.518053412437439, -1.7225006818771362], [0.5087490677833557, -0.27192652225494385, -0.5404969453811646, 0.12042433023452759, -0.5628848075866699, 1.1719857454299927, -0.07389097660779953, -0.9998555183410645, -1.8671907186508179, 0.7057558298110962, 0.9212816953659058, -2.0275697708129883, -0.983529269695282, -1.0170090198516846, 0.5701295137405396, -1.6484602689743042], [-1.0813016891479492, 1.8321754932403564, -1.1518560647964478, -1.567870855331421, 2.8022360801696777, -0.6278398036956787, -1.933232069015503, -2.028719902038574, 0.3994002640247345, -0.31433019042015076, -1.6483817100524902, -0.2417345643043518, 0.3052675127983093, 0.989896297454834, -0.1778598129749298, 1.5500245094299316], [2.0347015857696533, -0.280759334564209, -0.7172321081161499, -3.697732925415039, 0.8875159621238708, 0.4868937134742737, 0.26461535692214966, -1.9957009553909302, 0.6421357989311218, -0.6392039060592651, -1.682052493095398, -1.2370362281799316, -0.2352406084537506, 0.8327987790107727, 2.0572502613067627, 0.6041803956031799], [1.6654763221740723, 1.3821427822113037, 1.4638192653656006, 0.2219933271408081, 0.9098039865493774, 0.2657618224620819, -0.6461665630340576, -1.2348071336746216, 1.6244637966156006, -1.9784942865371704, 2.712327480316162, -0.3420243561267853, -0.705276370048523, 0.42920705676078796, -0.5940912961959839, 0.9308212995529175]], target: [1, 1, 1, 1, 0, 0, 0, 0, 1, 1]
+[[split=train]] train_iter: 0, batch_idx: 1, input: [[-0.9896684885025024, -0.6932245492935181, 0.8167281746864319, -0.3794645667076111, 1.604407787322998, 1.5360808372497559, 0.12697190046310425, -0.19879382848739624, 0.3979586660861969, 1.227940320968628, -0.45777490735054016, -1.0740365982055664, 1.2347297668457031, -2.2588515281677246, -0.9572713375091553, 1.8971928358078003], [-0.7473424673080444, 0.3085596561431885, -0.20496073365211487, 2.627124786376953, 0.6806991100311279, 0.48170673847198486, 0.8647680282592773, 0.39877766370773315, -3.005899429321289, 0.4621919095516205, 1.0710079669952393, -0.6646972298622131, -0.2837066650390625, -0.1620563268661499, -2.3196611404418945, 0.8059489727020264], [1.713578224182129, -0.719067394733429, 0.22874003648757935, -0.9708988666534424, -1.16658353805542, 1.7109938859939575, -0.5786951184272766, 1.4733234643936157, -2.0360875129699707, -0.09253019094467163, -0.6641320586204529, -0.4397808313369751, -0.8447830677032471, -0.17934072017669678, 1.0523457527160645, 1.399848461151123], [-2.0035367012023926, 0.4161122441291809, 0.42962563037872314, -0.34848594665527344, 1.3255425691604614, -1.2161095142364502, -0.8588804006576538, 0.4630114436149597, -2.4216175079345703, 0.7369401454925537, 2.1926164627075195, -1.0410088300704956, 0.6149548888206482, 1.125978708267212, -0.385662317276001, -1.0088138580322266], [-0.873416543006897, 0.08027362823486328, 1.2197089195251465, 3.052464485168457, 2.247830390930176, 0.24901926517486572, -1.6914647817611694, -1.090437412261963, 1.017340064048767, 0.8769302368164062, -0.270926833152771, -2.290555000305176, 0.5310970544815063, -0.6010401248931885, 0.5470483899116516, 0.3770822286605835], [-1.560192346572876, 0.7982132434844971, -1.1141607761383057, 2.2048048973083496, 0.9395177364349365, -0.037937015295028687, -0.9633914232254028, -1.8001097440719604, -1.186493158340454, 1.1125104427337646, -0.8563224077224731, -0.0827631950378418, -0.9924063086509705, 0.8097198009490967, -0.28567397594451904, -1.4113993644714355], [1.259131669998169, 0.11520802974700928, 0.11127060651779175, 3.254042148590088, 0.7239338755607605, -2.3754067420959473, 1.502967119216919, -1.341651439666748, -0.9947545528411865, 1.870601773262024, 0.8517523407936096, 0.5804382562637329, 0.3368878662586212, -0.21043336391448975, 1.0107463598251343, -0.39931970834732056], [-1.0976922512054443, 0.17144495248794556, -0.471584290266037, 0.817023754119873, 1.68056058883667, 0.5129784345626831, -0.360016405582428, -0.5025659799575806, -1.857862949371338, 0.21086552739143372, 0.720137894153595, -0.37965238094329834, -0.3162167966365814, -0.15631455183029175, -0.04258465766906738, -1.3113200664520264], [-1.6417524814605713, 1.2094184160232544, -0.635334849357605, 2.3297367095947266, 0.3398226499557495, 0.9272831678390503, -0.1502731591463089, 1.107344150543213, -1.8310391902923584, 1.0988097190856934, 0.7257629036903381, -1.7842512130737305, -0.11477945744991302, 2.8324828147888184, -0.45651721954345703, -0.9674422740936279], [-2.561161756515503, -0.39031165838241577, -0.6431606411933899, 0.3972717523574829, 0.9543094635009766, 1.5387887954711914, -0.5350375175476074, -0.12673741579055786, -1.0624514818191528, -0.6960238218307495, -0.12862873077392578, 0.31113147735595703, -1.7579834461212158, 1.5968679189682007, 1.3148081302642822, -0.2465447187423706]], target: [1, 0, 1, 0, 1, 0, 0, 0, 0, 0]
+
+Error executing job with overrides: ['data=gauss-mix-model', 'data.dim=16', 'data.num_classes=2', 'data.num_xy_pairs_train=32', 'data.num_xy_pairs_val=1024', 'eval.every=5000', 'eval.iters=1000', 'model=rnn', 'model.d_model=64', 'model.max_seq_len=4096', 'model.n_layer=12', 'optimizer=adamw', 'optimizer.lr=0.000316228', 'optimizer.weight_decay=0', 'scheduler.decay_lr=True', 'seed=2059', 'train.batch_size=128', 'train.do_early_stop=False', 'train.iters=100001', 'train.log_every=1000', 'train.parallel_loss=True']
+Traceback (most recent call last):
+  File "/mnt/ceph_rbd/synth-icl/main.py", line 1690, in <module>
+    main()
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/hydra/_internal/utils.py", line 223, in run_and_report
+    raise ex
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 132, in run
+    _ = ret.return_value
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/hydra/core/utils.py", line 260, in return_value
+    raise self._return_value
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/mnt/ceph_rbd/synth-icl/main.py", line 1679, in main
+    train(
+  File "/mnt/ceph_rbd/synth-icl/main.py", line 1314, in train
+    train_iter, exit_training, best_eval_loss, best_eval_acc = train_loop(
+  File "/mnt/ceph_rbd/synth-icl/main.py", line 936, in train_loop
+    eval_log = evaluate(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/mnt/ceph_rbd/synth-icl/main.py", line 1395, in evaluate
+    hidden_states = model(embeddings)  # [batch_size, seq_len, emb_dim]
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/ceph_rbd/synth-icl/arch/rnn.py", line 35, in forward
+    output, _ = self.rnn(x)  # [batch_size, seq_len, hidden_dim]
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/torch/nn/modules/rnn.py", line 509, in forward
+    result = _VF.rnn_tanh(input, hx, self._flat_weights, self.bias, self.num_layers,
+RuntimeError: Input and parameter tensors are not the same dtype, found input tensor with Half and parameter tensor with Float

@@ -1,0 +1,301 @@
+[34m[1mwandb[39m[22m: [33mWARNING[39m Config item 'seed' was locked by 'sweep' (ignored update).
+[34m[1mwandb[39m[22m: [33mWARNING[39m Config item 'optimizer' was locked by 'sweep' (ignored update).
+[34m[1mwandb[39m[22m: [33mWARNING[39m Config item 'model' was locked by 'sweep' (ignored update).
+[34m[1mwandb[39m[22m: [33mWARNING[39m Config item 'data' was locked by 'sweep' (ignored update).
+CONFIG
+├── seed
+│   └── 2059
+├── seed_eval
+│   └── 2000
+├── seed_test
+│   └── 3000
+├── device
+│   └── cuda
+├── train
+│   └── do: true
+│       do_save: false
+│       reset_every: null
+│       dtype: float32
+│       compile: false
+│       do_amp: false
+│       batch_size: 128
+│       grad_clip: 1.0
+│       iters: 100001
+│       samples: null
+│       log_every: 1000
+│       save_every: 100000
+│       save_path: ./out
+│       num_workers: 0
+│       do_early_stop: false
+│       early_stop_patience: 5
+│       early_stop_metric: loss
+│       early_stop_tol: 0.001
+│       early_stop_start_iter: 20000.2
+│       early_stop_acc: null
+│       parallel_loss: true
+│       merge_embeds: false
+│       merge_type: sum
+│
+├── eval
+│   └── do: true
+│       split: both
+│       batch_size: 1
+│       every: 5000
+│       every_samples: null
+│       iters: 1000
+│
+├── scheduler
+│   └── decay_lr: true
+│       warmup_iters: 20000.2
+│       lr_decay_iters: 100001
+│       min_lr: 0.0001
+│
+├── optimizer
+│   └── lr: 0.001
+│       _name_: adamw
+│       weight_decay: 0
+│       betas:
+│       - 0.9
+│       - 0.95
+│
+├── log_level
+│   └── info
+├── examples_to_log
+│   └── 3
+├── log_batch_idx
+│   └── [0, 1]
+├── wandb
+│   └── project: icl-arch
+│
+├── save_checkpoints
+│   └── False
+├── nl_icl
+│   └── do: false
+│       checkpoint_path: null
+│       hf_path: null
+│       task: sentiment
+│       n_seeds: 10
+│       min_examples_per_class: 0
+│       max_examples_per_class: 9
+│       do_full_vocab: true
+│
+├── do_count_param_only
+│   └── False
+├── model
+│   └── _name_: gpt2
+│       d_model: 64
+│       dim: 64
+│       d_inner: 256
+│       n_layer: 12
+│       n_heads: 2.0
+│       n_kv_heads: 2.0
+│       multiple_of: 32
+│       max_seq_len: 4096
+│       dropout: 0.0
+│       norm_eps: 1.0e-05
+│
+└── data
+    └── _name_: linear-regression
+        curriculum:
+          dims:
+            start: 5
+            end: 5
+            inc: 1
+            interval: 2000
+          points_train:
+            start: 32
+            end: 32
+            inc: 2
+            interval: 2000
+          points_val:
+            start: 1024
+            end: 1024
+            inc: 2
+            interval: 2000
+        task: linear_regression
+        data: gaussian
+        task_kwargs: {}
+        n_dims: 5
+        train_noise: 0
+        val_noise: 0
+This model is an encoder-decoder model:  False
+Initializing Huggingface model with config:
+GPT2Config {
+  "activation_function": "gelu_new",
+  "attn_pdrop": 0.0,
+  "bos_token_id": 50256,
+  "embd_pdrop": 0.0,
+  "eos_token_id": 50256,
+  "initializer_range": 0.02,
+  "layer_norm_epsilon": 1e-05,
+  "model_type": "gpt2",
+  "n_embd": 64,
+  "n_head": 2,
+  "n_inner": 256,
+  "n_layer": 12,
+  "n_positions": 4096,
+  "reorder_and_upcast_attn": false,
+  "resid_pdrop": 0.0,
+  "scale_attn_by_inverse_layer_idx": false,
+  "scale_attn_weights": true,
+  "summary_activation": null,
+  "summary_first_dropout": 0.1,
+  "summary_proj_to_labels": true,
+  "summary_type": "cls_index",
+  "summary_use_proj": true,
+  "transformers_version": "4.32.1",
+  "use_cache": true,
+  "vocab_size": 1
+}
+model.h.0.ln_1.weight: 64
+model.h.0.ln_1.bias: 64
+model.h.0.attn.c_attn.weight: 12288
+model.h.0.attn.c_attn.bias: 192
+model.h.0.attn.c_proj.weight: 4096
+model.h.0.attn.c_proj.bias: 64
+model.h.0.ln_2.weight: 64
+model.h.0.ln_2.bias: 64
+model.h.0.mlp.c_fc.weight: 16384
+model.h.0.mlp.c_fc.bias: 256
+model.h.0.mlp.c_proj.weight: 16384
+model.h.0.mlp.c_proj.bias: 64
+model.h.1.ln_1.weight: 64
+model.h.1.ln_1.bias: 64
+model.h.1.attn.c_attn.weight: 12288
+model.h.1.attn.c_attn.bias: 192
+model.h.1.attn.c_proj.weight: 4096
+model.h.1.attn.c_proj.bias: 64
+model.h.1.ln_2.weight: 64
+model.h.1.ln_2.bias: 64
+model.h.1.mlp.c_fc.weight: 16384
+model.h.1.mlp.c_fc.bias: 256
+model.h.1.mlp.c_proj.weight: 16384
+model.h.1.mlp.c_proj.bias: 64
+model.h.2.ln_1.weight: 64
+model.h.2.ln_1.bias: 64
+model.h.2.attn.c_attn.weight: 12288
+model.h.2.attn.c_attn.bias: 192
+model.h.2.attn.c_proj.weight: 4096
+model.h.2.attn.c_proj.bias: 64
+model.h.2.ln_2.weight: 64
+model.h.2.ln_2.bias: 64
+model.h.2.mlp.c_fc.weight: 16384
+model.h.2.mlp.c_fc.bias: 256
+model.h.2.mlp.c_proj.weight: 16384
+model.h.2.mlp.c_proj.bias: 64
+model.h.3.ln_1.weight: 64
+model.h.3.ln_1.bias: 64
+model.h.3.attn.c_attn.weight: 12288
+model.h.3.attn.c_attn.bias: 192
+model.h.3.attn.c_proj.weight: 4096
+model.h.4.attn.c_proj.bias: 64
+model.h.4.ln_2.weight: 64
+model.h.4.ln_2.bias: 64
+model.h.4.mlp.c_fc.weight: 16384
+model.h.4.mlp.c_fc.bias: 256
+model.h.4.mlp.c_proj.weight: 16384
+model.h.4.mlp.c_proj.bias: 64
+model.h.5.ln_1.weight: 64
+model.h.5.ln_1.bias: 64
+model.h.5.attn.c_attn.weight: 12288
+model.h.5.attn.c_attn.bias: 192
+model.h.5.attn.c_proj.weight: 4096
+model.h.5.attn.c_proj.bias: 64
+model.h.5.ln_2.weight: 64
+model.h.5.ln_2.bias: 64
+model.h.5.mlp.c_fc.weight: 16384
+model.h.5.mlp.c_fc.bias: 256
+model.h.5.mlp.c_proj.weight: 16384
+model.h.5.mlp.c_proj.bias: 64
+model.h.6.ln_1.weight: 64
+model.h.6.ln_1.bias: 64
+model.h.6.attn.c_attn.weight: 12288
+model.h.6.attn.c_attn.bias: 192
+model.h.6.attn.c_proj.weight: 4096
+model.h.6.attn.c_proj.bias: 64
+model.h.6.ln_2.weight: 64
+model.h.6.ln_2.bias: 64
+model.h.6.mlp.c_fc.weight: 16384
+model.h.6.mlp.c_fc.bias: 256
+model.h.6.mlp.c_proj.weight: 16384
+model.h.6.mlp.c_proj.bias: 64
+model.h.7.ln_1.weight: 64
+model.h.7.ln_1.bias: 64
+model.h.7.attn.c_attn.weight: 12288
+model.h.7.attn.c_attn.bias: 192
+model.h.7.attn.c_proj.weight: 4096
+model.h.7.attn.c_proj.bias: 64
+model.h.7.ln_2.weight: 64
+model.h.7.ln_2.bias: 64
+model.h.7.mlp.c_fc.weight: 16384
+model.h.7.mlp.c_fc.bias: 256
+model.h.7.mlp.c_proj.weight: 16384
+model.h.7.mlp.c_proj.bias: 64
+model.h.8.ln_1.weight: 64
+model.h.8.ln_1.bias: 64
+model.h.8.attn.c_attn.weight: 12288
+model.h.8.attn.c_attn.bias: 192
+model.h.8.attn.c_proj.weight: 4096
+model.h.8.attn.c_proj.bias: 64
+model.h.8.ln_2.weight: 64
+model.h.8.ln_2.bias: 64
+model.h.8.mlp.c_fc.weight: 16384
+model.h.8.mlp.c_fc.bias: 256
+model.h.8.mlp.c_proj.weight: 16384
+model.h.8.mlp.c_proj.bias: 64
+model.h.9.ln_1.weight: 64
+model.h.9.ln_1.bias: 64
+model.h.9.attn.c_attn.weight: 12288
+model.h.9.attn.c_attn.bias: 192
+model.h.9.attn.c_proj.weight: 4096
+model.h.9.attn.c_proj.bias: 64
+model.h.9.ln_2.weight: 64
+model.h.9.ln_2.bias: 64
+model.h.9.mlp.c_fc.weight: 16384
+model.h.9.mlp.c_fc.bias: 256
+model.h.9.mlp.c_proj.weight: 16384
+model.h.9.mlp.c_proj.bias: 64
+model.h.10.ln_1.weight: 64
+model.h.10.ln_1.bias: 64
+model.h.10.attn.c_attn.weight: 12288
+model.h.10.attn.c_attn.bias: 192
+model.h.10.attn.c_proj.weight: 4096
+model.h.10.attn.c_proj.bias: 64
+model.h.10.ln_2.weight: 64
+model.h.10.ln_2.bias: 64
+model.h.10.mlp.c_fc.weight: 16384
+model.h.10.mlp.c_fc.bias: 256
+model.h.10.mlp.c_proj.weight: 16384
+model.h.10.mlp.c_proj.bias: 64
+model.h.11.ln_1.weight: 64
+model.h.11.ln_1.bias: 64
+model.h.11.attn.c_attn.weight: 12288
+model.h.11.attn.c_attn.bias: 192
+model.h.11.attn.c_proj.weight: 4096
+model.h.11.attn.c_proj.bias: 64
+model.h.11.ln_2.weight: 64
+model.h.11.ln_2.bias: 64
+model.h.11.mlp.c_fc.weight: 16384
+model.h.11.mlp.c_fc.bias: 256
+model.h.11.mlp.c_proj.weight: 16384
+model.h.11.mlp.c_proj.bias: 64
+model.ln_f.weight: 64
+model.ln_f.bias: 64
+n_params=599936
+ignored=[('model.wte.weight', 64), ('model.wpe.weight', 262144), ('embedder.embedder.weight', 320), ('embedder.embedder.bias', 64), ('head.head.weight', 64)]
+[[split=train]] train_iter: 0, batch_idx: 0, input: [[0.6724631190299988, -2.400009870529175, 0.3455061614513397, 0.5480261445045471, -0.7111261487007141], [2.8987808227539062, 0.0, 0.0, 0.0, 0.0], [0.14275112748146057, -0.7984437942504883, -0.42434749007225037, -0.5070681571960449, 0.37779757380485535], [0.5941888093948364, 0.0, 0.0, 0.0, 0.0], [0.18988056480884552, 0.8159309029579163, 2.492114305496216, 0.4521389305591583, -0.8088147044181824], [0.5824015140533447, 0.0, 0.0, 0.0, 0.0], [1.1277031898498535, -0.6596270799636841, -1.437281847000122, -1.1760475635528564, 0.22123658657073975], [1.7983826398849487, 0.0, 0.0, 0.0, 0.0], [-1.2551008462905884, -0.6732901334762573, -0.4023072421550751, -0.19438129663467407, 0.20169568061828613], [-0.3347209095954895, 0.0, 0.0, 0.0, 0.0]], target: [2.8987808227539062, 0.5941888093948364, 0.5824015140533447, 1.7983826398849487, -0.3347209095954895, 1.7118861675262451, -2.4734838008880615, -0.3487122058868408, -0.1563582420349121, -0.8171783685684204]
+  0%|                                                                                                                                  | 0/100001 [00:00<?, ?it/s]
+
+  0%|                                                                                                                          | 1/1000 [00:05<1:28:15,  5.30s/it]
+[[split=eval]] train_iter: 0, eval_iter: 1, batch_idx: 0, input: [[0.32853397727012634, -1.113255262374878, 0.838888943195343, -0.6574654579162598, -0.3239317536354065], [1.1324061155319214, 0.0, 0.0, 0.0, 0.0], [1.142399787902832, -0.038401633501052856, 1.4896352291107178, 0.07022134214639664, -1.397045373916626], [-1.6001558303833008, 0.0, 0.0, 0.0, 0.0], [1.96773362159729, 0.31781065464019775, -1.793107509613037, 0.3199353814125061, -0.9854117631912231], [0.5978349447250366, 0.0, 0.0, 0.0, 0.0], [-1.1753662824630737, -0.7069042921066284, 1.631754994392395, 0.33515477180480957, 0.7220890522003174], [-0.8600477576255798, 0.0, 0.0, 0.0, 0.0], [-0.14661362767219543, -1.3920907974243164, -0.6477355360984802, -0.11829765141010284, -1.3703991174697876], [-0.6125239133834839, 0.0, 0.0, 0.0, 0.0]], target: [1.1324061155319214, -1.6001558303833008, 0.5978349447250366, -0.8600477576255798, -0.6125239133834839, 5.261972427368164, 3.258908748626709, 0.8352506160736084, 1.506016492843628, 2.41762113571167]
+
+
+
+
+
+
+
+
+
+
+ 11%|█████████████▉                                                                                                            | 114/1000 [00:25<03:34,  4.13it/s]

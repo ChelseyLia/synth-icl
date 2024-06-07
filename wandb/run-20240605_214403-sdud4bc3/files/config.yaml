@@ -1,0 +1,240 @@
+wandb_version: 1
+
+data:
+  desc: null
+  value: gauss-mix-model
+data.dim:
+  desc: null
+  value: 16
+data.num_classes:
+  desc: null
+  value: 2
+data.num_xy_pairs_train:
+  desc: null
+  value: 2
+data.num_xy_pairs_val:
+  desc: null
+  value: 1024
+eval.every:
+  desc: null
+  value: 5000
+eval.iters:
+  desc: null
+  value: 1000
+model:
+  desc: null
+  value: mamba
+model.d_model:
+  desc: null
+  value: 64
+model.max_seq_len:
+  desc: null
+  value: 4096
+model.n_layer:
+  desc: null
+  value: 12
+optimizer:
+  desc: null
+  value: adamw
+optimizer.lr:
+  desc: null
+  value: 0.001
+optimizer.weight_decay:
+  desc: null
+  value: 0
+scheduler.decay_lr:
+  desc: null
+  value: true
+seed:
+  desc: null
+  value: 2059
+train.batch_size:
+  desc: null
+  value: 128
+train.do_early_stop:
+  desc: null
+  value: false
+train.iters:
+  desc: null
+  value: 100001
+train.log_every:
+  desc: null
+  value: 1000
+train.parallel_loss:
+  desc: null
+  value: true
+_wandb:
+  desc: null
+  value:
+    python_version: 3.10.14
+    cli_version: 0.15.9
+    framework: huggingface
+    huggingface_version: 4.32.1
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1717623843.386716
+    t:
+      1:
+      - 1
+      - 5
+      - 9
+      - 11
+      - 41
+      - 49
+      - 50
+      - 51
+      - 53
+      - 55
+      - 63
+      - 64
+      2:
+      - 1
+      - 5
+      - 9
+      - 11
+      - 41
+      - 49
+      - 50
+      - 51
+      - 53
+      - 55
+      - 63
+      - 64
+      3:
+      - 7
+      - 23
+      - 37
+      4: 3.10.14
+      5: 0.15.9
+      6: 4.32.1
+      8:
+      - 5
+    m:
+    - 1: eval-eval.acc
+      6:
+      - 3
+      7:
+      - 2
+    - 1: eval-train.acc
+      6:
+      - 3
+      7:
+      - 2
+    - 1: eval-test.acc
+      6:
+      - 3
+      7:
+      - 2
+    - 1: eval-eval.loss
+      6:
+      - 3
+      7:
+      - 1
+    - 1: best_test_acc
+      6:
+      - 3
+      7:
+      - 2
+    - 1: best_test_loss
+      6:
+      - 3
+      7:
+      - 1
+    - 1: best_test_acc_train_iter
+      6:
+      - 3
+      7:
+      - 5
+    - 1: best_test_loss_train_iter
+      6:
+      - 3
+      7:
+      - 5
+    - 1: loss
+      6:
+      - 3
+      7:
+      - 1
+seed_eval:
+  desc: null
+  value: 2000
+seed_test:
+  desc: null
+  value: 3000
+device:
+  desc: null
+  value: cuda
+train:
+  desc: null
+  value:
+    do: true
+    do_save: false
+    reset_every: null
+    dtype: float32
+    compile: false
+    do_amp: false
+    batch_size: 128
+    grad_clip: 1.0
+    iters: 100001
+    samples: null
+    log_every: 1000
+    save_every: 100000
+    save_path: ./out
+    num_workers: 0
+    do_early_stop: false
+    early_stop_patience: 5
+    early_stop_metric: loss
+    early_stop_tol: 0.001
+    early_stop_start_iter: 20000.2
+    early_stop_acc: null
+    parallel_loss: true
+    merge_embeds: false
+    merge_type: sum
+eval:
+  desc: null
+  value:
+    do: true
+    split: both
+    batch_size: 1
+    every: 5000
+    every_samples: null
+    iters: 1000
+scheduler:
+  desc: null
+  value:
+    decay_lr: true
+    warmup_iters: 20000.2
+    lr_decay_iters: 100001
+    min_lr: 0.0001
+log_level:
+  desc: null
+  value: info
+examples_to_log:
+  desc: null
+  value: 3
+log_batch_idx:
+  desc: null
+  value:
+  - 0
+  - 1
+wandb:
+  desc: null
+  value:
+    project: icl-arch
+save_checkpoints:
+  desc: null
+  value: false
+nl_icl:
+  desc: null
+  value:
+    do: false
+    checkpoint_path: null
+    hf_path: null
+    task: sentiment
+    n_seeds: 10
+    min_examples_per_class: 0
+    max_examples_per_class: 9
+    do_full_vocab: true
+do_count_param_only:
+  desc: null
+  value: false

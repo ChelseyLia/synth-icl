@@ -1,0 +1,234 @@
+wandb: WARNING Config item 'seed' was locked by 'sweep' (ignored update).
+wandb: WARNING Config item 'optimizer' was locked by 'sweep' (ignored update).
+wandb: WARNING Config item 'model' was locked by 'sweep' (ignored update).
+wandb: WARNING Config item 'data' was locked by 'sweep' (ignored update).
+Error executing job with overrides: ['data=gauss-mix-model', 'data.dim=16', 'data.num_classes=2', 'data.num_xy_pairs_train=32', 'data.num_xy_pairs_val=1024', 'eval.every=5000', 'eval.iters=1000', 'model=mamba', 'model.d_model=64', 'model.max_seq_len=4096', 'model.n_layer=12', 'optimizer=adamw', 'optimizer.betas=0.9', 'optimizer.lr=0.001', 'optimizer.weight_decay=0', 'scheduler.decay_lr=True', 'seed=5947', 'train.batch_size=128', 'train.do_early_stop=False', 'train.iters=100001', 'train.log_every=1000', 'train.parallel_loss=True']
+Traceback (most recent call last):
+  File "/mnt/ceph_rbd/synth-icl/main.py", line 1679, in main
+    train(
+  File "/mnt/ceph_rbd/synth-icl/main.py", line 1306, in train
+    optimizer, lr_scheduler = build_optimizer(cfg=cfg, model=model)
+  File "/mnt/ceph_rbd/synth-icl/main.py", line 1552, in build_optimizer
+    optimizer = torch.optim.AdamW(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/torch/optim/adamw.py", line 32, in __init__
+    if not 0.0 <= betas[0] < 1.0:
+TypeError: 'float' object is not subscriptable
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+CONFIG
+├── seed
+│   └── 5947
+├── seed_eval
+│   └── 2000
+├── seed_test
+│   └── 3000
+├── device
+│   └── cuda
+├── train
+│   └── do: true
+│       do_save: false
+│       reset_every: null
+│       dtype: float32
+│       compile: false
+│       do_amp: false
+│       batch_size: 128
+│       grad_clip: 1.0
+│       iters: 100001
+│       samples: null
+│       log_every: 1000
+│       save_every: 100000
+│       save_path: ./out
+│       num_workers: 0
+│       do_early_stop: false
+│       early_stop_patience: 5
+│       early_stop_metric: loss
+│       early_stop_tol: 0.001
+│       early_stop_start_iter: 20000.2
+│       early_stop_acc: null
+│       parallel_loss: true
+│       merge_embeds: false
+│       merge_type: sum
+│
+├── eval
+│   └── do: true
+│       split: both
+│       batch_size: 1
+│       every: 5000
+│       every_samples: null
+│       iters: 1000
+│
+├── scheduler
+│   └── decay_lr: true
+│       warmup_iters: 20000.2
+│       lr_decay_iters: 100001
+│       min_lr: 0.0001
+│
+├── optimizer
+│   └── lr: 0.001
+│       _name_: adamw
+│       weight_decay: 0
+│       betas: 0.9
+│
+├── log_level
+│   └── info
+├── examples_to_log
+│   └── 3
+├── log_batch_idx
+│   └── [0, 1]
+├── wandb
+│   └── project: icl-arch
+│
+├── save_checkpoints
+│   └── False
+├── nl_icl
+│   └── do: false
+│       checkpoint_path: null
+│       hf_path: null
+│       task: sentiment
+│       n_seeds: 10
+│       min_examples_per_class: 0
+│       max_examples_per_class: 9
+│       do_full_vocab: true
+│
+├── do_count_param_only
+│   └── False
+├── model
+│   └── _name_: mamba
+│       d_model: 64
+│       n_layer: 12
+│       norm_epsilon: 1.0e-05
+│       rms_norm: false
+│       fused_add_norm: false
+│       residual_in_fp32: false
+│       max_seq_len: 4096
+│
+└── data
+    └── _name_: gauss-mix-model
+        num_classes: 2
+        num_xy_pairs_train: 32
+        num_xy_pairs_val: 1024
+        dim: 16
+head.linear.weight: 128
+head.linear.bias: 2
+mamba.backbone.layers.0.mixer.A_log: 2048
+mamba.backbone.layers.0.mixer.D: 128
+mamba.backbone.layers.0.mixer.in_proj.weight: 16384
+mamba.backbone.layers.0.mixer.conv1d.weight: 512
+mamba.backbone.layers.0.mixer.conv1d.bias: 128
+mamba.backbone.layers.0.mixer.x_proj.weight: 4608
+mamba.backbone.layers.0.mixer.dt_proj.weight: 512
+mamba.backbone.layers.0.mixer.dt_proj.bias: 128
+mamba.backbone.layers.0.mixer.out_proj.weight: 8192
+mamba.backbone.layers.0.norm.weight: 64
+mamba.backbone.layers.1.mixer.A_log: 2048
+mamba.backbone.layers.1.mixer.D: 128
+mamba.backbone.layers.1.mixer.in_proj.weight: 16384
+mamba.backbone.layers.1.mixer.conv1d.weight: 512
+mamba.backbone.layers.1.mixer.conv1d.bias: 128
+mamba.backbone.layers.1.mixer.x_proj.weight: 4608
+mamba.backbone.layers.1.mixer.dt_proj.weight: 512
+mamba.backbone.layers.1.mixer.dt_proj.bias: 128
+mamba.backbone.layers.1.mixer.out_proj.weight: 8192
+mamba.backbone.layers.1.norm.weight: 64
+mamba.backbone.layers.2.mixer.A_log: 2048
+mamba.backbone.layers.2.mixer.D: 128
+mamba.backbone.layers.2.mixer.in_proj.weight: 16384
+mamba.backbone.layers.2.mixer.conv1d.weight: 512
+mamba.backbone.layers.2.mixer.conv1d.bias: 128
+mamba.backbone.layers.2.mixer.x_proj.weight: 4608
+mamba.backbone.layers.2.mixer.dt_proj.weight: 512
+mamba.backbone.layers.2.mixer.dt_proj.bias: 128
+mamba.backbone.layers.2.mixer.out_proj.weight: 8192
+mamba.backbone.layers.2.norm.weight: 64
+mamba.backbone.layers.3.mixer.A_log: 2048
+mamba.backbone.layers.3.mixer.D: 128
+mamba.backbone.layers.3.mixer.in_proj.weight: 16384
+mamba.backbone.layers.3.mixer.conv1d.weight: 512
+mamba.backbone.layers.3.mixer.conv1d.bias: 128
+mamba.backbone.layers.3.mixer.x_proj.weight: 4608
+mamba.backbone.layers.3.mixer.dt_proj.weight: 512
+mamba.backbone.layers.3.mixer.dt_proj.bias: 128
+mamba.backbone.layers.3.mixer.out_proj.weight: 8192
+mamba.backbone.layers.3.norm.weight: 64
+mamba.backbone.layers.4.mixer.A_log: 2048
+mamba.backbone.layers.4.mixer.D: 128
+mamba.backbone.layers.4.mixer.in_proj.weight: 16384
+mamba.backbone.layers.4.mixer.conv1d.weight: 512
+mamba.backbone.layers.4.mixer.conv1d.bias: 128
+mamba.backbone.layers.4.mixer.x_proj.weight: 4608
+mamba.backbone.layers.4.mixer.dt_proj.weight: 512
+mamba.backbone.layers.4.mixer.dt_proj.bias: 128
+mamba.backbone.layers.4.mixer.out_proj.weight: 8192
+mamba.backbone.layers.4.norm.weight: 64
+mamba.backbone.layers.5.mixer.A_log: 2048
+mamba.backbone.layers.5.mixer.D: 128
+mamba.backbone.layers.5.mixer.in_proj.weight: 16384
+mamba.backbone.layers.5.mixer.conv1d.weight: 512
+mamba.backbone.layers.5.mixer.conv1d.bias: 128
+mamba.backbone.layers.5.mixer.x_proj.weight: 4608
+mamba.backbone.layers.5.mixer.dt_proj.weight: 512
+mamba.backbone.layers.5.mixer.dt_proj.bias: 128
+mamba.backbone.layers.5.mixer.out_proj.weight: 8192
+mamba.backbone.layers.5.norm.weight: 64
+mamba.backbone.layers.6.mixer.A_log: 2048
+mamba.backbone.layers.6.mixer.D: 128
+mamba.backbone.layers.6.mixer.in_proj.weight: 16384
+mamba.backbone.layers.6.mixer.conv1d.weight: 512
+mamba.backbone.layers.6.mixer.conv1d.bias: 128
+mamba.backbone.layers.6.mixer.x_proj.weight: 4608
+mamba.backbone.layers.6.mixer.dt_proj.weight: 512
+mamba.backbone.layers.6.mixer.dt_proj.bias: 128
+mamba.backbone.layers.6.mixer.out_proj.weight: 8192
+mamba.backbone.layers.6.norm.weight: 64
+mamba.backbone.layers.7.mixer.A_log: 2048
+mamba.backbone.layers.7.mixer.D: 128
+mamba.backbone.layers.7.mixer.in_proj.weight: 16384
+mamba.backbone.layers.7.mixer.conv1d.weight: 512
+mamba.backbone.layers.7.mixer.conv1d.bias: 128
+mamba.backbone.layers.7.mixer.x_proj.weight: 4608
+mamba.backbone.layers.7.mixer.dt_proj.weight: 512
+mamba.backbone.layers.7.mixer.dt_proj.bias: 128
+mamba.backbone.layers.7.mixer.out_proj.weight: 8192
+mamba.backbone.layers.7.norm.weight: 64
+mamba.backbone.layers.8.mixer.A_log: 2048
+mamba.backbone.layers.8.mixer.D: 128
+mamba.backbone.layers.8.mixer.in_proj.weight: 16384
+mamba.backbone.layers.8.mixer.conv1d.weight: 512
+mamba.backbone.layers.8.mixer.conv1d.bias: 128
+mamba.backbone.layers.8.mixer.x_proj.weight: 4608
+mamba.backbone.layers.8.mixer.dt_proj.weight: 512
+mamba.backbone.layers.8.mixer.dt_proj.bias: 128
+mamba.backbone.layers.8.mixer.out_proj.weight: 8192
+mamba.backbone.layers.8.norm.weight: 64
+mamba.backbone.layers.9.mixer.A_log: 2048
+mamba.backbone.layers.9.mixer.D: 128
+mamba.backbone.layers.9.mixer.in_proj.weight: 16384
+mamba.backbone.layers.9.mixer.conv1d.weight: 512
+mamba.backbone.layers.9.mixer.conv1d.bias: 128
+mamba.backbone.layers.9.mixer.x_proj.weight: 4608
+mamba.backbone.layers.9.mixer.dt_proj.weight: 512
+mamba.backbone.layers.9.mixer.dt_proj.bias: 128
+mamba.backbone.layers.9.mixer.out_proj.weight: 8192
+mamba.backbone.layers.9.norm.weight: 64
+mamba.backbone.layers.10.mixer.A_log: 2048
+mamba.backbone.layers.10.mixer.D: 128
+mamba.backbone.layers.10.mixer.in_proj.weight: 16384
+mamba.backbone.layers.10.mixer.conv1d.weight: 512
+mamba.backbone.layers.10.mixer.conv1d.bias: 128
+mamba.backbone.layers.10.mixer.x_proj.weight: 4608
+mamba.backbone.layers.10.mixer.dt_proj.weight: 512
+mamba.backbone.layers.10.mixer.dt_proj.bias: 128
+mamba.backbone.layers.10.mixer.out_proj.weight: 8192
+mamba.backbone.layers.10.norm.weight: 64
+mamba.backbone.layers.11.mixer.A_log: 2048
+mamba.backbone.layers.11.mixer.D: 128
+mamba.backbone.layers.11.mixer.in_proj.weight: 16384
+mamba.backbone.layers.11.mixer.conv1d.weight: 512
+mamba.backbone.layers.11.mixer.conv1d.bias: 128
+mamba.backbone.layers.11.mixer.x_proj.weight: 4608
+mamba.backbone.layers.11.mixer.dt_proj.weight: 512
+mamba.backbone.layers.11.mixer.dt_proj.bias: 128
+mamba.backbone.layers.11.mixer.out_proj.weight: 8192
+mamba.backbone.layers.11.norm.weight: 64
+mamba.backbone.norm_f.weight: 64
+n_params=392642
+ignored=[('embedder.embedder.weight', 1024), ('embedder.embedder.bias', 64), ('embedder.y_embedder.weight', 32)]

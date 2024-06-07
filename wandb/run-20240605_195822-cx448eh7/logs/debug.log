@@ -1,0 +1,31 @@
+2024-06-05 19:58:22,958 INFO    MainThread:83933 [wandb_setup.py:_flush():76] Current SDK version is 0.15.9
+2024-06-05 19:58:22,958 INFO    MainThread:83933 [wandb_setup.py:_flush():76] Configure stats pid to 83933
+2024-06-05 19:58:22,958 INFO    MainThread:83933 [wandb_setup.py:_flush():76] Loading settings from /root/.config/wandb/settings
+2024-06-05 19:58:22,958 INFO    MainThread:83933 [wandb_setup.py:_flush():76] Loading settings from /mnt/ceph_rbd/synth-icl/wandb/settings
+2024-06-05 19:58:22,958 WARNING MainThread:83933 [wandb_setup.py:_flush():76] Unknown environment variable: WANDB_SERVICE
+2024-06-05 19:58:22,958 INFO    MainThread:83933 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'entity': 'edin', 'project': 'lr-extrapolate', 'sweep_id': '0bklo6pk', 'root_dir': '/mnt/ceph_rbd/synth-icl', 'run_id': 'cx448eh7', 'sweep_param_path': '/mnt/ceph_rbd/synth-icl/wandb/sweep-0bklo6pk/config-cx448eh7.yaml'}
+2024-06-05 19:58:22,958 INFO    MainThread:83933 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-06-05 19:58:22,958 INFO    MainThread:83933 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'main.py', 'program': '/mnt/ceph_rbd/synth-icl/main.py'}
+2024-06-05 19:58:22,958 INFO    MainThread:83933 [wandb_init.py:_log_setup():524] Logging user logs to /mnt/ceph_rbd/synth-icl/wandb/run-20240605_195822-cx448eh7/logs/debug.log
+2024-06-05 19:58:22,958 INFO    MainThread:83933 [wandb_init.py:_log_setup():525] Logging internal logs to /mnt/ceph_rbd/synth-icl/wandb/run-20240605_195822-cx448eh7/logs/debug-internal.log
+2024-06-05 19:58:22,958 INFO    MainThread:83933 [wandb_init.py:init():564] calling init triggers
+2024-06-05 19:58:22,959 INFO    MainThread:83933 [wandb_init.py:init():571] wandb.init called with sweep_config: {'data': 'linear-regression', 'data.curriculum.dims.end': 5, 'data.curriculum.points_train.end': 32, 'data.curriculum.points_train.start': 32, 'data.curriculum.points_val.end': 1024, 'data.curriculum.points_val.start': 1024, 'eval.every': 5000, 'eval.iters': 1000, 'model': 'dynamicconv', 'model.d_model': 64, 'model.max_seq_len': 4096, 'model.n_layer': 12, 'optimizer': 'adamw', 'optimizer.lr': 0.001, 'optimizer.weight_decay': 0, 'scheduler.decay_lr': True, 'seed': 2059, 'train.batch_size': 128, 'train.do_early_stop': False, 'train.iters': 100001, 'train.log_every': 1000, 'train.parallel_loss': True}
+config: {}
+2024-06-05 19:58:22,959 INFO    MainThread:83933 [wandb_init.py:init():613] starting backend
+2024-06-05 19:58:22,959 INFO    MainThread:83933 [wandb_init.py:init():617] setting up manager
+2024-06-05 19:58:23,024 INFO    MainThread:83933 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-06-05 19:58:23,025 INFO    MainThread:83933 [wandb_init.py:init():623] backend started and connected
+2024-06-05 19:58:23,033 INFO    MainThread:83933 [wandb_run.py:_config_callback():1282] config_cb None None {'data': 'linear-regression', 'data.curriculum.dims.end': 5, 'data.curriculum.points_train.end': 32, 'data.curriculum.points_train.start': 32, 'data.curriculum.points_val.end': 1024, 'data.curriculum.points_val.start': 1024, 'eval.every': 5000, 'eval.iters': 1000, 'model': 'dynamicconv', 'model.d_model': 64, 'model.max_seq_len': 4096, 'model.n_layer': 12, 'optimizer': 'adamw', 'optimizer.lr': 0.001, 'optimizer.weight_decay': 0, 'scheduler.decay_lr': True, 'seed': 2059, 'train.batch_size': 128, 'train.do_early_stop': False, 'train.iters': 100001, 'train.log_every': 1000, 'train.parallel_loss': True}
+2024-06-05 19:58:23,035 INFO    MainThread:83933 [wandb_init.py:init():714] updated telemetry
+2024-06-05 19:58:23,123 INFO    MainThread:83933 [wandb_init.py:init():747] communicating run to backend with 60.0 second timeout
+2024-06-05 19:58:23,830 INFO    MainThread:83933 [wandb_run.py:_on_init():2180] communicating current version
+2024-06-05 19:58:24,429 INFO    MainThread:83933 [wandb_run.py:_on_init():2189] got version response upgrade_message: "wandb version 0.17.0 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2024-06-05 19:58:24,430 INFO    MainThread:83933 [wandb_init.py:init():798] starting run threads in backend
+2024-06-05 19:58:54,529 INFO    MainThread:83933 [wandb_run.py:_console_start():2159] atexit reg
+2024-06-05 19:58:54,529 INFO    MainThread:83933 [wandb_run.py:_redirect():2014] redirect: wrap_raw
+2024-06-05 19:58:54,529 INFO    MainThread:83933 [wandb_run.py:_redirect():2079] Wrapping output streams.
+2024-06-05 19:58:54,529 INFO    MainThread:83933 [wandb_run.py:_redirect():2104] Redirects installed.
+2024-06-05 19:58:54,530 INFO    MainThread:83933 [wandb_init.py:init():839] run started, returning control to user process
+2024-06-05 19:58:54,631 INFO    MainThread:83933 [wandb_run.py:_config_callback():1282] config_cb None None {'seed_eval': 2000, 'seed_test': 3000, 'device': 'cuda', 'train': {'do': True, 'do_save': False, 'reset_every': None, 'dtype': 'float32', 'compile': False, 'do_amp': False, 'batch_size': 128, 'grad_clip': 1.0, 'iters': 100001, 'samples': None, 'log_every': 1000, 'save_every': 100000, 'save_path': './out', 'num_workers': 0, 'do_early_stop': False, 'early_stop_patience': 5, 'early_stop_metric': 'loss', 'early_stop_tol': 0.001, 'early_stop_start_iter': 20000.2, 'early_stop_acc': None, 'parallel_loss': True, 'merge_embeds': False, 'merge_type': 'sum'}, 'eval': {'do': True, 'split': 'both', 'batch_size': 1, 'every': 5000, 'every_samples': None, 'iters': 1000}, 'scheduler': {'decay_lr': True, 'warmup_iters': 20000.2, 'lr_decay_iters': 100001, 'min_lr': 0.0001}, 'log_level': 'info', 'examples_to_log': 3, 'log_batch_idx': [0, 1], 'wandb': {'project': 'icl-arch'}, 'save_checkpoints': False, 'nl_icl': {'do': False, 'checkpoint_path': None, 'hf_path': None, 'task': 'sentiment', 'n_seeds': 10, 'min_examples_per_class': 0, 'max_examples_per_class': 9, 'do_full_vocab': True}, 'do_count_param_only': False}
+2024-06-05 19:59:04,628 INFO    MainThread:83933 [wandb_watch.py:watch():51] Watching

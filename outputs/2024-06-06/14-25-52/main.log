@@ -1,0 +1,14 @@
+[2024-06-06 14:26:05,480][root][INFO] - # train images: 19280
+[2024-06-06 14:26:13,536][root][INFO] - # train classes: 964
+[2024-06-06 14:26:13,671][root][INFO] - # test images: 13180
+[2024-06-06 14:26:19,186][root][INFO] - # test classes: 659
+[2024-06-06 14:26:19,188][root][INFO] - # all images: 32460
+[2024-06-06 14:26:19,188][root][INFO] - # all classes: 1623
+[2024-06-06 14:26:19,188][root][INFO] - example shape: (105, 105, 1)
+[2024-06-06 14:26:19,189][root][INFO] - Loaded 1623 classes of type "omniglot"
+[2024-06-06 14:26:19,190][root][INFO] - 1603 rare classes: [1120, 1243, 1572, 1479, 611, 628, 1065, 1476, 110, 1510, 1156, 1236, 1619, 981, 237, 1461, 1187, 888, 1275, 971] ...
+[2024-06-06 14:26:19,190][root][INFO] - 10 common classes: [76, 315, 80, 1431, 256, 1421, 566, 241, 1489, 358] ...
+[2024-06-06 14:26:19,190][root][INFO] - 10 holdout classes: [25, 574, 562, 735, 1396, 1323, 846, 757, 900, 1077] ...
+[2024-06-06 14:26:19,190][root][INFO] - Zipf exponent: 0
+[2024-06-06 14:26:19,191][root][INFO] - Use Zipf for common/rare: False
+[2024-06-06 14:26:19,191][root][INFO] - Noise scale: 0

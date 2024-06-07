@@ -1,0 +1,31 @@
+2024-06-07 22:02:56,957 INFO    MainThread:256039 [wandb_setup.py:_flush():76] Current SDK version is 0.15.9
+2024-06-07 22:02:56,957 INFO    MainThread:256039 [wandb_setup.py:_flush():76] Configure stats pid to 256039
+2024-06-07 22:02:56,957 INFO    MainThread:256039 [wandb_setup.py:_flush():76] Loading settings from /root/.config/wandb/settings
+2024-06-07 22:02:56,958 INFO    MainThread:256039 [wandb_setup.py:_flush():76] Loading settings from /mnt/ceph_rbd/synth-icl/wandb/settings
+2024-06-07 22:02:56,958 WARNING MainThread:256039 [wandb_setup.py:_flush():76] Unknown environment variable: WANDB_SERVICE
+2024-06-07 22:02:56,958 INFO    MainThread:256039 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'entity': 'edin', 'project': 'lm-tinystories-reprod', 'sweep_id': '4fmcjje4', 'root_dir': '/mnt/ceph_rbd/synth-icl', 'run_id': 'd9n1eknp', 'sweep_param_path': '/mnt/ceph_rbd/synth-icl/wandb/sweep-4fmcjje4/config-d9n1eknp.yaml'}
+2024-06-07 22:02:56,958 INFO    MainThread:256039 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-06-07 22:02:56,958 INFO    MainThread:256039 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'main.py', 'program': '/mnt/ceph_rbd/synth-icl/main.py'}
+2024-06-07 22:02:56,958 INFO    MainThread:256039 [wandb_init.py:_log_setup():524] Logging user logs to /mnt/ceph_rbd/synth-icl/wandb/run-20240607_220256-d9n1eknp/logs/debug.log
+2024-06-07 22:02:56,958 INFO    MainThread:256039 [wandb_init.py:_log_setup():525] Logging internal logs to /mnt/ceph_rbd/synth-icl/wandb/run-20240607_220256-d9n1eknp/logs/debug-internal.log
+2024-06-07 22:02:56,958 INFO    MainThread:256039 [wandb_init.py:init():564] calling init triggers
+2024-06-07 22:02:56,958 INFO    MainThread:256039 [wandb_init.py:init():571] wandb.init called with sweep_config: {'data': 'lang-model', 'data.preprocessing_num_workers': 20, 'data.version': 'original', 'eval.every': 5000, 'eval.iters': 1000, 'model': 'mamba', 'model.d_model': 800, 'model.max_seq_len': 512, 'model.n_layer': 8, 'optimizer': 'adamw', 'optimizer.lr': 0.000316228, 'optimizer.weight_decay': 0, 'save_checkpoints': True, 'scheduler.decay_lr': True, 'seed': 2059, 'train.batch_size': 50, 'train.do_early_stop': False, 'train.iters': 200001, 'train.log_every': 1000, 'train.num_workers': 0, 'train.parallel_loss': True, 'train.save_every': 50000}
+config: {}
+2024-06-07 22:02:56,959 INFO    MainThread:256039 [wandb_init.py:init():613] starting backend
+2024-06-07 22:02:56,959 INFO    MainThread:256039 [wandb_init.py:init():617] setting up manager
+2024-06-07 22:02:56,971 INFO    MainThread:256039 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-06-07 22:02:56,974 INFO    MainThread:256039 [wandb_init.py:init():623] backend started and connected
+2024-06-07 22:02:56,993 INFO    MainThread:256039 [wandb_run.py:_config_callback():1282] config_cb None None {'data': 'lang-model', 'data.preprocessing_num_workers': 20, 'data.version': 'original', 'eval.every': 5000, 'eval.iters': 1000, 'model': 'mamba', 'model.d_model': 800, 'model.max_seq_len': 512, 'model.n_layer': 8, 'optimizer': 'adamw', 'optimizer.lr': 0.000316228, 'optimizer.weight_decay': 0, 'save_checkpoints': True, 'scheduler.decay_lr': True, 'seed': 2059, 'train.batch_size': 50, 'train.do_early_stop': False, 'train.iters': 200001, 'train.log_every': 1000, 'train.num_workers': 0, 'train.parallel_loss': True, 'train.save_every': 50000}
+2024-06-07 22:02:56,995 INFO    MainThread:256039 [wandb_init.py:init():714] updated telemetry
+2024-06-07 22:02:57,002 INFO    MainThread:256039 [wandb_init.py:init():747] communicating run to backend with 60.0 second timeout
+2024-06-07 22:02:57,358 INFO    MainThread:256039 [wandb_run.py:_on_init():2180] communicating current version
+2024-06-07 22:02:57,419 INFO    MainThread:256039 [wandb_run.py:_on_init():2189] got version response upgrade_message: "wandb version 0.17.1 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2024-06-07 22:02:57,419 INFO    MainThread:256039 [wandb_init.py:init():798] starting run threads in backend
+2024-06-07 22:03:00,620 INFO    MainThread:256039 [wandb_run.py:_console_start():2159] atexit reg
+2024-06-07 22:03:00,621 INFO    MainThread:256039 [wandb_run.py:_redirect():2014] redirect: wrap_raw
+2024-06-07 22:03:00,622 INFO    MainThread:256039 [wandb_run.py:_redirect():2079] Wrapping output streams.
+2024-06-07 22:03:00,622 INFO    MainThread:256039 [wandb_run.py:_redirect():2104] Redirects installed.
+2024-06-07 22:03:00,623 INFO    MainThread:256039 [wandb_init.py:init():839] run started, returning control to user process
+2024-06-07 22:03:00,628 INFO    MainThread:256039 [wandb_run.py:_config_callback():1282] config_cb None None {'seed_eval': 2000, 'seed_test': 3000, 'device': 'cuda', 'train': {'do': True, 'do_save': False, 'reset_every': None, 'dtype': 'float32', 'compile': False, 'do_amp': False, 'batch_size': 50, 'grad_clip': 1.0, 'iters': 200001, 'samples': None, 'log_every': 1000, 'save_every': 50000, 'save_path': './out', 'num_workers': 0, 'do_early_stop': False, 'early_stop_patience': 5, 'early_stop_metric': 'loss', 'early_stop_tol': 0.001, 'early_stop_start_iter': 40000.200000000004, 'early_stop_acc': None, 'parallel_loss': True, 'merge_embeds': False, 'merge_type': 'sum'}, 'eval': {'do': True, 'split': 'both', 'batch_size': 1, 'every': 5000, 'every_samples': None, 'iters': 1000}, 'scheduler': {'decay_lr': True, 'warmup_iters': 40000.200000000004, 'lr_decay_iters': 200001, 'min_lr': 3.16228e-05}, 'log_level': 'info', 'examples_to_log': 3, 'log_batch_idx': [0, 1], 'wandb': {'project': 'icl-arch'}, 'nl_icl': {'do': False, 'checkpoint_path': None, 'hf_path': None, 'task': 'sentiment', 'n_seeds': 10, 'min_examples_per_class': 0, 'max_examples_per_class': 9, 'do_full_vocab': True}, 'do_count_param_only': False}
+2024-06-07 22:03:17,416 INFO    MainThread:256039 [wandb_watch.py:watch():51] Watching

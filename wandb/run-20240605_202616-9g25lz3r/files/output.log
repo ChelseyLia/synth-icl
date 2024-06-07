@@ -1,0 +1,276 @@
+[34m[1mwandb[39m[22m: [33mWARNING[39m Config item 'seed' was locked by 'sweep' (ignored update).
+[34m[1mwandb[39m[22m: [33mWARNING[39m Config item 'optimizer' was locked by 'sweep' (ignored update).
+[34m[1mwandb[39m[22m: [33mWARNING[39m Config item 'model' was locked by 'sweep' (ignored update).
+[34m[1mwandb[39m[22m: [33mWARNING[39m Config item 'data' was locked by 'sweep' (ignored update).
+CONFIG
+├── seed
+│   └── 9656
+├── seed_eval
+│   └── 2000
+├── seed_test
+│   └── 3000
+├── device
+│   └── cuda
+├── train
+│   └── do: true
+│       do_save: false
+│       reset_every: null
+│       dtype: float32
+│       compile: false
+│       do_amp: false
+│       batch_size: 128
+│       grad_clip: 1.0
+│       iters: 100001
+│       samples: null
+│       log_every: 1000
+│       save_every: 100000
+│       save_path: ./out
+│       num_workers: 0
+│       do_early_stop: false
+│       early_stop_patience: 5
+│       early_stop_metric: loss
+│       early_stop_tol: 0.001
+│       early_stop_start_iter: 20000.2
+│       early_stop_acc: null
+│       parallel_loss: true
+│       merge_embeds: false
+│       merge_type: sum
+│
+├── eval
+│   └── do: true
+│       split: both
+│       batch_size: 1
+│       every: 5000
+│       every_samples: null
+│       iters: 1000
+│
+├── scheduler
+│   └── decay_lr: true
+│       warmup_iters: 20000.2
+│       lr_decay_iters: 100001
+│       min_lr: 0.0001
+│
+├── optimizer
+│   └── lr: 0.001
+│       _name_: adamw
+│       weight_decay: 0
+│       betas:
+│       - 0.9
+│       - 0.95
+│
+├── log_level
+│   └── info
+├── examples_to_log
+│   └── 3
+├── log_batch_idx
+│   └── [0, 1]
+├── wandb
+│   └── project: icl-arch
+│
+├── save_checkpoints
+│   └── False
+├── nl_icl
+│   └── do: false
+│       checkpoint_path: null
+│       hf_path: null
+│       task: sentiment
+│       n_seeds: 10
+│       min_examples_per_class: 0
+│       max_examples_per_class: 9
+│       do_full_vocab: true
+│
+├── do_count_param_only
+│   └── False
+├── model
+│   └── _name_: mamba
+│       d_model: 64
+│       n_layer: 12
+│       norm_epsilon: 1.0e-05
+│       rms_norm: false
+│       fused_add_norm: false
+│       residual_in_fp32: false
+│       max_seq_len: 4096
+│
+└── data
+    └── _name_: linear-regression
+        curriculum:
+          dims:
+            start: 5
+            end: 5
+            inc: 1
+            interval: 2000
+          points_train:
+            start: 32
+            end: 32
+            inc: 2
+            interval: 2000
+          points_val:
+            start: 1024
+            end: 1024
+            inc: 2
+            interval: 2000
+        task: linear_regression
+        data: gaussian
+        task_kwargs: {}
+        n_dims: 5
+        train_noise: 0
+        val_noise: 0
+mamba.backbone.layers.0.mixer.A_log: 2048
+mamba.backbone.layers.0.mixer.D: 128
+mamba.backbone.layers.0.mixer.in_proj.weight: 16384
+mamba.backbone.layers.0.mixer.conv1d.weight: 512
+mamba.backbone.layers.0.mixer.conv1d.bias: 128
+mamba.backbone.layers.0.mixer.x_proj.weight: 4608
+mamba.backbone.layers.0.mixer.dt_proj.weight: 512
+mamba.backbone.layers.0.mixer.dt_proj.bias: 128
+mamba.backbone.layers.0.mixer.out_proj.weight: 8192
+mamba.backbone.layers.0.norm.weight: 64
+mamba.backbone.layers.1.mixer.A_log: 2048
+mamba.backbone.layers.1.mixer.D: 128
+mamba.backbone.layers.1.mixer.in_proj.weight: 16384
+mamba.backbone.layers.1.mixer.conv1d.weight: 512
+mamba.backbone.layers.1.mixer.conv1d.bias: 128
+mamba.backbone.layers.1.mixer.x_proj.weight: 4608
+mamba.backbone.layers.1.mixer.dt_proj.weight: 512
+mamba.backbone.layers.1.mixer.dt_proj.bias: 128
+mamba.backbone.layers.1.mixer.out_proj.weight: 8192
+mamba.backbone.layers.1.norm.weight: 64
+mamba.backbone.layers.2.mixer.A_log: 2048
+mamba.backbone.layers.2.mixer.D: 128
+mamba.backbone.layers.2.mixer.in_proj.weight: 16384
+mamba.backbone.layers.2.mixer.conv1d.weight: 512
+mamba.backbone.layers.2.mixer.conv1d.bias: 128
+mamba.backbone.layers.2.mixer.x_proj.weight: 4608
+mamba.backbone.layers.2.mixer.dt_proj.weight: 512
+mamba.backbone.layers.2.mixer.dt_proj.bias: 128
+mamba.backbone.layers.2.mixer.out_proj.weight: 8192
+mamba.backbone.layers.2.norm.weight: 64
+mamba.backbone.layers.3.mixer.A_log: 2048
+mamba.backbone.layers.3.mixer.D: 128
+mamba.backbone.layers.3.mixer.in_proj.weight: 16384
+mamba.backbone.layers.3.mixer.conv1d.weight: 512
+mamba.backbone.layers.3.mixer.conv1d.bias: 128
+mamba.backbone.layers.3.mixer.x_proj.weight: 4608
+mamba.backbone.layers.3.mixer.dt_proj.weight: 512
+mamba.backbone.layers.3.mixer.dt_proj.bias: 128
+mamba.backbone.layers.3.mixer.out_proj.weight: 8192
+mamba.backbone.layers.3.norm.weight: 64
+mamba.backbone.layers.4.mixer.A_log: 2048
+mamba.backbone.layers.4.mixer.D: 128
+mamba.backbone.layers.4.mixer.in_proj.weight: 16384
+mamba.backbone.layers.4.mixer.conv1d.weight: 512
+mamba.backbone.layers.4.mixer.conv1d.bias: 128
+mamba.backbone.layers.4.mixer.x_proj.weight: 4608
+mamba.backbone.layers.4.mixer.dt_proj.weight: 512
+mamba.backbone.layers.4.mixer.dt_proj.bias: 128
+mamba.backbone.layers.4.mixer.out_proj.weight: 8192
+mamba.backbone.layers.4.norm.weight: 64
+mamba.backbone.layers.6.mixer.D: 128
+mamba.backbone.layers.6.mixer.in_proj.weight: 16384
+mamba.backbone.layers.6.mixer.conv1d.weight: 512
+mamba.backbone.layers.6.mixer.conv1d.bias: 128
+mamba.backbone.layers.6.mixer.x_proj.weight: 4608
+mamba.backbone.layers.6.mixer.dt_proj.weight: 512
+mamba.backbone.layers.6.mixer.dt_proj.bias: 128
+mamba.backbone.layers.6.mixer.out_proj.weight: 8192
+mamba.backbone.layers.6.norm.weight: 64
+mamba.backbone.layers.7.mixer.A_log: 2048
+mamba.backbone.layers.7.mixer.D: 128
+mamba.backbone.layers.7.mixer.in_proj.weight: 16384
+mamba.backbone.layers.7.mixer.conv1d.weight: 512
+mamba.backbone.layers.7.mixer.conv1d.bias: 128
+mamba.backbone.layers.7.mixer.x_proj.weight: 4608
+mamba.backbone.layers.7.mixer.dt_proj.weight: 512
+mamba.backbone.layers.7.mixer.dt_proj.bias: 128
+mamba.backbone.layers.7.mixer.out_proj.weight: 8192
+mamba.backbone.layers.7.norm.weight: 64
+mamba.backbone.layers.8.mixer.A_log: 2048
+mamba.backbone.layers.8.mixer.D: 128
+mamba.backbone.layers.8.mixer.in_proj.weight: 16384
+mamba.backbone.layers.8.mixer.conv1d.weight: 512
+mamba.backbone.layers.8.mixer.conv1d.bias: 128
+mamba.backbone.layers.8.mixer.x_proj.weight: 4608
+mamba.backbone.layers.8.mixer.dt_proj.weight: 512
+mamba.backbone.layers.8.mixer.dt_proj.bias: 128
+mamba.backbone.layers.8.mixer.out_proj.weight: 8192
+mamba.backbone.layers.8.norm.weight: 64
+mamba.backbone.layers.9.mixer.A_log: 2048
+mamba.backbone.layers.9.mixer.D: 128
+mamba.backbone.layers.9.mixer.in_proj.weight: 16384
+mamba.backbone.layers.9.mixer.conv1d.weight: 512
+mamba.backbone.layers.9.mixer.conv1d.bias: 128
+mamba.backbone.layers.9.mixer.x_proj.weight: 4608
+mamba.backbone.layers.9.mixer.dt_proj.weight: 512
+mamba.backbone.layers.9.mixer.dt_proj.bias: 128
+mamba.backbone.layers.9.mixer.out_proj.weight: 8192
+mamba.backbone.layers.9.norm.weight: 64
+mamba.backbone.layers.10.mixer.A_log: 2048
+mamba.backbone.layers.10.mixer.D: 128
+mamba.backbone.layers.10.mixer.in_proj.weight: 16384
+mamba.backbone.layers.10.mixer.conv1d.weight: 512
+mamba.backbone.layers.10.mixer.conv1d.bias: 128
+mamba.backbone.layers.10.mixer.x_proj.weight: 4608
+mamba.backbone.layers.10.mixer.dt_proj.weight: 512
+mamba.backbone.layers.10.mixer.dt_proj.bias: 128
+mamba.backbone.layers.10.mixer.out_proj.weight: 8192
+mamba.backbone.layers.10.norm.weight: 64
+mamba.backbone.layers.11.mixer.A_log: 2048
+mamba.backbone.layers.11.mixer.D: 128
+mamba.backbone.layers.11.mixer.in_proj.weight: 16384
+mamba.backbone.layers.11.mixer.conv1d.weight: 512
+mamba.backbone.layers.11.mixer.conv1d.bias: 128
+mamba.backbone.layers.11.mixer.x_proj.weight: 4608
+mamba.backbone.layers.11.mixer.dt_proj.weight: 512
+mamba.backbone.layers.11.mixer.dt_proj.bias: 128
+mamba.backbone.layers.11.mixer.out_proj.weight: 8192
+mamba.backbone.layers.11.norm.weight: 64
+mamba.backbone.norm_f.weight: 64
+n_params=392512
+ignored=[('embedder.embedder.weight', 320), ('embedder.embedder.bias', 64), ('head.head.weight', 64)]
+  0%|                                                                                                                                  | 0/100001 [00:00<?, ?it/s]
+[[split=train]] train_iter: 0, batch_idx: 0, input: [[0.8162900805473328, -0.8937985897064209, -1.231592059135437, -0.006909837480634451, -0.6606903672218323], [0.8797289133071899, 0.0, 0.0, 0.0, 0.0], [1.338809609413147, 1.693846344947815, 0.37473538517951965, -2.216855049133301, -1.0760955810546875], [-2.262162923812866, 0.0, 0.0, 0.0, 0.0], [0.4095987379550934, -0.959525465965271, -0.40346845984458923, 0.10880132764577866, -0.7321749329566956], [1.30717134475708, 0.0, 0.0, 0.0, 0.0], [-0.6105225086212158, -1.8265992403030396, 0.3599432110786438, 0.5522516369819641, 0.9502310156822205], [0.5753015279769897, 0.0, 0.0, 0.0, 0.0], [-1.1912099123001099, 0.7222743630409241, -0.675369381904602, -0.3983597755432129, 0.9675205945968628], [-0.4647520184516907, 0.0, 0.0, 0.0, 0.0]], target: [0.8797289133071899, -2.262162923812866, 1.30717134475708, 0.5753015279769897, -0.4647520184516907, -0.9855940937995911, 1.3876891136169434, 0.9503867626190186, -1.9472428560256958, 0.09046852588653564]
+[[split=train]] train_iter: 0, batch_idx: 1, input: [[-0.4491397440433502, 1.8280136585235596, 0.9897819757461548, -0.320390909910202, 0.5379754900932312], [-3.1020119190216064, 0.0, 0.0, 0.0, 0.0], [0.0064454516395926476, 0.15073370933532715, 0.17710530757904053, 0.04110562428832054, 1.1405218839645386], [-0.8037629723548889, 0.0, 0.0, 0.0, 0.0], [0.3398081958293915, 0.08187104016542435, 0.665878176689148, 1.0534658432006836, -0.07220642268657684], [-0.6552398204803467, 0.0, 0.0, 0.0, 0.0], [-1.1079179048538208, 0.2800193727016449, 0.14736108481884003, 0.5868382453918457, -1.0011214017868042], [-0.34071919322013855, 0.0, 0.0, 0.0, 0.0], [-0.547766387462616, -1.1050153970718384, 0.925240159034729, -1.4807944297790527, 0.6986226439476013], [-1.229428768157959, 0.0, 0.0, 0.0, 0.0]], target: [-3.1020119190216064, -0.8037629723548889, -0.6552398204803467, -0.34071919322013855, -1.229428768157959, 3.2118775844573975, -2.7036781311035156, 0.0024459362030029297, -2.583981513977051, -1.1445428133010864]
+[[split=eval]] train_iter: 0, eval_iter: 0, batch_idx: 0, input: [[0.056923117488622665, -0.2254948914051056, 0.3654947280883789, -0.12143641710281372, -0.26607635617256165], [0.5323647260665894, 0.0, 0.0, 0.0, 0.0], [0.6566091775894165, -0.349270224571228, 0.934318482875824, 0.32319915294647217, 0.03453914076089859], [1.0814130306243896, 0.0, 0.0, 0.0, 0.0], [1.1539881229400635, -0.2999887466430664, 0.11472588777542114, -0.23394045233726501, -0.41918471455574036], [2.7665770053863525, 0.0, 0.0, 0.0, 0.0], [-1.296101450920105, 0.9774020910263062, -1.100465178489685, -0.16676835715770721, 0.44746509194374084], [-2.677063226699829, 0.0, 0.0, 0.0, 0.0], [1.8922678232192993, -0.30407023429870605, 0.45499151945114136, 1.6132011413574219, -1.9200893640518188], [7.698993682861328, 0.0, 0.0, 0.0, 0.0]], target: [0.5323647260665894, 1.0814130306243896, 2.7665770053863525, -2.677063226699829, 7.698993682861328, 1.873331904411316, 0.7060158252716064, -0.30461013317108154, -0.6633553504943848, 0.9465861916542053]
+
+Error executing job with overrides: ['data=linear-regression', 'data.curriculum.dims.end=5', 'data.curriculum.points_train.end=32', 'data.curriculum.points_train.start=32', 'data.curriculum.points_val.end=1024', 'data.curriculum.points_val.start=1024', 'eval.every=5000', 'eval.iters=1000', 'model=mamba', 'model.d_model=64', 'model.max_seq_len=4096', 'model.n_layer=12', 'optimizer=adamw', 'optimizer.lr=0.001', 'optimizer.weight_decay=0', 'scheduler.decay_lr=True', 'seed=9656', 'train.batch_size=128', 'train.do_early_stop=False', 'train.iters=100001', 'train.log_every=1000', 'train.parallel_loss=True']
+Traceback (most recent call last):
+  File "/mnt/ceph_rbd/synth-icl/main.py", line 1679, in main
+    train(
+  File "/mnt/ceph_rbd/synth-icl/main.py", line 1314, in train
+    train_iter, exit_training, best_eval_loss, best_eval_acc = train_loop(
+  File "/mnt/ceph_rbd/synth-icl/main.py", line 936, in train_loop
+    eval_log = evaluate(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/mnt/ceph_rbd/synth-icl/main.py", line 1395, in evaluate
+    hidden_states = model(embeddings)  # [batch_size, seq_len, emb_dim]
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/ceph_rbd/synth-icl/arch/mamba.py", line 287, in forward
+    return self.mamba(x)  # [batch_size, seq_len, hidden_dim]
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/ceph_rbd/synth-icl/arch/mamba.py", line 237, in forward
+    hidden_states = self.backbone(input_ids, inference_params=inference_params)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/ceph_rbd/synth-icl/arch/mamba.py", line 156, in forward
+    hidden_states, residual = layer(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/mamba_ssm/modules/mamba_simple.py", line 351, in forward
+    hidden_states = self.mixer(hidden_states, inference_params=inference_params)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/mamba_ssm/modules/mamba_simple.py", line 148, in forward
+    out = mamba_inner_fn(
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/mamba_ssm/ops/selective_scan_interface.py", line 319, in mamba_inner_fn
+    return MambaInnerFn.apply(xz, conv1d_weight, conv1d_bias, x_proj_weight, delta_proj_weight,
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/torch/autograd/function.py", line 506, in apply
+    return super().apply(*args, **kwargs)  # type: ignore[misc]
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/torch/cuda/amp/autocast_mode.py", line 98, in decorate_fwd
+    return fwd(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/mamba_ssm/ops/selective_scan_interface.py", line 196, in forward
+    delta = rearrange(delta_proj_weight @ x_dbl[:, :delta_rank].t(), "d (b l) -> b d l", l = L)
+RuntimeError: expected scalar type Float but found Half
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

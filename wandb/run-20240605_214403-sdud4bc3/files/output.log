@@ -1,0 +1,102 @@
+[34m[1mwandb[39m[22m: [33mWARNING[39m Config item 'seed' was locked by 'sweep' (ignored update).
+[34m[1mwandb[39m[22m: [33mWARNING[39m Config item 'optimizer' was locked by 'sweep' (ignored update).
+[34m[1mwandb[39m[22m: [33mWARNING[39m Config item 'model' was locked by 'sweep' (ignored update).
+[34m[1mwandb[39m[22m: [33mWARNING[39m Config item 'data' was locked by 'sweep' (ignored update).
+CONFIG
+├── seed
+│   └── 2059
+├── seed_eval
+│   └── 2000
+├── seed_test
+│   └── 3000
+├── device
+│   └── cuda
+├── train
+│   └── do: true
+│       do_save: false
+│       reset_every: null
+│       dtype: float32
+│       compile: false
+│       do_amp: false
+│       batch_size: 128
+│       grad_clip: 1.0
+│       iters: 100001
+│       samples: null
+│       log_every: 1000
+│       save_every: 100000
+│       save_path: ./out
+│       num_workers: 0
+│       do_early_stop: false
+│       early_stop_patience: 5
+│       early_stop_metric: loss
+│       early_stop_tol: 0.001
+│       early_stop_start_iter: 20000.2
+│       early_stop_acc: null
+│       parallel_loss: true
+│       merge_embeds: false
+│       merge_type: sum
+│
+├── eval
+│   └── do: true
+│       split: both
+│       batch_size: 1
+│       every: 5000
+│       every_samples: null
+│       iters: 1000
+│
+├── scheduler
+│   └── decay_lr: true
+│       warmup_iters: 20000.2
+│       lr_decay_iters: 100001
+│       min_lr: 0.0001
+│
+├── optimizer
+│   └── lr: 0.001
+│       _name_: adamw
+│       weight_decay: 0
+│       betas:
+│       - 0.9
+│       - 0.95
+│
+├── log_level
+│   └── info
+├── examples_to_log
+│   └── 3
+├── log_batch_idx
+│   └── [0, 1]
+├── wandb
+│   └── project: icl-arch
+│
+├── save_checkpoints
+│   └── False
+├── nl_icl
+│   └── do: false
+│       checkpoint_path: null
+│       hf_path: null
+│       task: sentiment
+│       n_seeds: 10
+│       min_examples_per_class: 0
+│       max_examples_per_class: 9
+│       do_full_vocab: true
+│
+├── do_count_param_only
+│   └── False
+├── model
+│   └── _name_: mamba
+│       d_model: 64
+│       n_layer: 12
+│       norm_epsilon: 1.0e-05
+│       rms_norm: false
+│       fused_add_norm: false
+│       residual_in_fp32: false
+│       max_seq_len: 4096
+│
+└── data
+    └── _name_: gauss-mix-model
+        num_classes: 2
+        num_xy_pairs_train: 2
+        num_xy_pairs_val: 1024
+        dim: 16
+{'seed': 2059, 'seed_eval': 2000, 'seed_test': 3000, 'device': 'cuda', 'train': {'do': True, 'do_save': False, 'reset_every': None, 'dtype': 'float32', 'compile': False, 'do_amp': False, 'batch_size': 128, 'grad_clip': 1.0, 'iters': 100001, 'samples': None, 'log_every': 1000, 'save_every': 100000, 'save_path': './out', 'num_workers': 0, 'do_early_stop': False, 'early_stop_patience': 5, 'early_stop_metric': 'loss', 'early_stop_tol': 0.001, 'early_stop_start_iter': '${scheduler.warmup_iters}', 'early_stop_acc': None, 'parallel_loss': True, 'merge_embeds': False, 'merge_type': 'sum'}, 'eval': {'do': True, 'split': 'both', 'batch_size': 1, 'every': 5000, 'every_samples': None, 'iters': 1000}, 'scheduler': {'decay_lr': True, 'warmup_iters': "${eval:'${train.iters} * 0.2'}", 'lr_decay_iters': '${train.iters}', 'min_lr': "${eval:'${optimizer.lr} / 10'}"}, 'optimizer': {'lr': 0.001, '_name_': 'adamw', 'weight_decay': 0, 'betas': [0.9, 0.95]}, 'log_level': 'info', 'examples_to_log': 3, 'log_batch_idx': [0, 1], 'wandb': {'project': 'icl-arch'}, 'save_checkpoints': False, 'nl_icl': {'do': False, 'checkpoint_path': None, 'hf_path': None, 'task': 'sentiment', 'n_seeds': 10, 'min_examples_per_class': 0, 'max_examples_per_class': 9, 'do_full_vocab': True}, 'do_count_param_only': False, 'model': {'_name_': 'mamba', 'd_model': 64, 'n_layer': 12, 'norm_epsilon': 1e-05, 'rms_norm': False, 'fused_add_norm': False, 'residual_in_fp32': False, 'max_seq_len': 4096}, 'data': {'_name_': 'gauss-mix-model', 'num_classes': 2, 'num_xy_pairs_train': 2, 'num_xy_pairs_val': 1024, 'dim': 16}}
+torch.Size([128, 2])
+torch.Size([128, 2, 16])

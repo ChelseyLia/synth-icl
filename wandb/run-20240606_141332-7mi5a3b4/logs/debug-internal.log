@@ -1,0 +1,68 @@
+2024-06-06 14:13:32,254 INFO    StreamThr :124471 [internal.py:wandb_internal():86] W&B internal server running at pid: 124471, started at: 2024-06-06 14:13:32.253516
+2024-06-06 14:13:32,256 DEBUG   HandlerThread:124471 [handler.py:handle_request():144] handle_request: status
+2024-06-06 14:13:32,275 INFO    WriterThread:124471 [datastore.py:open_for_write():85] open: /mnt/ceph_rbd/synth-icl/wandb/run-20240606_141332-7mi5a3b4/run-7mi5a3b4.wandb
+2024-06-06 14:13:32,276 DEBUG   SenderThread:124471 [sender.py:send():379] send: header
+2024-06-06 14:13:32,282 DEBUG   SenderThread:124471 [sender.py:send():379] send: run
+2024-06-06 14:13:32,564 ERROR   SenderThread:124471 [internal_api.py:execute():326] 409 response executing GraphQL.
+2024-06-06 14:13:32,564 ERROR   SenderThread:124471 [internal_api.py:execute():327] {"errors":[{"message":"run 7mi5a3b4 was previously created and deleted; try a new run name","path":["upsertBucket"]}],"data":{"upsertBucket":null}}
+2024-06-06 14:13:33,800 ERROR   SenderThread:124471 [internal_api.py:execute():326] 409 response executing GraphQL.
+2024-06-06 14:13:33,800 ERROR   SenderThread:124471 [internal_api.py:execute():327] {"errors":[{"message":"run 7mi5a3b4 was previously created and deleted; try a new run name","path":["upsertBucket"]}],"data":{"upsertBucket":null}}
+2024-06-06 14:13:36,089 ERROR   SenderThread:124471 [internal_api.py:execute():326] 409 response executing GraphQL.
+2024-06-06 14:13:36,089 ERROR   SenderThread:124471 [internal_api.py:execute():327] {"errors":[{"message":"run 7mi5a3b4 was previously created and deleted; try a new run name","path":["upsertBucket"]}],"data":{"upsertBucket":null}}
+2024-06-06 14:13:36,089 INFO    SenderThread:124471 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/internal/internal_api.py", line 323, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/wandb/sdk/lib/gql_request.py", line 56, in execute
+    request.raise_for_status()
+  File "/root/anaconda3/envs/icl/lib/python3.10/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 409 Client Error: Conflict for url: https://api.wandb.ai/graphql
+2024-06-06 14:13:37,284 DEBUG   HandlerThread:124471 [handler.py:handle_request():144] handle_request: keepalive
+2024-06-06 14:13:40,609 ERROR   SenderThread:124471 [internal_api.py:execute():326] 409 response executing GraphQL.
+2024-06-06 14:13:40,610 ERROR   SenderThread:124471 [internal_api.py:execute():327] {"errors":[{"message":"run 7mi5a3b4 was previously created and deleted; try a new run name","path":["upsertBucket"]}],"data":{"upsertBucket":null}}
+2024-06-06 14:13:42,287 DEBUG   HandlerThread:124471 [handler.py:handle_request():144] handle_request: keepalive
+2024-06-06 14:13:47,291 DEBUG   HandlerThread:124471 [handler.py:handle_request():144] handle_request: keepalive
+2024-06-06 14:13:49,397 ERROR   SenderThread:124471 [internal_api.py:execute():326] 409 response executing GraphQL.
+2024-06-06 14:13:49,397 ERROR   SenderThread:124471 [internal_api.py:execute():327] {"errors":[{"message":"run 7mi5a3b4 was previously created and deleted; try a new run name","path":["upsertBucket"]}],"data":{"upsertBucket":null}}
+2024-06-06 14:13:52,294 DEBUG   HandlerThread:124471 [handler.py:handle_request():144] handle_request: keepalive
+2024-06-06 14:13:57,297 DEBUG   HandlerThread:124471 [handler.py:handle_request():144] handle_request: keepalive
+2024-06-06 14:14:02,300 DEBUG   HandlerThread:124471 [handler.py:handle_request():144] handle_request: keepalive
+2024-06-06 14:14:07,303 DEBUG   HandlerThread:124471 [handler.py:handle_request():144] handle_request: keepalive
+2024-06-06 14:14:07,515 ERROR   SenderThread:124471 [internal_api.py:execute():326] 409 response executing GraphQL.
+2024-06-06 14:14:07,516 ERROR   SenderThread:124471 [internal_api.py:execute():327] {"errors":[{"message":"run 7mi5a3b4 was previously created and deleted; try a new run name","path":["upsertBucket"]}],"data":{"upsertBucket":null}}
+2024-06-06 14:14:12,305 DEBUG   HandlerThread:124471 [handler.py:handle_request():144] handle_request: keepalive
+2024-06-06 14:14:17,309 DEBUG   HandlerThread:124471 [handler.py:handle_request():144] handle_request: keepalive
+2024-06-06 14:14:22,311 DEBUG   HandlerThread:124471 [handler.py:handle_request():144] handle_request: keepalive
+2024-06-06 14:14:27,314 DEBUG   HandlerThread:124471 [handler.py:handle_request():144] handle_request: keepalive
+2024-06-06 14:14:32,316 DEBUG   HandlerThread:124471 [handler.py:handle_request():144] handle_request: cancel
+2024-06-06 14:14:32,317 DEBUG   SenderThread:124471 [sender.py:send():388] Record cancelled: run
+2024-06-06 14:14:32,317 DEBUG   HandlerThread:124471 [handler.py:handle_request():144] handle_request: status_report
+2024-06-06 14:14:32,317 DEBUG   HandlerThread:124471 [handler.py:handle_request():144] handle_request: cancel
+2024-06-06 14:14:37,318 DEBUG   HandlerThread:124471 [handler.py:handle_request():144] handle_request: status_report
+2024-06-06 14:14:42,320 DEBUG   HandlerThread:124471 [handler.py:handle_request():144] handle_request: status_report
+2024-06-06 14:14:47,320 DEBUG   HandlerThread:124471 [handler.py:handle_request():144] handle_request: status_report
+2024-06-06 14:14:52,321 DEBUG   HandlerThread:124471 [handler.py:handle_request():144] handle_request: status_report
+2024-06-06 14:14:57,322 DEBUG   HandlerThread:124471 [handler.py:handle_request():144] handle_request: status_report
+2024-06-06 14:15:02,322 DEBUG   HandlerThread:124471 [handler.py:handle_request():144] handle_request: status_report
+2024-06-06 14:15:07,323 DEBUG   HandlerThread:124471 [handler.py:handle_request():144] handle_request: status_report
+2024-06-06 14:15:12,324 DEBUG   HandlerThread:124471 [handler.py:handle_request():144] handle_request: status_report
+2024-06-06 14:15:17,325 DEBUG   HandlerThread:124471 [handler.py:handle_request():144] handle_request: status_report
+2024-06-06 14:15:22,325 DEBUG   HandlerThread:124471 [handler.py:handle_request():144] handle_request: status_report
+2024-06-06 14:15:27,326 DEBUG   HandlerThread:124471 [handler.py:handle_request():144] handle_request: status_report
+2024-06-06 14:15:32,327 DEBUG   HandlerThread:124471 [handler.py:handle_request():144] handle_request: status_report
+2024-06-06 14:15:37,327 DEBUG   HandlerThread:124471 [handler.py:handle_request():144] handle_request: status_report
+2024-06-06 14:15:42,328 DEBUG   HandlerThread:124471 [handler.py:handle_request():144] handle_request: status_report
+2024-06-06 14:15:47,329 DEBUG   HandlerThread:124471 [handler.py:handle_request():144] handle_request: status_report
+2024-06-06 14:15:52,330 DEBUG   HandlerThread:124471 [handler.py:handle_request():144] handle_request: status_report
+2024-06-06 14:15:57,330 DEBUG   HandlerThread:124471 [handler.py:handle_request():144] handle_request: status_report
+2024-06-06 14:16:00,342 DEBUG   HandlerThread:124471 [handler.py:handle_request():144] handle_request: shutdown
+2024-06-06 14:16:00,343 INFO    HandlerThread:124471 [handler.py:finish():861] shutting down handler
+2024-06-06 14:16:01,331 INFO    SenderThread:124471 [sender.py:finish():1552] shutting down sender
+2024-06-06 14:16:01,331 INFO    WriterThread:124471 [datastore.py:close():294] close: /mnt/ceph_rbd/synth-icl/wandb/run-20240606_141332-7mi5a3b4/run-7mi5a3b4.wandb

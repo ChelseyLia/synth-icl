@@ -1,0 +1,134 @@
+seed: 2059
+seed_eval: 2000
+seed_test: 3000
+device: cuda
+train:
+  do: true
+  do_save: false
+  reset_every: null
+  dtype: float32
+  compile: false
+  do_amp: false
+  batch_size: 128
+  grad_clip: 1.0
+  iters: 100001
+  samples: null
+  log_every: 1000
+  save_every: 100000
+  save_path: ./out
+  num_workers: 0
+  do_early_stop: false
+  early_stop_patience: 5
+  early_stop_metric: loss
+  early_stop_tol: 0.001
+  early_stop_start_iter: ${scheduler.warmup_iters}
+  early_stop_acc: null
+  parallel_loss: true
+  merge_embeds: false
+  merge_type: sum
+  seed: 0
+  interval: step
+  monitor: val/accuracy_ignore_index
+  mode: max
+  ema: 0.0
+  test: false
+  debug: false
+  ignore_warnings: false
+  state:
+    mode: null
+    n_context: 0
+    n_context_eval: 0
+  ckpt: null
+  disable_dataset: false
+  validate_at_start: false
+  pretrained_model_path: null
+  pretrained_model_strict_load: true
+  pretrained_model_state_hook:
+    _name_: null
+  post_init_hook:
+    _name_: null
+  layer_decay:
+    _name_: null
+    decay: 0.7
+  global_batch_size: 32
+eval:
+  do: true
+  split: both
+  batch_size: 1
+  every: 5000
+  every_samples: null
+  iters: 1000
+scheduler:
+  decay_lr: true
+  warmup_iters: ${eval:'${train.iters} * 0.2'}
+  lr_decay_iters: ${train.iters}
+  min_lr: ${eval:'${optimizer.lr} / 10'}
+optimizer:
+  lr: 0.001
+  _name_: adamw
+  weight_decay: 0
+  betas:
+  - 0.9
+  - 0.95
+log_level: info
+examples_to_log: 3
+log_batch_idx:
+- 0
+- 1
+wandb:
+  project: icl-arch
+save_checkpoints: false
+nl_icl:
+  do: false
+  checkpoint_path: null
+  hf_path: null
+  task: sentiment
+  n_seeds: 10
+  min_examples_per_class: 0
+  max_examples_per_class: 9
+  do_full_vocab: true
+do_count_param_only: false
+model:
+  _name_: safari
+  d_model: 64
+  n_layer: 12
+  d_inner: ${eval:4 * ${.d_model}}
+  vocab_size: 32000
+  resid_dropout: 0.0
+  embed_dropout: 0.1
+  layer:
+    _name_: hyena
+    emb_dim: 5
+    filter_order: 64
+    local_order: 3
+    l_max: 131074
+    modulate: true
+    w: 10
+    lr: 0.0005
+    wd: 0.0
+    lr_pos_emb: 0.0
+  max_seq_len: 4096
+data:
+  _name_: linear-regression
+  curriculum:
+    dims:
+      start: ${data.curriculum.dims.end}
+      end: 5
+      inc: 1
+      interval: 2000
+    points_train:
+      start: 32
+      end: 32
+      inc: 2
+      interval: 2000
+    points_val:
+      start: 1024
+      end: 1024
+      inc: 2
+      interval: 2000
+  task: linear_regression
+  data: gaussian
+  task_kwargs: {}
+  n_dims: ${data.curriculum.dims.end}
+  train_noise: 0
+  val_noise: 0
